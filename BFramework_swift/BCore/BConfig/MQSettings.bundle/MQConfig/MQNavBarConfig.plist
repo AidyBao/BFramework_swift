@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>mq_userSystemBackButton</key>
+	<false/>
+	<key>mq_showSeparatorLine</key>
+	<false/>
+	<key>mq_isTranslucent</key>
+	<false/>
+	<key>mq_navTitleFont</key>
+	<string>PingFangSC-Regular</string>
+	<key>mq_navBarColor</key>
+	<string>#3B87EE</string>
+	<key>mq_titleColor</key>
+	<string>#ffffff</string>
+	<key>mq_barButtonColor</key>
+	<string>#ffffff</string>
+	<key>mq_titleFontSize</key>
+	<dict>
+		<key>4_0</key>
+		<integer>18</integer>
+		<key>4_7</key>
+		<integer>21</integer>
+		<key>5_5</key>
+		<integer>21</integer>
+	</dict>
+	<key>mq_barButtonFontSize</key>
+	<dict>
+		<key>4_0</key>
+		<integer>16</integer>
+		<key>4_7</key>
+		<integer>17</integer>
+		<key>5_5</key>
+		<integer>18</integer>
+	</dict>
+</dict>
+</plist>

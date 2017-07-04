@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>mq_textColorTitle</key>
+	<string>#3b3e43</string>
+	<key>mq_textColorBody</key>
+	<string>#5e6269</string>
+	<key>mq_textColorMark</key>
+	<string>#9fa4ac</string>
+	<key>mq_fontNameTitle</key>
+	<string>PingFangSC-Regular</string>
+	<key>mq_fontNameBody</key>
+	<string>PingFangSC-Light</string>
+	<key>mq_fontNameMark</key>
+	<string>PingFangSC-Light</string>
+	<key>mq_iconFont</key>
+	<string>iconfont</string>
+	<key>mq_fontSizeTitle</key>
+	<dict>
+		<key>4_0</key>
+		<integer>15</integer>
+		<key>4_7</key>
+		<integer>17</integer>
+		<key>5_5</key>
+		<integer>18</integer>
+	</dict>
+	<key>mq_fontSizeSubtitle</key>
+	<dict>
+		<key>4_0</key>
+		<integer>14</integer>
+		<key>4_7</key>
+		<integer>15</integer>
+		<key>5_5</key>
+		<integer>16</integer>
+	</dict>
+	<key>mq_fontSizeBody</key>
+	<dict>
+		<key>4_0</key>
+		<integer>13</integer>
+		<key>4_7</key>
+		<integer>14</integer>
+		<key>5_5</key>
+		<integer>15</integer>
+	</dict>
+	<key>mq_fontSizeMark</key>
+	<dict>
+		<key>4_0</key>
+		<integer>10</integer>
+		<key>4_7</key>
+		<integer>11</integer>
+		<key>5_5</key>
+		<integer>12</integer>
+	</dict>
+</dict>
+</plist>

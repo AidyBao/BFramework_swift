@@ -15,10 +15,10 @@ class MQStructs: NSObject {
     }
     
     class func loadnavBarConfig() {
-//        MQNavBarConfig.active()
+        MQNavBarConfig.active()
     }
     
     class func loadtabBarConfig() {
-//        MQTabbarConfig.active()
+        MQTabbarConfig.active()
     }
 }

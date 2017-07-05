@@ -47,6 +47,45 @@
 		7A6D146F1F0B6C0400B30FD4 /* MQLocationUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6D14641F0B6C0400B30FD4 /* MQLocationUtils.swift */; };
 		7A6D14701F0B6C0400B30FD4 /* MQTintButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6D14651F0B6C0400B30FD4 /* MQTintButton.swift */; };
 		7A6D14721F0B6C6000B30FD4 /* UIViewController+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6D14711F0B6C6000B30FD4 /* UIViewController+MQ.swift */; };
+		7A6D14761F0B78DF00B30FD4 /* MQAutoScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6D14751F0B78DF00B30FD4 /* MQAutoScrollView.swift */; };
+		7A6D147B1F0B79C700B30FD4 /* Address.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A6D14781F0B79C700B30FD4 /* Address.plist */; };
+		7A6D147C1F0B79C700B30FD4 /* MQAddressCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6D14791F0B79C700B30FD4 /* MQAddressCache.swift */; };
+		7A6D147D1F0B79C700B30FD4 /* MQAddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6D147A1F0B79C700B30FD4 /* MQAddressView.swift */; };
+		7A6D14821F0B7A9A00B30FD4 /* MQCityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6D147E1F0B7A9A00B30FD4 /* MQCityModel.swift */; };
+		7A6D14831F0B7A9A00B30FD4 /* MQCountryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6D147F1F0B7A9A00B30FD4 /* MQCountryModel.swift */; };
+		7A6D14841F0B7A9A00B30FD4 /* MQParishModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6D14801F0B7A9A00B30FD4 /* MQParishModel.swift */; };
+		7A6D14851F0B7A9A00B30FD4 /* MQProvinceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6D14811F0B7A9A00B30FD4 /* MQProvinceModel.swift */; };
+		7A6D148B1F0B7FCC00B30FD4 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A6D148A1F0B7FCC00B30FD4 /* libsqlite3.0.tbd */; };
+		7A6D14B01F0B8BC900B30FD4 /* MQDateSelectUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6D148F1F0B8BC900B30FD4 /* MQDateSelectUtils.swift */; };
+		7A6D14B11F0B8BC900B30FD4 /* MQDateSelectUtils.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A6D14901F0B8BC900B30FD4 /* MQDateSelectUtils.xib */; };
+		7A6D14B21F0B8BC900B30FD4 /* MQEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6D14921F0B8BC900B30FD4 /* MQEmptyView.swift */; };
+		7A6D14B31F0B8BC900B30FD4 /* MQHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6D14941F0B8BC900B30FD4 /* MQHUD.swift */; };
+		7A6D14B41F0B8BC900B30FD4 /* MQLineChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6D14961F0B8BC900B30FD4 /* MQLineChartView.swift */; };
+		7A6D14B51F0B8BC900B30FD4 /* MQQRCodeScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6D14981F0B8BC900B30FD4 /* MQQRCodeScanViewController.swift */; };
+		7A6D14B61F0B8BC900B30FD4 /* MQQRCodeScanViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A6D14991F0B8BC900B30FD4 /* MQQRCodeScanViewController.xib */; };
+		7A6D14B71F0B8BC900B30FD4 /* iconfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7A6D149B1F0B8BC900B30FD4 /* iconfont.ttf */; };
+		7A6D14B81F0B8BC900B30FD4 /* MQCheck@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A6D149C1F0B8BC900B30FD4 /* MQCheck@2x.png */; };
+		7A6D14B91F0B8BC900B30FD4 /* MQCheck@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A6D149D1F0B8BC900B30FD4 /* MQCheck@3x.png */; };
+		7A6D14BA1F0B8BC900B30FD4 /* MQFailure@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A6D149E1F0B8BC900B30FD4 /* MQFailure@2x.png */; };
+		7A6D14BB1F0B8BC900B30FD4 /* MQFailure@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A6D149F1F0B8BC900B30FD4 /* MQFailure@3x.png */; };
+		7A6D14BC1F0B8BC900B30FD4 /* MQLoading@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A6D14A01F0B8BC900B30FD4 /* MQLoading@2x.png */; };
+		7A6D14BD1F0B8BC900B30FD4 /* MQLoading@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A6D14A11F0B8BC900B30FD4 /* MQLoading@3x.png */; };
+		7A6D14BE1F0B8BC900B30FD4 /* MQNoData@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A6D14A21F0B8BC900B30FD4 /* MQNoData@2x.png */; };
+		7A6D14BF1F0B8BC900B30FD4 /* MQNoData@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A6D14A31F0B8BC900B30FD4 /* MQNoData@3x.png */; };
+		7A6D14C01F0B8BC900B30FD4 /* MQNoNetwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A6D14A41F0B8BC900B30FD4 /* MQNoNetwork@2x.png */; };
+		7A6D14C11F0B8BC900B30FD4 /* MQNoNetwork@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A6D14A51F0B8BC900B30FD4 /* MQNoNetwork@3x.png */; };
+		7A6D14C21F0B8BC900B30FD4 /* MQSuccess@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A6D14A61F0B8BC900B30FD4 /* MQSuccess@2x.png */; };
+		7A6D14C31F0B8BC900B30FD4 /* MQSuccess@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A6D14A71F0B8BC900B30FD4 /* MQSuccess@3x.png */; };
+		7A6D14C41F0B8BC900B30FD4 /* MQSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6D14A91F0B8BC900B30FD4 /* MQSegment.swift */; };
+		7A6D14C51F0B8BC900B30FD4 /* MQUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6D14AB1F0B8BC900B30FD4 /* MQUIButton.swift */; };
+		7A6D14C61F0B8BC900B30FD4 /* MQUIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6D14AC1F0B8BC900B30FD4 /* MQUIImageView.swift */; };
+		7A6D14C71F0B8BC900B30FD4 /* MQUILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6D14AD1F0B8BC900B30FD4 /* MQUILabel.swift */; };
+		7A6D14C81F0B8BC900B30FD4 /* MQUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6D14AE1F0B8BC900B30FD4 /* MQUIView.swift */; };
+		7A6D14CA1F0B8DAE00B30FD4 /* CommonIcon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A6D14C91F0B8DAE00B30FD4 /* CommonIcon.xcassets */; };
+		7A6D14CC1F0B900000B30FD4 /* MQClosure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6D14CB1F0B900000B30FD4 /* MQClosure.swift */; };
+		7A6D14CE1F0B905000B30FD4 /* MQUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6D14CD1F0B905000B30FD4 /* MQUIViewController.swift */; };
+		7A6D14D11F0B90B800B30FD4 /* UINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A6D14D01F0B90B800B30FD4 /* UINavigationController+FDFullscreenPopGesture.m */; };
+		7A6F812F1F0C8CEC005D9EBC /* MQDimmingPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6F812E1F0C8CEC005D9EBC /* MQDimmingPresentationController.swift */; };
 		7A757FB51F03754A00CD6BC5 /* TabbarIcon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A757FB41F03754A00CD6BC5 /* TabbarIcon.xcassets */; };
 		7A7E094C1F0248BD0072C968 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7E094B1F0248BD0072C968 /* AppDelegate.swift */; };
 		7A7E09531F0248BD0072C968 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A7E09521F0248BD0072C968 /* Assets.xcassets */; };
@@ -71,6 +110,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		7A6F81281F0C8901005D9EBC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7A6F81231F0C8901005D9EBC /* SnapKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EEBCC9D819CC627D0083B827;
+			remoteInfo = SnapKit;
+		};
+		7A6F812A1F0C8901005D9EBC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7A6F81231F0C8901005D9EBC /* SnapKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EEBCC9E219CC627E0083B827;
+			remoteInfo = "SnapKit Tests";
+		};
 		7A7E095D1F0248BD0072C968 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 7A7E09401F0248BD0072C968 /* Project object */;
@@ -86,6 +139,19 @@
 			remoteInfo = BFramework_swift;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		7A6F811F1F0C87C8005D9EBC /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		7A6A354D1F062F0A000AB9D2 /* UITabBarController+MQ.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITabBarController+MQ.swift"; sourceTree = "<group>"; };
@@ -129,6 +195,47 @@
 		7A6D14641F0B6C0400B30FD4 /* MQLocationUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MQLocationUtils.swift; sourceTree = "<group>"; };
 		7A6D14651F0B6C0400B30FD4 /* MQTintButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MQTintButton.swift; sourceTree = "<group>"; };
 		7A6D14711F0B6C6000B30FD4 /* UIViewController+MQ.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+MQ.swift"; sourceTree = "<group>"; };
+		7A6D14751F0B78DF00B30FD4 /* MQAutoScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MQAutoScrollView.swift; sourceTree = "<group>"; };
+		7A6D14781F0B79C700B30FD4 /* Address.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Address.plist; sourceTree = "<group>"; };
+		7A6D14791F0B79C700B30FD4 /* MQAddressCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MQAddressCache.swift; sourceTree = "<group>"; };
+		7A6D147A1F0B79C700B30FD4 /* MQAddressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MQAddressView.swift; sourceTree = "<group>"; };
+		7A6D147E1F0B7A9A00B30FD4 /* MQCityModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MQCityModel.swift; sourceTree = "<group>"; };
+		7A6D147F1F0B7A9A00B30FD4 /* MQCountryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MQCountryModel.swift; sourceTree = "<group>"; };
+		7A6D14801F0B7A9A00B30FD4 /* MQParishModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MQParishModel.swift; sourceTree = "<group>"; };
+		7A6D14811F0B7A9A00B30FD4 /* MQProvinceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MQProvinceModel.swift; sourceTree = "<group>"; };
+		7A6D148A1F0B7FCC00B30FD4 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		7A6D148F1F0B8BC900B30FD4 /* MQDateSelectUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MQDateSelectUtils.swift; sourceTree = "<group>"; };
+		7A6D14901F0B8BC900B30FD4 /* MQDateSelectUtils.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MQDateSelectUtils.xib; sourceTree = "<group>"; };
+		7A6D14921F0B8BC900B30FD4 /* MQEmptyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MQEmptyView.swift; sourceTree = "<group>"; };
+		7A6D14941F0B8BC900B30FD4 /* MQHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MQHUD.swift; sourceTree = "<group>"; };
+		7A6D14961F0B8BC900B30FD4 /* MQLineChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MQLineChartView.swift; sourceTree = "<group>"; };
+		7A6D14981F0B8BC900B30FD4 /* MQQRCodeScanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MQQRCodeScanViewController.swift; sourceTree = "<group>"; };
+		7A6D14991F0B8BC900B30FD4 /* MQQRCodeScanViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MQQRCodeScanViewController.xib; sourceTree = "<group>"; };
+		7A6D149B1F0B8BC900B30FD4 /* iconfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = iconfont.ttf; sourceTree = "<group>"; };
+		7A6D149C1F0B8BC900B30FD4 /* MQCheck@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MQCheck@2x.png"; sourceTree = "<group>"; };
+		7A6D149D1F0B8BC900B30FD4 /* MQCheck@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MQCheck@3x.png"; sourceTree = "<group>"; };
+		7A6D149E1F0B8BC900B30FD4 /* MQFailure@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MQFailure@2x.png"; sourceTree = "<group>"; };
+		7A6D149F1F0B8BC900B30FD4 /* MQFailure@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MQFailure@3x.png"; sourceTree = "<group>"; };
+		7A6D14A01F0B8BC900B30FD4 /* MQLoading@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MQLoading@2x.png"; sourceTree = "<group>"; };
+		7A6D14A11F0B8BC900B30FD4 /* MQLoading@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MQLoading@3x.png"; sourceTree = "<group>"; };
+		7A6D14A21F0B8BC900B30FD4 /* MQNoData@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MQNoData@2x.png"; sourceTree = "<group>"; };
+		7A6D14A31F0B8BC900B30FD4 /* MQNoData@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MQNoData@3x.png"; sourceTree = "<group>"; };
+		7A6D14A41F0B8BC900B30FD4 /* MQNoNetwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MQNoNetwork@2x.png"; sourceTree = "<group>"; };
+		7A6D14A51F0B8BC900B30FD4 /* MQNoNetwork@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MQNoNetwork@3x.png"; sourceTree = "<group>"; };
+		7A6D14A61F0B8BC900B30FD4 /* MQSuccess@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MQSuccess@2x.png"; sourceTree = "<group>"; };
+		7A6D14A71F0B8BC900B30FD4 /* MQSuccess@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MQSuccess@3x.png"; sourceTree = "<group>"; };
+		7A6D14A91F0B8BC900B30FD4 /* MQSegment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MQSegment.swift; sourceTree = "<group>"; };
+		7A6D14AB1F0B8BC900B30FD4 /* MQUIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MQUIButton.swift; sourceTree = "<group>"; };
+		7A6D14AC1F0B8BC900B30FD4 /* MQUIImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MQUIImageView.swift; sourceTree = "<group>"; };
+		7A6D14AD1F0B8BC900B30FD4 /* MQUILabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MQUILabel.swift; sourceTree = "<group>"; };
+		7A6D14AE1F0B8BC900B30FD4 /* MQUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MQUIView.swift; sourceTree = "<group>"; };
+		7A6D14C91F0B8DAE00B30FD4 /* CommonIcon.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = CommonIcon.xcassets; sourceTree = "<group>"; };
+		7A6D14CB1F0B900000B30FD4 /* MQClosure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MQClosure.swift; sourceTree = "<group>"; };
+		7A6D14CD1F0B905000B30FD4 /* MQUIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MQUIViewController.swift; sourceTree = "<group>"; };
+		7A6D14CF1F0B90B800B30FD4 /* UINavigationController+FDFullscreenPopGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+FDFullscreenPopGesture.h"; sourceTree = "<group>"; };
+		7A6D14D01F0B90B800B30FD4 /* UINavigationController+FDFullscreenPopGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+FDFullscreenPopGesture.m"; sourceTree = "<group>"; };
+		7A6F81231F0C8901005D9EBC /* SnapKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SnapKit.xcodeproj; path = "../../../Downloads/SnapKit-develop/SnapKit.xcodeproj"; sourceTree = "<group>"; };
+		7A6F812E1F0C8CEC005D9EBC /* MQDimmingPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MQDimmingPresentationController.swift; sourceTree = "<group>"; };
 		7A757FB41F03754A00CD6BC5 /* TabbarIcon.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = TabbarIcon.xcassets; sourceTree = "<group>"; };
 		7A7E09481F0248BD0072C968 /* BFramework_swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BFramework_swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A7E094B1F0248BD0072C968 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -167,6 +274,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A6D148B1F0B7FCC00B30FD4 /* libsqlite3.0.tbd in Frameworks */,
 				7A6BE7A71F04E41A00A92196 /* libz.tbd in Frameworks */,
 				1CDBE7CD80DE3CE2C6E30DC4 /* libPods-BFramework_swift.a in Frameworks */,
 			);
@@ -224,6 +332,7 @@
 		7A6BE7A51F04E41A00A92196 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7A6D148A1F0B7FCC00B30FD4 /* libsqlite3.0.tbd */,
 				7A6BE7A61F04E41A00A92196 /* libz.tbd */,
 				A847C20E6A91FD19AFC121C8 /* libPods-BFramework_swift.a */,
 			);
@@ -233,6 +342,7 @@
 		7A6BE7A81F04E7D300A92196 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				7A6F812E1F0C8CEC005D9EBC /* MQDimmingPresentationController.swift */,
 				7A6D14431F0B5CAB00B30FD4 /* NotificationCenter+MQ.swift */,
 			);
 			path = Common;
@@ -241,6 +351,7 @@
 		7A6BE7A91F04E7DA00A92196 /* MainRootVC */ = {
 			isa = PBXGroup;
 			children = (
+				7A6D14CD1F0B905000B30FD4 /* MQUIViewController.swift */,
 				7AC13BA81F0638550019E340 /* MQRootController.swift */,
 			);
 			path = MainRootVC;
@@ -313,10 +424,140 @@
 			path = MQUtilityTools;
 			sourceTree = "<group>";
 		};
+		7A6D14731F0B78DF00B30FD4 /* MQCommonUI */ = {
+			isa = PBXGroup;
+			children = (
+				7A6D14771F0B79C700B30FD4 /* MQAddressView */,
+				7A6D148E1F0B8BC900B30FD4 /* MQDateSelect */,
+				7A6D14911F0B8BC900B30FD4 /* MQEmptyView */,
+				7A6D14931F0B8BC900B30FD4 /* MQHUD */,
+				7A6D14951F0B8BC900B30FD4 /* MQLineChart */,
+				7A6D14971F0B8BC900B30FD4 /* MQQRCodeScan */,
+				7A6D149A1F0B8BC900B30FD4 /* MQResources */,
+				7A6D14A81F0B8BC900B30FD4 /* MQSegment */,
+				7A6D14AA1F0B8BC900B30FD4 /* MQViews */,
+				7A6D14741F0B78DF00B30FD4 /* MQAutoScrollView */,
+			);
+			path = MQCommonUI;
+			sourceTree = "<group>";
+		};
+		7A6D14741F0B78DF00B30FD4 /* MQAutoScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				7A6D14751F0B78DF00B30FD4 /* MQAutoScrollView.swift */,
+			);
+			path = MQAutoScrollView;
+			sourceTree = "<group>";
+		};
+		7A6D14771F0B79C700B30FD4 /* MQAddressView */ = {
+			isa = PBXGroup;
+			children = (
+				7A6D14781F0B79C700B30FD4 /* Address.plist */,
+				7A6D14791F0B79C700B30FD4 /* MQAddressCache.swift */,
+				7A6D147A1F0B79C700B30FD4 /* MQAddressView.swift */,
+				7A6D147E1F0B7A9A00B30FD4 /* MQCityModel.swift */,
+				7A6D147F1F0B7A9A00B30FD4 /* MQCountryModel.swift */,
+				7A6D14801F0B7A9A00B30FD4 /* MQParishModel.swift */,
+				7A6D14811F0B7A9A00B30FD4 /* MQProvinceModel.swift */,
+			);
+			path = MQAddressView;
+			sourceTree = "<group>";
+		};
+		7A6D148E1F0B8BC900B30FD4 /* MQDateSelect */ = {
+			isa = PBXGroup;
+			children = (
+				7A6D148F1F0B8BC900B30FD4 /* MQDateSelectUtils.swift */,
+				7A6D14901F0B8BC900B30FD4 /* MQDateSelectUtils.xib */,
+			);
+			path = MQDateSelect;
+			sourceTree = "<group>";
+		};
+		7A6D14911F0B8BC900B30FD4 /* MQEmptyView */ = {
+			isa = PBXGroup;
+			children = (
+				7A6D14921F0B8BC900B30FD4 /* MQEmptyView.swift */,
+			);
+			path = MQEmptyView;
+			sourceTree = "<group>";
+		};
+		7A6D14931F0B8BC900B30FD4 /* MQHUD */ = {
+			isa = PBXGroup;
+			children = (
+				7A6D14941F0B8BC900B30FD4 /* MQHUD.swift */,
+			);
+			path = MQHUD;
+			sourceTree = "<group>";
+		};
+		7A6D14951F0B8BC900B30FD4 /* MQLineChart */ = {
+			isa = PBXGroup;
+			children = (
+				7A6D14961F0B8BC900B30FD4 /* MQLineChartView.swift */,
+			);
+			path = MQLineChart;
+			sourceTree = "<group>";
+		};
+		7A6D14971F0B8BC900B30FD4 /* MQQRCodeScan */ = {
+			isa = PBXGroup;
+			children = (
+				7A6D14981F0B8BC900B30FD4 /* MQQRCodeScanViewController.swift */,
+				7A6D14991F0B8BC900B30FD4 /* MQQRCodeScanViewController.xib */,
+			);
+			path = MQQRCodeScan;
+			sourceTree = "<group>";
+		};
+		7A6D149A1F0B8BC900B30FD4 /* MQResources */ = {
+			isa = PBXGroup;
+			children = (
+				7A6D149B1F0B8BC900B30FD4 /* iconfont.ttf */,
+				7A6D149C1F0B8BC900B30FD4 /* MQCheck@2x.png */,
+				7A6D149D1F0B8BC900B30FD4 /* MQCheck@3x.png */,
+				7A6D149E1F0B8BC900B30FD4 /* MQFailure@2x.png */,
+				7A6D149F1F0B8BC900B30FD4 /* MQFailure@3x.png */,
+				7A6D14A01F0B8BC900B30FD4 /* MQLoading@2x.png */,
+				7A6D14A11F0B8BC900B30FD4 /* MQLoading@3x.png */,
+				7A6D14A21F0B8BC900B30FD4 /* MQNoData@2x.png */,
+				7A6D14A31F0B8BC900B30FD4 /* MQNoData@3x.png */,
+				7A6D14A41F0B8BC900B30FD4 /* MQNoNetwork@2x.png */,
+				7A6D14A51F0B8BC900B30FD4 /* MQNoNetwork@3x.png */,
+				7A6D14A61F0B8BC900B30FD4 /* MQSuccess@2x.png */,
+				7A6D14A71F0B8BC900B30FD4 /* MQSuccess@3x.png */,
+			);
+			path = MQResources;
+			sourceTree = "<group>";
+		};
+		7A6D14A81F0B8BC900B30FD4 /* MQSegment */ = {
+			isa = PBXGroup;
+			children = (
+				7A6D14A91F0B8BC900B30FD4 /* MQSegment.swift */,
+			);
+			path = MQSegment;
+			sourceTree = "<group>";
+		};
+		7A6D14AA1F0B8BC900B30FD4 /* MQViews */ = {
+			isa = PBXGroup;
+			children = (
+				7A6D14AB1F0B8BC900B30FD4 /* MQUIButton.swift */,
+				7A6D14AC1F0B8BC900B30FD4 /* MQUIImageView.swift */,
+				7A6D14AD1F0B8BC900B30FD4 /* MQUILabel.swift */,
+				7A6D14AE1F0B8BC900B30FD4 /* MQUIView.swift */,
+			);
+			path = MQViews;
+			sourceTree = "<group>";
+		};
+		7A6F81241F0C8901005D9EBC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7A6F81291F0C8901005D9EBC /* SnapKit.framework */,
+				7A6F812B1F0C8901005D9EBC /* SnapKit Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		7A757FB31F03752300CD6BC5 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				7A757FB41F03754A00CD6BC5 /* TabbarIcon.xcassets */,
+				7A6D14C91F0B8DAE00B30FD4 /* CommonIcon.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -324,6 +565,7 @@
 		7A7E093F1F0248BD0072C968 = {
 			isa = PBXGroup;
 			children = (
+				7A6F81231F0C8901005D9EBC /* SnapKit.xcodeproj */,
 				7A7E094A1F0248BD0072C968 /* BFramework_swift */,
 				7A7E095F1F0248BD0072C968 /* BFramework_swiftTests */,
 				7A7E096A1F0248BD0072C968 /* BFramework_swiftUITests */,
@@ -378,6 +620,8 @@
 		7A7E09791F0256C20072C968 /* MQCore */ = {
 			isa = PBXGroup;
 			children = (
+				7A6D14CB1F0B900000B30FD4 /* MQClosure.swift */,
+				7A6D14731F0B78DF00B30FD4 /* MQCommonUI */,
 				7A6D142B1F0B3E9700B30FD4 /* MQStructs.swift */,
 				7A6D14411F0B5BBD00B30FD4 /* MQURLConst.swift */,
 				7A6D14471F0B5DA500B30FD4 /* MQNotificationNames.swift */,
@@ -589,6 +833,8 @@
 		7A7E09B01F0259C50072C968 /* MQExtension */ = {
 			isa = PBXGroup;
 			children = (
+				7A6D14CF1F0B90B800B30FD4 /* UINavigationController+FDFullscreenPopGesture.h */,
+				7A6D14D01F0B90B800B30FD4 /* UINavigationController+FDFullscreenPopGesture.m */,
 				7A6D14711F0B6C6000B30FD4 /* UIViewController+MQ.swift */,
 				7A6D144B1F0B5F1F00B30FD4 /* MQUITextField.swift */,
 				7A6D144C1F0B5F1F00B30FD4 /* MQUITextView.swift */,
@@ -622,6 +868,7 @@
 				7A7E09461F0248BD0072C968 /* Resources */,
 				63C1BFA0EE5148BF1ED636B5 /* [CP] Embed Pods Frameworks */,
 				59400D3EB1AF7AB6C2236917 /* [CP] Copy Pods Resources */,
+				7A6F811F1F0C87C8005D9EBC /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -709,6 +956,12 @@
 			mainGroup = 7A7E093F1F0248BD0072C968;
 			productRefGroup = 7A7E09491F0248BD0072C968 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 7A6F81241F0C8901005D9EBC /* Products */;
+					ProjectRef = 7A6F81231F0C8901005D9EBC /* SnapKit.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				7A7E09471F0248BD0072C968 /* BFramework_swift */,
@@ -718,20 +971,54 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		7A6F81291F0C8901005D9EBC /* SnapKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SnapKit.framework;
+			remoteRef = 7A6F81281F0C8901005D9EBC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7A6F812B1F0C8901005D9EBC /* SnapKit Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "SnapKit Tests.xctest";
+			remoteRef = 7A6F812A1F0C8901005D9EBC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		7A7E09461F0248BD0072C968 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				7AC13B9F1F0634DB0019E340 /* MQSettings.bundle in Resources */,
+				7A6D14C11F0B8BC900B30FD4 /* MQNoNetwork@3x.png in Resources */,
+				7A6D14BE1F0B8BC900B30FD4 /* MQNoData@2x.png in Resources */,
 				7A7E09961F0257420072C968 /* VC3.xib in Resources */,
+				7A6D14C31F0B8BC900B30FD4 /* MQSuccess@3x.png in Resources */,
+				7A6D14CA1F0B8DAE00B30FD4 /* CommonIcon.xcassets in Resources */,
+				7A6D14B91F0B8BC900B30FD4 /* MQCheck@3x.png in Resources */,
+				7A6D14BA1F0B8BC900B30FD4 /* MQFailure@2x.png in Resources */,
 				7A7E099A1F0257510072C968 /* VC4.xib in Resources */,
 				7A6D14271F0B36C400B30FD4 /* VC5.xib in Resources */,
+				7A6D14BD1F0B8BC900B30FD4 /* MQLoading@3x.png in Resources */,
+				7A6D14BB1F0B8BC900B30FD4 /* MQFailure@3x.png in Resources */,
 				7A7E099E1F0257780072C968 /* VC1.xib in Resources */,
+				7A6D14B81F0B8BC900B30FD4 /* MQCheck@2x.png in Resources */,
+				7A6D14C21F0B8BC900B30FD4 /* MQSuccess@2x.png in Resources */,
 				7A757FB51F03754A00CD6BC5 /* TabbarIcon.xcassets in Resources */,
+				7A6D14C01F0B8BC900B30FD4 /* MQNoNetwork@2x.png in Resources */,
 				7A7E09A21F0257840072C968 /* VC2.xib in Resources */,
+				7A6D14B61F0B8BC900B30FD4 /* MQQRCodeScanViewController.xib in Resources */,
 				7A7E09561F0248BD0072C968 /* LaunchScreen.storyboard in Resources */,
+				7A6D14B71F0B8BC900B30FD4 /* iconfont.ttf in Resources */,
+				7A6D14B11F0B8BC900B30FD4 /* MQDateSelectUtils.xib in Resources */,
 				7A7E09531F0248BD0072C968 /* Assets.xcassets in Resources */,
+				7A6D147B1F0B79C700B30FD4 /* Address.plist in Resources */,
+				7A6D14BF1F0B8BC900B30FD4 /* MQNoData@3x.png in Resources */,
+				7A6D14BC1F0B8BC900B30FD4 /* MQLoading@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -808,6 +1095,7 @@
 				7A6D14261F0B36C400B30FD4 /* VC5.swift in Sources */,
 				7A6D14691F0B6C0400B30FD4 /* MQCache.swift in Sources */,
 				7AC13BA31F06352C0019E340 /* MQFontConfig.swift in Sources */,
+				7A6D147D1F0B79C700B30FD4 /* MQAddressView.swift in Sources */,
 				7A6D14301F0B411000B30FD4 /* UIDevice+MQ.swift in Sources */,
 				7A6D143F1F0B5A9F00B30FD4 /* MQAPISign.swift in Sources */,
 				7A7E09951F0257420072C968 /* VC3.swift in Sources */,
@@ -818,25 +1106,39 @@
 				7A6D14591F0B5F1F00B30FD4 /* UIView+MQFrame.swift in Sources */,
 				7A6D14681F0B6C0400B30FD4 /* MQButton.swift in Sources */,
 				7A6D14341F0B433000B30FD4 /* String+MQ.swift in Sources */,
+				7A6D14C41F0B8BC900B30FD4 /* MQSegment.swift in Sources */,
 				7A6D14541F0B5F1F00B30FD4 /* MQUITextView.swift in Sources */,
 				7A6D146B1F0B6C0400B30FD4 /* MQDateUtils.swift in Sources */,
+				7A6D14C81F0B8BC900B30FD4 /* MQUIView.swift in Sources */,
 				7A7E09991F0257510072C968 /* VC4.swift in Sources */,
+				7A6D14B21F0B8BC900B30FD4 /* MQEmptyView.swift in Sources */,
+				7A6D14B41F0B8BC900B30FD4 /* MQLineChartView.swift in Sources */,
 				7A6D146D1F0B6C0400B30FD4 /* MQDevice.swift in Sources */,
 				7A6D14661F0B6C0400B30FD4 /* MQAlertUtils.swift in Sources */,
+				7A6D14761F0B78DF00B30FD4 /* MQAutoScrollView.swift in Sources */,
+				7A6D14B51F0B8BC900B30FD4 /* MQQRCodeScanViewController.swift in Sources */,
 				7AC13BA91F0638550019E340 /* MQRootController.swift in Sources */,
 				7A6D14441F0B5CAB00B30FD4 /* NotificationCenter+MQ.swift in Sources */,
 				7A6D146C1F0B6C0400B30FD4 /* MQDeletedView.swift in Sources */,
+				7A6D14CE1F0B905000B30FD4 /* MQUIViewController.swift in Sources */,
 				7A6D14531F0B5F1F00B30FD4 /* MQUITextField.swift in Sources */,
 				7A6D14551F0B5F1F00B30FD4 /* UIFont+MQ.swift in Sources */,
+				7A6D14C51F0B8BC900B30FD4 /* MQUIButton.swift in Sources */,
 				7AC13BAB1F063AAC0019E340 /* Bundle+MQ.swift in Sources */,
+				7A6D14D11F0B90B800B30FD4 /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
 				7AC13BA51F0635440019E340 /* MQNavBarConfig.swift in Sources */,
+				7A6F812F1F0C8CEC005D9EBC /* MQDimmingPresentationController.swift in Sources */,
+				7A6D14821F0B7A9A00B30FD4 /* MQCityModel.swift in Sources */,
 				7A6D14721F0B6C6000B30FD4 /* UIViewController+MQ.swift in Sources */,
 				7A6D144A1F0B5E0B00B30FD4 /* MQBase64Utils.swift in Sources */,
 				7A6D143D1F0B5A9F00B30FD4 /* MQAPI.swift in Sources */,
+				7A6D14B31F0B8BC900B30FD4 /* MQHUD.swift in Sources */,
 				7A6D143E1F0B5A9F00B30FD4 /* MQAPIDataparse.swift in Sources */,
+				7A6D14C61F0B8BC900B30FD4 /* MQUIImageView.swift in Sources */,
 				7A6D14321F0B416C00B30FD4 /* UIColor+MQ.swift in Sources */,
 				7A6BE7A41F04E36900A92196 /* Base64.m in Sources */,
 				7A6D14571F0B5F1F00B30FD4 /* UIImage+MQCropping.m in Sources */,
+				7A6D14B01F0B8BC900B30FD4 /* MQDateSelectUtils.swift in Sources */,
 				7A6D14401F0B5A9F00B30FD4 /* MQNetwork.swift in Sources */,
 				7A6D14371F0B43A800B30FD4 /* NSAttributedString+MQ.swift in Sources */,
 				7A7E09A11F0257840072C968 /* VC2.swift in Sources */,
@@ -845,13 +1147,19 @@
 				7AC13BA71F06355D0019E340 /* MQTintColorConfig.swift in Sources */,
 				7A6D146A1F0B6C0400B30FD4 /* MQCommonUtils.swift in Sources */,
 				7A7E099D1F0257780072C968 /* VC1.swift in Sources */,
+				7A6D14841F0B7A9A00B30FD4 /* MQParishModel.swift in Sources */,
 				7A6D142A1F0B388C00B30FD4 /* MQRouter.swift in Sources */,
 				7A6D146E1F0B6C0400B30FD4 /* MQImagePickerUtils.swift in Sources */,
 				7A6D14581F0B5F1F00B30FD4 /* UIScrollView+MQRefresh.swift in Sources */,
 				7A6D14381F0B43A800B30FD4 /* NSObject+MQ.swift in Sources */,
+				7A6D14C71F0B8BC900B30FD4 /* MQUILabel.swift in Sources */,
+				7A6D14831F0B7A9A00B30FD4 /* MQCountryModel.swift in Sources */,
 				7A7E094C1F0248BD0072C968 /* AppDelegate.swift in Sources */,
+				7A6D14CC1F0B900000B30FD4 /* MQClosure.swift in Sources */,
 				7A6D14481F0B5DA500B30FD4 /* MQNotificationNames.swift in Sources */,
 				7AC13BA11F0635130019E340 /* MQTabbarConfig.swift in Sources */,
+				7A6D147C1F0B79C700B30FD4 /* MQAddressCache.swift in Sources */,
+				7A6D14851F0B7A9A00B30FD4 /* MQProvinceModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -939,7 +1247,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -983,7 +1291,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -998,7 +1306,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = H4384M9Z5J;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/BFramework_swift/BMain/Resources",
+				);
 				INFOPLIST_FILE = BFramework_swift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "BMQ.BFramework-swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1015,7 +1328,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = H4384M9Z5J;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/BFramework_swift/BMain/Resources",
+				);
 				INFOPLIST_FILE = BFramework_swift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "BMQ.BFramework-swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";

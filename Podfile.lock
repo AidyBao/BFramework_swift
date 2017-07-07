@@ -2,17 +2,20 @@ PODS:
   - MBProgressHUD (1.0.0)
   - MJExtension (3.0.13)
   - MJRefresh (3.1.12)
+  - SnapKit (3.2.0)
 
 DEPENDENCIES:
   - MBProgressHUD
   - MJExtension
   - MJRefresh
+  - SnapKit
 
 SPEC CHECKSUMS:
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   MJExtension: 5932755f451458eefa24239358817f8d291240c7
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
+  SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
 
-PODFILE CHECKSUM: 05156a1ff85813765a27b224bfcc90267acd260e
+PODFILE CHECKSUM: f34ae7f8c06867f59f97765b348a3cbce28b658d
 
 COCOAPODS: 1.2.0

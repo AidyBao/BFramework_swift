@@ -7,7 +7,8 @@
 //
 
 import UIKit
-//import MBProgressHUD
+import MBProgressHUD
+
 let MQ_LOADING_TEXT     =   "加载中..."
 let MQ_IMAGE_LOADING    =   "MQLoading"
 let MQ_IMAGE_SUCCESS    =   "MQSuccess"

@@ -1,55 +1,70 @@
 //
 //  MQSegment.swift
-//  YDY_GJ_3_5
+//  BMQTestSegment
 //
-//  Created by screson on 2017/5/8.
-//  Copyright © 2017年 screson. All rights reserved.
+//  Created by 120v on 2017/7/6.
+//  Copyright © 2017年 120v. All rights reserved.
 //
 
 import UIKit
 
-protocol MQSegmentDelegate:class {
-    func mqsegment(_ segment:MQSegment,didSelectAt index:Int)
+/** 按钮之间的间距(滚动时按钮之间的间距) */
+let SegmentH: CGFloat = 44.0
+
+/** 按钮之间的间距(滚动时按钮之间的间距) */
+let margin: CGFloat = 15.0
+
+/** 按钮字体的大小(字号) */
+let titlefondOfSize: CGFloat = 15.0
+
+/** 指示器的高度 */
+let indicatorViewH: CGFloat = 2.0
+
+protocol MQSegmentDelegate: NSObjectProtocol {
+    func didSelectSegmentButtonAction(_ sender: UIButton, _ selectedIndex: NSInteger)
 }
 
 extension MQSegmentDelegate {
-    func mqsegment(_ segment:MQSegment,didSelectAt index:Int) {}
+    func didSelectSegmentButtonAction(_ sender: UIButton, _ selectedIndex: NSInteger){}
 }
 
-protocol MQSegmentDataSource:class {
-    func numberOfTitles(in segment:MQSegment) -> Int
-    func mqsegment(_ segment:MQSegment,titleOf index:Int) -> String
-}
-
-class MQSegment: UIView {
-
-    let animationDuration = 0.25
+class MQSegment: UIScrollView {
     
-    weak var delegate:MQSegmentDelegate?
-    weak var dataSource:MQSegmentDataSource?
+    weak var delegat_MQ: MQSegmentDelegate?
     
-    fileprivate let mq_height = 44
-    fileprivate var mq_width:CGFloat  = 60
-    fileprivate var isAnimating = false
-    fileprivate var selectedIndex = 0
-    fileprivate let offsetX:CGFloat = 20.0
-    fileprivate let ratio:CGFloat = 0.2
+    /**存入所有标题按钮*/
+    lazy var titleBtn_mArr:NSMutableArray = { [] }()
     
-    var currentIndex:Int {
-        get {
-            return selectedIndex
+    /** 临时button用来转换button的点击状态 */
+    var temp_btn : UIButton?
+    
+    /** 点击按钮时, 指示器的动画移动时间 */
+    let indicatorViewTimeOfAnimation : CGFloat = 0.4
+    
+    /** 选中按钮 */
+    var selectedIndex: NSInteger = 0 {
+        didSet{
+            if self.titleBtn_mArr.count != 0 {
+                let temBtn: UIButton = titleBtn_mArr.object(at: selectedIndex) as! UIButton
+                self.titleBtnSelected(temBtn)
+            }
         }
     }
     
-    var labels = [UILabel]()
-    let slider = UIView()
-    
-    
-    init(origin:CGPoint) {
-        super.init(frame: CGRect(x: origin.x, y: origin.y, width: MQ_BOUNDS_WIDTH
-            , height: 44))
-        slider.backgroundColor = UIColor.mq_tintColor
-        self.addSubview(slider)
+    /**标题数组*/
+    var titleArr: NSMutableArray = {[]}() {
+        didSet{
+            self.addButtonView()
+        }
+    }
+
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        self.frame = frame
+        self.showsVerticalScrollIndicator = false
+        self.showsHorizontalScrollIndicator = false
+        //
+//        self.addButtonView()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -58,82 +73,138 @@ class MQSegment: UIView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        reloadData()
     }
     
-    fileprivate func reloadData() {
-        for label in labels {
-            label.removeFromSuperview()
-        }
-        labels.removeAll()
-        slider.isHidden = true
-        if let count = dataSource?.numberOfTitles(in: self) {
+    //MARK: - Private
+    func addButtonView() {
+        var button_X : CGFloat = 0.0
+        let button_Y : CGFloat = 0.0
+        let button_H : CGFloat = SegmentH - indicatorViewH
+        
+        var i = 0
+        for text in self.titleArr {
             
-            mq_width = (MQ_BOUNDS_WIDTH - offsetX * 2) / (CGFloat(count))
-            for i in 0 ..< count {
-                let label = UILabel(frame: CGRect(x: offsetX + CGFloat(i) * mq_width, y: 0, width: mq_width, height: 44))
-                label.text = dataSource?.mqsegment(self, titleOf: i)
-                label.textAlignment = .center
-                label.font = UIFont.mq_titleFont(17)
-                label.textColor = UIColor.mq_textColorTitle
-                label.highlightedTextColor = UIColor.mq_tintColor
-                if i == 0 {
-                    label.isHighlighted = true
-                }
-                self.addSubview(label)
-                labels.append(label)
+            /** 创建滚动时的标题Label */
+            let btn = UIButton(type: .custom)
+            
+            btn.titleLabel?.font = UIFont.systemFont(ofSize: titlefondOfSize)
+            btn.tag = i
+            
+            // 计算内容的Size
+            let buttonSize = self.sizeWithText(text as! NSString, font: UIFont.systemFont(ofSize: titlefondOfSize), maxSize: CGSize(width: CGFloat(MAXFLOAT), height: button_H))
+            
+            // 计算内容的宽度
+            let button_W = 2 * margin + buttonSize.width
+            btn.frame = CGRect(x: button_X, y: button_Y, width: button_W, height: button_H)
+            
+            btn.setTitle(text as? String, for: UIControlState())
+            btn.setTitleColor(UIColor.black, for: UIControlState())
+            btn.setTitleColor(UIColor.red, for: .selected)
+            
+            // 计算每个label的X值
+            button_X = button_X + button_W
+            
+            // 点击事件
+            btn.addTarget(self, action: #selector(buttonAction(_:)), for: .touchUpInside)
+            // 默认选中第0个button
+            if i == 0 {
+                self.buttonAction(btn)
             }
-            slider.frame = CGRect(x: offsetX + mq_width * ratio , y: 42, width: mq_width * (1 - ratio * 2), height: 2)
-            slider.isHidden = false
+            
+            // 存入所有的title_btn
+            self.titleBtn_mArr.add(btn)
+            self.addSubview(btn)
+            
+            i = i + 1
+        }
+        
+        // 计算scrollView的宽度
+        let scrollViewWidth : CGFloat = (self.subviews.last?.frame)!.maxX
+        self.contentSize = CGSize(width: scrollViewWidth, height: self.frame.size.height)
+        
+        // 取出第一个子控件
+        let firstButton = self.subviews.first as! UIButton
+        
+        // 添加指示器
+        self.indicatorView.setHeight(indicatorViewH)
+        self.indicatorView.setY(SegmentH - indicatorViewH)
+        self.addSubview(self.indicatorView)
+        
+        // 指示器默认在第一个选中位置
+        // 计算TitleLabel内容的Size
+        let buttonSize : CGSize = self.sizeWithText((firstButton.titleLabel?.text)! as NSString, font: UIFont.systemFont(ofSize: titlefondOfSize), maxSize: CGSize(width: CGFloat(MAXFLOAT), height: SegmentH))
+        self.indicatorView.setWidth(buttonSize.width)
+        self.indicatorView.setCenterX(firstButton.centerX())
+    }
+    
+    @objc func buttonAction(_ sender: UIButton) {
+        //
+        self.titleBtnSelected(sender)
+        
+        //
+        self.selectedIndex = sender.tag
+        
+        //
+        if delegat_MQ != nil {
+            delegat_MQ?.didSelectSegmentButtonAction(sender, selectedIndex)
         }
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        if let count = dataSource?.numberOfTitles(in: self), count > 0 {
-            mq_width = (MQ_BOUNDS_WIDTH - offsetX * 2) / (CGFloat(count))
-            if let touch = touches.first {
-                let point = touch.location(in: self)
-                if point.x > offsetX,point.x < MQ_BOUNDS_WIDTH - offsetX,point.y > 0,point.y < 44 {
-                    let index = Int(((point.x - offsetX) / mq_width))
-                    self.slider(to: index)
-                }
-                print(point.debugDescription)
-                
+    /** 标题选中颜色改变以及指示器位置变化 */
+    func titleBtnSelected(_ sender : UIButton) {
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + Double(Int64(indicatorViewTimeOfAnimation) * Int64(0.5) * Int64(NSEC_PER_SEC)) / Double(NSEC_PER_SEC)) {
+            if self.temp_btn == nil {
+                sender.isSelected = true
+                self.temp_btn = sender
+            }else if self.temp_btn != nil && self.temp_btn == sender {
+                sender.isSelected = true
+            }else if self.temp_btn != sender && self.temp_btn != nil {
+                self.temp_btn?.isSelected = false
+                sender.isSelected = true
+                self.temp_btn = sender
             }
         }
+            // 改变指示器位置
+        UIView.animate(withDuration: 0.20, animations: {
+            self.indicatorView.setWidth(sender.width() - margin)
+            self.indicatorView.setCenterX(sender.centerX())
+        })
+        
+        //
+        self.titleBtnSelectededCenter(sender)
+}
+    
+    //MARK: - 滚动标题选中居中
+    func titleBtnSelectededCenter(_ sender : UIButton) {
+        //计算偏移量
+        var offsetX : CGFloat = sender.center.x - UIScreen.main.bounds.size.width * 0.5
+        
+        if offsetX < 0 {
+            offsetX = 0
+        }
+        
+        // 获取最大滚动范围
+        let maxOffsetX : CGFloat = self.contentSize.width - UIScreen.main.bounds.size.width
+        
+        if offsetX > maxOffsetX {
+            offsetX = maxOffsetX
+        }
+        self.setContentOffset(CGPoint(x: offsetX, y: 0), animated: true)
+    }
+
+    
+    //MARK: - 计算文字尺寸
+    func sizeWithText(_ text: NSString, font: UIFont, maxSize: CGSize) -> CGSize {
+        let attrs:Dictionary<String,UIFont> = [NSFontAttributeName : font]
+        return text.boundingRect(with: maxSize, options: .usesLineFragmentOrigin, attributes: attrs, context: nil).size
     }
     
-    fileprivate func slider(to index:Int) {
-        if selectedIndex == index {
-            return
-        }
-        if isAnimating {
-            return
-        }
-        isAnimating = true
-
-        let lb1 = labels[selectedIndex]
-        let lb2 = labels[index]
-        lb1.isHighlighted = false
-        lb2.isHighlighted = true
-        
-        selectedIndex = index
-        var frame = slider.frame
-        frame.origin.x = (offsetX + mq_width * ratio) + (CGFloat(index) * mq_width)
-        
-        UIView.animate(withDuration: animationDuration, animations: {
-            self.slider.frame = frame
-        }) { (finished) in
-            self.isAnimating = false
-        }
-        delegate?.mqsegment(self, didSelectAt: selectedIndex)
-    }
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
-
+    //MARK: -指示器
+    lazy var indicatorView: UIView = {
+        let view: UIView = UIView.init()
+        view.backgroundColor = UIColor.red
+        view.layer.cornerRadius = 0.5
+        view.layer.masksToBounds = true
+        return view
+    }()
 }

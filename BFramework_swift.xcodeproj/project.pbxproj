@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1CDBE7CD80DE3CE2C6E30DC4 /* libPods-BFramework_swift.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A847C20E6A91FD19AFC121C8 /* libPods-BFramework_swift.a */; };
+		051B1FCA9BBF84AA8E245778 /* Pods_BFramework_swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2774CA59CF5658B49F6EB9E7 /* Pods_BFramework_swift.framework */; };
 		7A6A354E1F062F0A000AB9D2 /* UITabBarController+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6A354D1F062F0A000AB9D2 /* UITabBarController+MQ.swift */; };
 		7A6BE7A41F04E36900A92196 /* Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A6BE7A31F04E36900A92196 /* Base64.m */; };
 		7A6BE7A71F04E41A00A92196 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A6BE7A61F04E41A00A92196 /* libz.tbd */; };
@@ -100,6 +100,11 @@
 		7A7E099E1F0257780072C968 /* VC1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A7E099C1F0257780072C968 /* VC1.xib */; };
 		7A7E09A11F0257840072C968 /* VC2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7E099F1F0257840072C968 /* VC2.swift */; };
 		7A7E09A21F0257840072C968 /* VC2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A7E09A01F0257840072C968 /* VC2.xib */; };
+		7A9CE1B11F0F5A0A000E957C /* Test01Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9CE1AF1F0F5A0A000E957C /* Test01Controller.swift */; };
+		7A9CE1B21F0F5A0A000E957C /* Test01Controller.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A9CE1B01F0F5A0A000E957C /* Test01Controller.xib */; };
+		7A9CE1B71F0F5AE6000E957C /* ChildrenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9CE1B51F0F5AE6000E957C /* ChildrenController.swift */; };
+		7A9CE1B81F0F5AE6000E957C /* ChildrenController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A9CE1B61F0F5AE6000E957C /* ChildrenController.xib */; };
+		7A9CE1BA1F0F5B77000E957C /* MQSegmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9CE1B91F0F5B77000E957C /* MQSegmentView.swift */; };
 		7AC13B9F1F0634DB0019E340 /* MQSettings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7AC13B9E1F0634DB0019E340 /* MQSettings.bundle */; };
 		7AC13BA11F0635130019E340 /* MQTabbarConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC13BA01F0635130019E340 /* MQTabbarConfig.swift */; };
 		7AC13BA31F06352C0019E340 /* MQFontConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC13BA21F06352C0019E340 /* MQFontConfig.swift */; };
@@ -110,20 +115,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		7A6F81281F0C8901005D9EBC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7A6F81231F0C8901005D9EBC /* SnapKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = EEBCC9D819CC627D0083B827;
-			remoteInfo = SnapKit;
-		};
-		7A6F812A1F0C8901005D9EBC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7A6F81231F0C8901005D9EBC /* SnapKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = EEBCC9E219CC627E0083B827;
-			remoteInfo = "SnapKit Tests";
-		};
 		7A7E095D1F0248BD0072C968 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 7A7E09401F0248BD0072C968 /* Project object */;
@@ -154,6 +145,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2774CA59CF5658B49F6EB9E7 /* Pods_BFramework_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BFramework_swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A6A354D1F062F0A000AB9D2 /* UITabBarController+MQ.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITabBarController+MQ.swift"; sourceTree = "<group>"; };
 		7A6BE7A21F04E36900A92196 /* Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64.h; sourceTree = "<group>"; };
 		7A6BE7A31F04E36900A92196 /* Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Base64.m; sourceTree = "<group>"; };
@@ -234,7 +226,6 @@
 		7A6D14CD1F0B905000B30FD4 /* MQUIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MQUIViewController.swift; sourceTree = "<group>"; };
 		7A6D14CF1F0B90B800B30FD4 /* UINavigationController+FDFullscreenPopGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+FDFullscreenPopGesture.h"; sourceTree = "<group>"; };
 		7A6D14D01F0B90B800B30FD4 /* UINavigationController+FDFullscreenPopGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+FDFullscreenPopGesture.m"; sourceTree = "<group>"; };
-		7A6F81231F0C8901005D9EBC /* SnapKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SnapKit.xcodeproj; path = "../../../Downloads/SnapKit-develop/SnapKit.xcodeproj"; sourceTree = "<group>"; };
 		7A6F812E1F0C8CEC005D9EBC /* MQDimmingPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MQDimmingPresentationController.swift; sourceTree = "<group>"; };
 		7A757FB41F03754A00CD6BC5 /* TabbarIcon.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = TabbarIcon.xcassets; sourceTree = "<group>"; };
 		7A7E09481F0248BD0072C968 /* BFramework_swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BFramework_swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -257,6 +248,11 @@
 		7A7E099F1F0257840072C968 /* VC2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VC2.swift; sourceTree = "<group>"; };
 		7A7E09A01F0257840072C968 /* VC2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VC2.xib; sourceTree = "<group>"; };
 		7A7E09B51F025C5C0072C968 /* BFramework_swift-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BFramework_swift-Bridging-Header.h"; sourceTree = "<group>"; };
+		7A9CE1AF1F0F5A0A000E957C /* Test01Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Test01Controller.swift; sourceTree = "<group>"; };
+		7A9CE1B01F0F5A0A000E957C /* Test01Controller.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Test01Controller.xib; sourceTree = "<group>"; };
+		7A9CE1B51F0F5AE6000E957C /* ChildrenController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildrenController.swift; sourceTree = "<group>"; };
+		7A9CE1B61F0F5AE6000E957C /* ChildrenController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChildrenController.xib; sourceTree = "<group>"; };
+		7A9CE1B91F0F5B77000E957C /* MQSegmentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MQSegmentView.swift; sourceTree = "<group>"; };
 		7AC13B9E1F0634DB0019E340 /* MQSettings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MQSettings.bundle; sourceTree = "<group>"; };
 		7AC13BA01F0635130019E340 /* MQTabbarConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MQTabbarConfig.swift; sourceTree = "<group>"; };
 		7AC13BA21F06352C0019E340 /* MQFontConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MQFontConfig.swift; sourceTree = "<group>"; };
@@ -264,7 +260,6 @@
 		7AC13BA61F06355D0019E340 /* MQTintColorConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MQTintColorConfig.swift; sourceTree = "<group>"; };
 		7AC13BA81F0638550019E340 /* MQRootController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MQRootController.swift; sourceTree = "<group>"; };
 		7AC13BAA1F063AAC0019E340 /* Bundle+MQ.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+MQ.swift"; sourceTree = "<group>"; };
-		A847C20E6A91FD19AFC121C8 /* libPods-BFramework_swift.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BFramework_swift.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D570DECA2F92BC656D71C25B /* Pods-BFramework_swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BFramework_swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BFramework_swift/Pods-BFramework_swift.debug.xcconfig"; sourceTree = "<group>"; };
 		EC89DEF8F15B81697509555C /* Pods-BFramework_swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BFramework_swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-BFramework_swift/Pods-BFramework_swift.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -276,7 +271,7 @@
 			files = (
 				7A6D148B1F0B7FCC00B30FD4 /* libsqlite3.0.tbd in Frameworks */,
 				7A6BE7A71F04E41A00A92196 /* libz.tbd in Frameworks */,
-				1CDBE7CD80DE3CE2C6E30DC4 /* libPods-BFramework_swift.a in Frameworks */,
+				051B1FCA9BBF84AA8E245778 /* Pods_BFramework_swift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,7 +329,7 @@
 			children = (
 				7A6D148A1F0B7FCC00B30FD4 /* libsqlite3.0.tbd */,
 				7A6BE7A61F04E41A00A92196 /* libz.tbd */,
-				A847C20E6A91FD19AFC121C8 /* libPods-BFramework_swift.a */,
+				2774CA59CF5658B49F6EB9E7 /* Pods_BFramework_swift.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -528,6 +523,7 @@
 		7A6D14A81F0B8BC900B30FD4 /* MQSegment */ = {
 			isa = PBXGroup;
 			children = (
+				7A9CE1B91F0F5B77000E957C /* MQSegmentView.swift */,
 				7A6D14A91F0B8BC900B30FD4 /* MQSegment.swift */,
 			);
 			path = MQSegment;
@@ -544,15 +540,6 @@
 			path = MQViews;
 			sourceTree = "<group>";
 		};
-		7A6F81241F0C8901005D9EBC /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				7A6F81291F0C8901005D9EBC /* SnapKit.framework */,
-				7A6F812B1F0C8901005D9EBC /* SnapKit Tests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		7A757FB31F03752300CD6BC5 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -565,7 +552,6 @@
 		7A7E093F1F0248BD0072C968 = {
 			isa = PBXGroup;
 			children = (
-				7A6F81231F0C8901005D9EBC /* SnapKit.xcodeproj */,
 				7A7E094A1F0248BD0072C968 /* BFramework_swift */,
 				7A7E095F1F0248BD0072C968 /* BFramework_swiftTests */,
 				7A7E096A1F0248BD0072C968 /* BFramework_swiftUITests */,
@@ -668,6 +654,10 @@
 			children = (
 				7A7E099B1F0257780072C968 /* VC1.swift */,
 				7A7E099C1F0257780072C968 /* VC1.xib */,
+				7A9CE1AF1F0F5A0A000E957C /* Test01Controller.swift */,
+				7A9CE1B01F0F5A0A000E957C /* Test01Controller.xib */,
+				7A9CE1B51F0F5AE6000E957C /* ChildrenController.swift */,
+				7A9CE1B61F0F5AE6000E957C /* ChildrenController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -956,12 +946,6 @@
 			mainGroup = 7A7E093F1F0248BD0072C968;
 			productRefGroup = 7A7E09491F0248BD0072C968 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 7A6F81241F0C8901005D9EBC /* Products */;
-					ProjectRef = 7A6F81231F0C8901005D9EBC /* SnapKit.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				7A7E09471F0248BD0072C968 /* BFramework_swift */,
@@ -971,28 +955,12 @@
 		};
 /* End PBXProject section */
 
-/* Begin PBXReferenceProxy section */
-		7A6F81291F0C8901005D9EBC /* SnapKit.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = SnapKit.framework;
-			remoteRef = 7A6F81281F0C8901005D9EBC /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		7A6F812B1F0C8901005D9EBC /* SnapKit Tests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "SnapKit Tests.xctest";
-			remoteRef = 7A6F812A1F0C8901005D9EBC /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
-
 /* Begin PBXResourcesBuildPhase section */
 		7A7E09461F0248BD0072C968 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A9CE1B21F0F5A0A000E957C /* Test01Controller.xib in Resources */,
 				7AC13B9F1F0634DB0019E340 /* MQSettings.bundle in Resources */,
 				7A6D14C11F0B8BC900B30FD4 /* MQNoNetwork@3x.png in Resources */,
 				7A6D14BE1F0B8BC900B30FD4 /* MQNoData@2x.png in Resources */,
@@ -1008,6 +976,7 @@
 				7A7E099E1F0257780072C968 /* VC1.xib in Resources */,
 				7A6D14B81F0B8BC900B30FD4 /* MQCheck@2x.png in Resources */,
 				7A6D14C21F0B8BC900B30FD4 /* MQSuccess@2x.png in Resources */,
+				7A9CE1B81F0F5AE6000E957C /* ChildrenController.xib in Resources */,
 				7A757FB51F03754A00CD6BC5 /* TabbarIcon.xcassets in Resources */,
 				7A6D14C01F0B8BC900B30FD4 /* MQNoNetwork@2x.png in Resources */,
 				7A7E09A21F0257840072C968 /* VC2.xib in Resources */,
@@ -1121,6 +1090,7 @@
 				7A6D14441F0B5CAB00B30FD4 /* NotificationCenter+MQ.swift in Sources */,
 				7A6D146C1F0B6C0400B30FD4 /* MQDeletedView.swift in Sources */,
 				7A6D14CE1F0B905000B30FD4 /* MQUIViewController.swift in Sources */,
+				7A9CE1B11F0F5A0A000E957C /* Test01Controller.swift in Sources */,
 				7A6D14531F0B5F1F00B30FD4 /* MQUITextField.swift in Sources */,
 				7A6D14551F0B5F1F00B30FD4 /* UIFont+MQ.swift in Sources */,
 				7A6D14C51F0B8BC900B30FD4 /* MQUIButton.swift in Sources */,
@@ -1134,6 +1104,7 @@
 				7A6D143D1F0B5A9F00B30FD4 /* MQAPI.swift in Sources */,
 				7A6D14B31F0B8BC900B30FD4 /* MQHUD.swift in Sources */,
 				7A6D143E1F0B5A9F00B30FD4 /* MQAPIDataparse.swift in Sources */,
+				7A9CE1B71F0F5AE6000E957C /* ChildrenController.swift in Sources */,
 				7A6D14C61F0B8BC900B30FD4 /* MQUIImageView.swift in Sources */,
 				7A6D14321F0B416C00B30FD4 /* UIColor+MQ.swift in Sources */,
 				7A6BE7A41F04E36900A92196 /* Base64.m in Sources */,
@@ -1147,6 +1118,7 @@
 				7AC13BA71F06355D0019E340 /* MQTintColorConfig.swift in Sources */,
 				7A6D146A1F0B6C0400B30FD4 /* MQCommonUtils.swift in Sources */,
 				7A7E099D1F0257780072C968 /* VC1.swift in Sources */,
+				7A9CE1BA1F0F5B77000E957C /* MQSegmentView.swift in Sources */,
 				7A6D14841F0B7A9A00B30FD4 /* MQParishModel.swift in Sources */,
 				7A6D142A1F0B388C00B30FD4 /* MQRouter.swift in Sources */,
 				7A6D146E1F0B6C0400B30FD4 /* MQImagePickerUtils.swift in Sources */,

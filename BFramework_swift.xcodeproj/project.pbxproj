@@ -105,6 +105,10 @@
 		7A9CE1B71F0F5AE6000E957C /* ChildrenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9CE1B51F0F5AE6000E957C /* ChildrenController.swift */; };
 		7A9CE1B81F0F5AE6000E957C /* ChildrenController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A9CE1B61F0F5AE6000E957C /* ChildrenController.xib */; };
 		7A9CE1BA1F0F5B77000E957C /* MQSegmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9CE1B91F0F5B77000E957C /* MQSegmentView.swift */; };
+		7A9CE1C01F0F7965000E957C /* soundA.caf in Resources */ = {isa = PBXBuildFile; fileRef = 7A9CE1BF1F0F7965000E957C /* soundA.caf */; };
+		7A9CE1C31F0F7C2D000E957C /* UIViewController+MQNavControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9CE1C11F0F7C2D000E957C /* UIViewController+MQNavControl.swift */; };
+		7A9CE1C71F0F8015000E957C /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9CE1C51F0F8015000E957C /* MapViewController.swift */; };
+		7A9CE1C81F0F8015000E957C /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A9CE1C61F0F8015000E957C /* MapViewController.xib */; };
 		7AC13B9F1F0634DB0019E340 /* MQSettings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7AC13B9E1F0634DB0019E340 /* MQSettings.bundle */; };
 		7AC13BA11F0635130019E340 /* MQTabbarConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC13BA01F0635130019E340 /* MQTabbarConfig.swift */; };
 		7AC13BA31F06352C0019E340 /* MQFontConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC13BA21F06352C0019E340 /* MQFontConfig.swift */; };
@@ -253,6 +257,10 @@
 		7A9CE1B51F0F5AE6000E957C /* ChildrenController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildrenController.swift; sourceTree = "<group>"; };
 		7A9CE1B61F0F5AE6000E957C /* ChildrenController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChildrenController.xib; sourceTree = "<group>"; };
 		7A9CE1B91F0F5B77000E957C /* MQSegmentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MQSegmentView.swift; sourceTree = "<group>"; };
+		7A9CE1BF1F0F7965000E957C /* soundA.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = soundA.caf; sourceTree = "<group>"; };
+		7A9CE1C11F0F7C2D000E957C /* UIViewController+MQNavControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+MQNavControl.swift"; sourceTree = "<group>"; };
+		7A9CE1C51F0F8015000E957C /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		7A9CE1C61F0F8015000E957C /* MapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
 		7AC13B9E1F0634DB0019E340 /* MQSettings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MQSettings.bundle; sourceTree = "<group>"; };
 		7AC13BA01F0635130019E340 /* MQTabbarConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MQTabbarConfig.swift; sourceTree = "<group>"; };
 		7AC13BA21F06352C0019E340 /* MQFontConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MQFontConfig.swift; sourceTree = "<group>"; };
@@ -543,6 +551,7 @@
 		7A757FB31F03752300CD6BC5 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				7A9CE1BF1F0F7965000E957C /* soundA.caf */,
 				7A757FB41F03754A00CD6BC5 /* TabbarIcon.xcassets */,
 				7A6D14C91F0B8DAE00B30FD4 /* CommonIcon.xcassets */,
 			);
@@ -658,6 +667,8 @@
 				7A9CE1B01F0F5A0A000E957C /* Test01Controller.xib */,
 				7A9CE1B51F0F5AE6000E957C /* ChildrenController.swift */,
 				7A9CE1B61F0F5AE6000E957C /* ChildrenController.xib */,
+				7A9CE1C51F0F8015000E957C /* MapViewController.swift */,
+				7A9CE1C61F0F8015000E957C /* MapViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -823,6 +834,7 @@
 		7A7E09B01F0259C50072C968 /* MQExtension */ = {
 			isa = PBXGroup;
 			children = (
+				7A9CE1C11F0F7C2D000E957C /* UIViewController+MQNavControl.swift */,
 				7A6D14CF1F0B90B800B30FD4 /* UINavigationController+FDFullscreenPopGesture.h */,
 				7A6D14D01F0B90B800B30FD4 /* UINavigationController+FDFullscreenPopGesture.m */,
 				7A6D14711F0B6C6000B30FD4 /* UIViewController+MQ.swift */,
@@ -961,6 +973,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A9CE1B21F0F5A0A000E957C /* Test01Controller.xib in Resources */,
+				7A9CE1C01F0F7965000E957C /* soundA.caf in Resources */,
 				7AC13B9F1F0634DB0019E340 /* MQSettings.bundle in Resources */,
 				7A6D14C11F0B8BC900B30FD4 /* MQNoNetwork@3x.png in Resources */,
 				7A6D14BE1F0B8BC900B30FD4 /* MQNoData@2x.png in Resources */,
@@ -972,6 +985,7 @@
 				7A7E099A1F0257510072C968 /* VC4.xib in Resources */,
 				7A6D14271F0B36C400B30FD4 /* VC5.xib in Resources */,
 				7A6D14BD1F0B8BC900B30FD4 /* MQLoading@3x.png in Resources */,
+				7A9CE1C81F0F8015000E957C /* MapViewController.xib in Resources */,
 				7A6D14BB1F0B8BC900B30FD4 /* MQFailure@3x.png in Resources */,
 				7A7E099E1F0257780072C968 /* VC1.xib in Resources */,
 				7A6D14B81F0B8BC900B30FD4 /* MQCheck@2x.png in Resources */,
@@ -1087,6 +1101,7 @@
 				7A6D14761F0B78DF00B30FD4 /* MQAutoScrollView.swift in Sources */,
 				7A6D14B51F0B8BC900B30FD4 /* MQQRCodeScanViewController.swift in Sources */,
 				7AC13BA91F0638550019E340 /* MQRootController.swift in Sources */,
+				7A9CE1C71F0F8015000E957C /* MapViewController.swift in Sources */,
 				7A6D14441F0B5CAB00B30FD4 /* NotificationCenter+MQ.swift in Sources */,
 				7A6D146C1F0B6C0400B30FD4 /* MQDeletedView.swift in Sources */,
 				7A6D14CE1F0B905000B30FD4 /* MQUIViewController.swift in Sources */,
@@ -1131,6 +1146,7 @@
 				7A6D14481F0B5DA500B30FD4 /* MQNotificationNames.swift in Sources */,
 				7AC13BA11F0635130019E340 /* MQTabbarConfig.swift in Sources */,
 				7A6D147C1F0B79C700B30FD4 /* MQAddressCache.swift in Sources */,
+				7A9CE1C31F0F7C2D000E957C /* UIViewController+MQNavControl.swift in Sources */,
 				7A6D14851F0B7A9A00B30FD4 /* MQProvinceModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

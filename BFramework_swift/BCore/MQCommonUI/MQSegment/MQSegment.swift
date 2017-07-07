@@ -126,15 +126,15 @@ class MQSegment: UIScrollView {
         let firstButton = self.subviews.first as! UIButton
         
         // 添加指示器
-        self.indicatorView.setHeight(indicatorViewH)
-        self.indicatorView.setY(SegmentH - indicatorViewH)
+        self.indicatorView.height = indicatorViewH
+        self.indicatorView.y = SegmentH - indicatorViewH
         self.addSubview(self.indicatorView)
         
         // 指示器默认在第一个选中位置
         // 计算TitleLabel内容的Size
         let buttonSize : CGSize = self.sizeWithText((firstButton.titleLabel?.text)! as NSString, font: UIFont.systemFont(ofSize: titlefondOfSize), maxSize: CGSize(width: CGFloat(MAXFLOAT), height: SegmentH))
-        self.indicatorView.setWidth(buttonSize.width)
-        self.indicatorView.setCenterX(firstButton.centerX())
+        self.indicatorView.width = buttonSize.width
+        self.indicatorView.centerX = firstButton.centerX
     }
     
     @objc func buttonAction(_ sender: UIButton) {
@@ -166,8 +166,8 @@ class MQSegment: UIScrollView {
         }
             // 改变指示器位置
         UIView.animate(withDuration: 0.20, animations: {
-            self.indicatorView.setWidth(sender.width() - margin)
-            self.indicatorView.setCenterX(sender.centerX())
+            self.indicatorView.width = sender.width - margin
+            self.indicatorView.centerX = sender.centerX
         })
         
         //

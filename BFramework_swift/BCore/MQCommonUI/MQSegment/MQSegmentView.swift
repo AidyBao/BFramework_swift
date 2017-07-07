@@ -52,9 +52,9 @@ class MQSegmentView: UIView{
     override func layoutSubviews() {
         super.layoutSubviews()
         //
-        self.mqSegment.frame = CGRect.init(x: 0, y: 0, width: self.width(), height: 44.0)
+        self.mqSegment.frame = CGRect.init(x: 0, y: 0, width: self.width, height: 44.0)
         //
-        self.scrollView.frame = CGRect.init(x: 0, y: self.mqSegment.frame.maxY, width: UIScreen.main.bounds.width, height: self.height() - self.mqSegment.height())
+        self.scrollView.frame = CGRect.init(x: 0, y: self.mqSegment.frame.maxY, width: UIScreen.main.bounds.width, height: self.height - self.mqSegment.height)
     }
     //MARK: - LoadTitle
     func reloadTitle() {
@@ -71,7 +71,7 @@ class MQSegmentView: UIView{
             childrenVC?.view.backgroundColor = UIColor.init(colorLiteralRed: Float(CGFloat(arc4random_uniform(255))/CGFloat(255.0)) , green: Float(CGFloat(arc4random_uniform(255))/CGFloat(255.0)) , blue: Float(CGFloat(arc4random_uniform(255))/CGFloat(255.0)) , alpha: 1.0)
             self.scrollView.addSubview((childrenVC?.view)!)
         }
-        self.scrollView.frame = CGRect.init(x: 0, y: self.mqSegment.frame.maxY, width: UIScreen.main.bounds.width, height: self.height() - self.mqSegment.height())
+        self.scrollView.frame = CGRect.init(x: 0, y: self.mqSegment.frame.maxY, width: UIScreen.main.bounds.width, height: self.height - self.mqSegment.height)
         self.scrollView.contentSize = CGSize(width: UIScreen.main.bounds.width * CGFloat(self.childrenViews.count), height: UIScreen.main.bounds.height - 64 - 44)
     }
     

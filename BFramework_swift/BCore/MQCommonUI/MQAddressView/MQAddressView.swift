@@ -80,10 +80,10 @@ class MQAddressView: UIView {
         self.cancelButton.addTarget(self, action: #selector(cancelButtonClick(_:)), for: UIControlEvents.touchUpInside)
         
         //
-        self.titleLabel.setWidth(80.0)
-        self.titleLabel.setHeight(40.0)
-        self.titleLabel.setCenterX(self.centerX())
-        self.titleLabel.setY(0)
+        self.titleLabel.width = 80.0
+        self.titleLabel.height = 40.0
+        self.titleLabel.centerX = self.centerX
+        self.titleLabel.y = 0
         self.titleLabel.text = "所在地区"
         self.titleLabel.textColor = UIColor.mq_textColorBody
         
@@ -98,7 +98,7 @@ class MQAddressView: UIView {
         self.geliView.frame = CGRect.init(x: 0, y: self.cancelButton.frame.maxY, width: MQ_BOUNDS_WIDTH, height: 1)
         
         //
-        self.pickerView.frame = CGRect.init(x: 0, y: self.geliView.frame.maxY, width: MQ_BOUNDS_WIDTH, height: self.backView.height() - self.geliView.y())
+        self.pickerView.frame = CGRect.init(x: 0, y: self.geliView.frame.maxY, width: MQ_BOUNDS_WIDTH, height: self.backView.height - self.geliView.y)
     }
     
     

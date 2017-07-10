@@ -8,4 +8,4 @@
 #import "UIImage+MQCropping.h"
 #import "UMessage.h"
 #import "UMMobClick/MobClick.h"
-
+#import <StoreKit/StoreKit.h>

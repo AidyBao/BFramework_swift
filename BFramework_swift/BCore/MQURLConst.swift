@@ -39,7 +39,7 @@ let APPSTORE_BUNDLE_ID      =   "com.reson.ydgj.appstore"  //AppStore
 //MARK: - 我的、管家、药店二维码地址需包含
 let MQ_QRCODE_CONTAIN       =   ".120v.cn"
 let MQ_QRCODE_FORMAT_ERROR  =   888
-let MQ_YDGJ_Appstore_ID     =   "1207739694"
+let Appstore_ID     =   "1207739694"
 
 //MARK: -
 let MQHUD_MBDELAY_TIME = 1.0                                                    //HUD显示时间

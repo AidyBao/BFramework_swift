@@ -118,6 +118,7 @@
 		7AA6EB5B1F1373D0009322DE /* UMMobClick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AA6EB591F1373D0009322DE /* UMMobClick.framework */; };
 		7AA6EB5D1F137485009322DE /* MQRouter+RemoteNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA6EB5C1F137485009322DE /* MQRouter+RemoteNotification.swift */; };
 		7AB490A01F13774F00E07E9E /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AB4909F1F13774F00E07E9E /* CoreTelephony.framework */; };
+		7AB490A21F137E5600E07E9E /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AB490A11F137E5600E07E9E /* StoreKit.framework */; };
 		7AC13B9F1F0634DB0019E340 /* MQSettings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7AC13B9E1F0634DB0019E340 /* MQSettings.bundle */; };
 		7AC13BA11F0635130019E340 /* MQTabbarConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC13BA01F0635130019E340 /* MQTabbarConfig.swift */; };
 		7AC13BA31F06352C0019E340 /* MQFontConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC13BA21F06352C0019E340 /* MQFontConfig.swift */; };
@@ -280,6 +281,7 @@
 		7AA6EB591F1373D0009322DE /* UMMobClick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UMMobClick.framework; sourceTree = "<group>"; };
 		7AA6EB5C1F137485009322DE /* MQRouter+RemoteNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MQRouter+RemoteNotification.swift"; sourceTree = "<group>"; };
 		7AB4909F1F13774F00E07E9E /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		7AB490A11F137E5600E07E9E /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		7AC13B9E1F0634DB0019E340 /* MQSettings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MQSettings.bundle; sourceTree = "<group>"; };
 		7AC13BA01F0635130019E340 /* MQTabbarConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MQTabbarConfig.swift; sourceTree = "<group>"; };
 		7AC13BA21F06352C0019E340 /* MQFontConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MQFontConfig.swift; sourceTree = "<group>"; };
@@ -296,6 +298,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7AB490A21F137E5600E07E9E /* StoreKit.framework in Frameworks */,
 				7AB490A01F13774F00E07E9E /* CoreTelephony.framework in Frameworks */,
 				7AA6EB5A1F1373D0009322DE /* libUMessage_Sdk_1.4.0.a in Frameworks */,
 				7A6D148B1F0B7FCC00B30FD4 /* libsqlite3.0.tbd in Frameworks */,
@@ -357,6 +360,7 @@
 		7A6BE7A51F04E41A00A92196 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7AB490A11F137E5600E07E9E /* StoreKit.framework */,
 				7AB4909F1F13774F00E07E9E /* CoreTelephony.framework */,
 				7A6D148A1F0B7FCC00B30FD4 /* libsqlite3.0.tbd */,
 				7A6BE7A61F04E41A00A92196 /* libz.tbd */,
@@ -643,10 +647,10 @@
 			isa = PBXGroup;
 			children = (
 				7A6D14CB1F0B900000B30FD4 /* MQClosure.swift */,
-				7A6D14731F0B78DF00B30FD4 /* MQCommonUI */,
 				7A6D142B1F0B3E9700B30FD4 /* MQStructs.swift */,
 				7A6D14411F0B5BBD00B30FD4 /* MQURLConst.swift */,
 				7A6D14471F0B5DA500B30FD4 /* MQNotificationNames.swift */,
+				7A6D14731F0B78DF00B30FD4 /* MQCommonUI */,
 				7A6D145A1F0B6C0400B30FD4 /* MQUtilityTools */,
 				7A6D14281F0B387B00B30FD4 /* BRouter */,
 				7A6BE7A11F04E36900A92196 /* MQase64 */,

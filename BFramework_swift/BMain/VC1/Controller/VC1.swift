@@ -103,6 +103,24 @@ class VC1: UIViewController {
         print(userLogin?.isLoginSataus ?? false)
     }
     
+    //MARK: - 获取并清除缓存
+    @IBAction func getAndClearCache(_ sender: Any) {
+        //获取缓存
+        print(MQCache.returnCacheSize())
+        
+        //清除缓存
+        MQCache.cleanCache {}
+    }
+    
+    //MARK: - AppStore评分
+    @IBAction func storeReview(_ sender: Any) {
+        if #available(iOS 10.3, *) {
+            SKStoreReviewController.requestReview()
+        } else {
+            let nsStringToOpen:String = String.init(format: "itms-apps://itunes.apple.com/app/id%@?action=write-review", Appstore_ID)//替换为对应的APPID
+            UIApplication.shared.openURL(URL.init(string: nsStringToOpen)!)
+        }
+    }
     
     //MARK: - Left Bar Button Action
     override func mq_leftBarButtonAction(index: Int) {

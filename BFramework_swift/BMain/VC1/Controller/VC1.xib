@@ -108,7 +108,7 @@
                     <rect key="frame" x="36" y="199" width="111" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                    <state key="normal" title="分页控制器"/>
+                    <state key="normal" title="AppStore评分"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                             <real key="value" value="5"/>
@@ -120,6 +120,9 @@
                             <real key="value" value="0.5"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="storeReview:" destination="-1" eventType="touchUpInside" id="YKT-1z-SC3"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i6n-Mc-QSw" customClass="MQUIButton" customModule="BFramework_swift" customModuleProvider="target">
                     <rect key="frame" x="227" y="199" width="111" height="30"/>
@@ -163,7 +166,7 @@
                     <rect key="frame" x="227" y="148" width="111" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                    <state key="normal" title="分页控制器"/>
+                    <state key="normal" title="获取/清空缓存"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                             <real key="value" value="5"/>
@@ -175,6 +178,9 @@
                             <real key="value" value="0.5"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="getAndClearCache:" destination="-1" eventType="touchUpInside" id="daP-Z9-bVR"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jxT-Iz-RkW" customClass="MQUIButton" customModule="BFramework_swift" customModuleProvider="target">
                     <rect key="frame" x="36" y="247" width="111" height="30"/>

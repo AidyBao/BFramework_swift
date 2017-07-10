@@ -1,5 +1,5 @@
 //
-//  ZZXCache.swift
+//  MQCache.swift
 //  YDY_GJ_3_5
 //
 //  Created by 120v on 2017/5/22.
@@ -8,21 +8,21 @@
 
 import UIKit
 
-class ZXCache: NSObject {
+class MQCache: NSObject {
     /**
      * 读取缓存大小
      */
     static func returnCacheSize() -> String {
-        return String(format: "%.2f",ZXCache.forderSizeAtPath(folderPath: NSHomeDirectory()))
+        return String(format: "%.2f",MQCache.forderSizeAtPath(folderPath: NSHomeDirectory()))
     }
     
     /**
      * 清除缓存 自己决定清除缓存的位置
      */
     static func cleanCache(competion:()->Void) {
-        ZXCache.deleteFolder(path: NSHomeDirectory() + "/Documents")
-        ZXCache.deleteFolder(path: NSHomeDirectory() + "/Library")
-        ZXCache.deleteFolder(path: NSHomeDirectory() + "/tmp")
+        MQCache.deleteFolder(path: NSHomeDirectory() + "/Documents")
+        MQCache.deleteFolder(path: NSHomeDirectory() + "/Library")
+        MQCache.deleteFolder(path: NSHomeDirectory() + "/tmp")
         competion()
     }
     /**
@@ -44,7 +44,7 @@ class ZXCache: NSObject {
         let childFilePath = manage.subpaths(atPath: path)
         for path_1 in childFilePath! {
             let fileAbsoluePath = path+"/"+path_1
-            ZXCache.deleteFile(path: fileAbsoluePath)
+            MQCache.deleteFile(path: fileAbsoluePath)
         }
     }
     
@@ -77,7 +77,7 @@ class ZXCache: NSObject {
         var fileSize:Double = 0
         for path in childFilePath! {
             let fileAbsoluePath = folderPath+"/"+path
-            fileSize += ZXCache.returnFileSize(path: fileAbsoluePath)
+            fileSize += MQCache.returnFileSize(path: fileAbsoluePath)
         }
         return fileSize
     }

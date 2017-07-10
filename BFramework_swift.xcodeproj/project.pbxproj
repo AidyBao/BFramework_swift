@@ -113,6 +113,11 @@
 		7AA6EB4C1F131D1F009322DE /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AA6EB4A1F131D1F009322DE /* LoginViewController.xib */; };
 		7AA6EB4E1F131D77009322DE /* UserLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA6EB4D1F131D77009322DE /* UserLogin.swift */; };
 		7AA6EB511F131E20009322DE /* UserLoginCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA6EB501F131E20009322DE /* UserLoginCache.swift */; };
+		7AA6EB531F1372DD009322DE /* AppDelegate+RemoteNotice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA6EB521F1372DD009322DE /* AppDelegate+RemoteNotice.swift */; };
+		7AA6EB5A1F1373D0009322DE /* libUMessage_Sdk_1.4.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AA6EB561F1373D0009322DE /* libUMessage_Sdk_1.4.0.a */; };
+		7AA6EB5B1F1373D0009322DE /* UMMobClick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AA6EB591F1373D0009322DE /* UMMobClick.framework */; };
+		7AA6EB5D1F137485009322DE /* MQRouter+RemoteNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA6EB5C1F137485009322DE /* MQRouter+RemoteNotification.swift */; };
+		7AB490A01F13774F00E07E9E /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AB4909F1F13774F00E07E9E /* CoreTelephony.framework */; };
 		7AC13B9F1F0634DB0019E340 /* MQSettings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7AC13B9E1F0634DB0019E340 /* MQSettings.bundle */; };
 		7AC13BA11F0635130019E340 /* MQTabbarConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC13BA01F0635130019E340 /* MQTabbarConfig.swift */; };
 		7AC13BA31F06352C0019E340 /* MQFontConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC13BA21F06352C0019E340 /* MQFontConfig.swift */; };
@@ -269,6 +274,12 @@
 		7AA6EB4A1F131D1F009322DE /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		7AA6EB4D1F131D77009322DE /* UserLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserLogin.swift; sourceTree = "<group>"; };
 		7AA6EB501F131E20009322DE /* UserLoginCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserLoginCache.swift; sourceTree = "<group>"; };
+		7AA6EB521F1372DD009322DE /* AppDelegate+RemoteNotice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppDelegate+RemoteNotice.swift"; sourceTree = "<group>"; };
+		7AA6EB561F1373D0009322DE /* libUMessage_Sdk_1.4.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libUMessage_Sdk_1.4.0.a; sourceTree = "<group>"; };
+		7AA6EB571F1373D0009322DE /* UMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMessage.h; sourceTree = "<group>"; };
+		7AA6EB591F1373D0009322DE /* UMMobClick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UMMobClick.framework; sourceTree = "<group>"; };
+		7AA6EB5C1F137485009322DE /* MQRouter+RemoteNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MQRouter+RemoteNotification.swift"; sourceTree = "<group>"; };
+		7AB4909F1F13774F00E07E9E /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		7AC13B9E1F0634DB0019E340 /* MQSettings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MQSettings.bundle; sourceTree = "<group>"; };
 		7AC13BA01F0635130019E340 /* MQTabbarConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MQTabbarConfig.swift; sourceTree = "<group>"; };
 		7AC13BA21F06352C0019E340 /* MQFontConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MQFontConfig.swift; sourceTree = "<group>"; };
@@ -285,7 +296,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7AB490A01F13774F00E07E9E /* CoreTelephony.framework in Frameworks */,
+				7AA6EB5A1F1373D0009322DE /* libUMessage_Sdk_1.4.0.a in Frameworks */,
 				7A6D148B1F0B7FCC00B30FD4 /* libsqlite3.0.tbd in Frameworks */,
+				7AA6EB5B1F1373D0009322DE /* UMMobClick.framework in Frameworks */,
 				7A6BE7A71F04E41A00A92196 /* libz.tbd in Frameworks */,
 				051B1FCA9BBF84AA8E245778 /* Pods_BFramework_swift.framework in Frameworks */,
 			);
@@ -343,6 +357,7 @@
 		7A6BE7A51F04E41A00A92196 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7AB4909F1F13774F00E07E9E /* CoreTelephony.framework */,
 				7A6D148A1F0B7FCC00B30FD4 /* libsqlite3.0.tbd */,
 				7A6BE7A61F04E41A00A92196 /* libz.tbd */,
 				2774CA59CF5658B49F6EB9E7 /* Pods_BFramework_swift.framework */,
@@ -413,6 +428,7 @@
 			isa = PBXGroup;
 			children = (
 				7A6D14291F0B388C00B30FD4 /* MQRouter.swift */,
+				7AA6EB5C1F137485009322DE /* MQRouter+RemoteNotification.swift */,
 			);
 			path = BRouter;
 			sourceTree = "<group>";
@@ -560,6 +576,7 @@
 		7A757FB31F03752300CD6BC5 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				7AA6EB541F1373D0009322DE /* UMessage */,
 				7A9CE1BF1F0F7965000E957C /* soundA.caf */,
 				7A757FB41F03754A00CD6BC5 /* TabbarIcon.xcassets */,
 				7A6D14C91F0B8DAE00B30FD4 /* CommonIcon.xcassets */,
@@ -593,6 +610,7 @@
 			isa = PBXGroup;
 			children = (
 				7A7E094B1F0248BD0072C968 /* AppDelegate.swift */,
+				7AA6EB521F1372DD009322DE /* AppDelegate+RemoteNotice.swift */,
 				7A7E097A1F0256C20072C968 /* MQMain */,
 				7A7E09791F0256C20072C968 /* MQCore */,
 				7A7E09521F0248BD0072C968 /* Assets.xcassets */,
@@ -917,6 +935,32 @@
 			path = AppManager;
 			sourceTree = "<group>";
 		};
+		7AA6EB541F1373D0009322DE /* UMessage */ = {
+			isa = PBXGroup;
+			children = (
+				7AA6EB551F1373D0009322DE /* UMessage_Sdk_1.4.0 */,
+				7AA6EB581F1373D0009322DE /* UMMobClick-NO-IDFA */,
+			);
+			path = UMessage;
+			sourceTree = "<group>";
+		};
+		7AA6EB551F1373D0009322DE /* UMessage_Sdk_1.4.0 */ = {
+			isa = PBXGroup;
+			children = (
+				7AA6EB561F1373D0009322DE /* libUMessage_Sdk_1.4.0.a */,
+				7AA6EB571F1373D0009322DE /* UMessage.h */,
+			);
+			path = UMessage_Sdk_1.4.0;
+			sourceTree = "<group>";
+		};
+		7AA6EB581F1373D0009322DE /* UMMobClick-NO-IDFA */ = {
+			isa = PBXGroup;
+			children = (
+				7AA6EB591F1373D0009322DE /* UMMobClick.framework */,
+			);
+			path = "UMMobClick-NO-IDFA";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1171,6 +1215,7 @@
 				7A6D14551F0B5F1F00B30FD4 /* UIFont+MQ.swift in Sources */,
 				7A6D14C51F0B8BC900B30FD4 /* MQUIButton.swift in Sources */,
 				7AC13BAB1F063AAC0019E340 /* Bundle+MQ.swift in Sources */,
+				7AA6EB531F1372DD009322DE /* AppDelegate+RemoteNotice.swift in Sources */,
 				7A6D14D11F0B90B800B30FD4 /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
 				7AC13BA51F0635440019E340 /* MQNavBarConfig.swift in Sources */,
 				7A6F812F1F0C8CEC005D9EBC /* MQDimmingPresentationController.swift in Sources */,
@@ -1210,6 +1255,7 @@
 				7A6D14481F0B5DA500B30FD4 /* MQNotificationNames.swift in Sources */,
 				7AC13BA11F0635130019E340 /* MQTabbarConfig.swift in Sources */,
 				7A6D147C1F0B79C700B30FD4 /* MQAddressCache.swift in Sources */,
+				7AA6EB5D1F137485009322DE /* MQRouter+RemoteNotification.swift in Sources */,
 				7A9CE1C31F0F7C2D000E957C /* UIViewController+MQNavControl.swift in Sources */,
 				7A6D14851F0B7A9A00B30FD4 /* MQProvinceModel.swift in Sources */,
 			);
@@ -1361,10 +1407,15 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/BFramework_swift/BMain/Resources",
+					"$(PROJECT_DIR)/BFramework_swift/BMain/Resources/UMessage/UMMobClick-NO-IDFA",
 				);
 				INFOPLIST_FILE = BFramework_swift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/BFramework_swift/BMain/Resources/UMessage/UMessage_Sdk_1.4.0",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "BMQ.BFramework-swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "BFramework_swift/BFramework_swift-Bridging-Header.h";
@@ -1383,10 +1434,15 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/BFramework_swift/BMain/Resources",
+					"$(PROJECT_DIR)/BFramework_swift/BMain/Resources/UMessage/UMMobClick-NO-IDFA",
 				);
 				INFOPLIST_FILE = BFramework_swift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/BFramework_swift/BMain/Resources/UMessage/UMessage_Sdk_1.4.0",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "BMQ.BFramework-swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "BFramework_swift/BFramework_swift-Bridging-Header.h";

@@ -13,6 +13,7 @@ let MQ_PARAMS_ENCODE = true
 
 extension Dictionary {
     
+    //MARK: - 签名
     func mq_signDic() -> Dictionary<String,Any> {
         var tempDic = self as! Dictionary<String,Any>
         var token:String? = nil
@@ -39,6 +40,7 @@ extension Dictionary {
         return tempDic2
     }
     
+    //MARK: - 编码
     func mq_signDicNotEncode() -> Dictionary<String,Any> {
         
         var tempDic = self as! Dictionary<String,Any>
@@ -56,6 +58,7 @@ extension Dictionary {
         return temp2
     }
     
+    //MARK: - 字典排序
     func mq_sortJsonString() -> String {
         var tempDic = self as! Dictionary<String,Any>
         var keys = Array<String>()
@@ -82,6 +85,7 @@ extension Dictionary {
 }
 
 extension Array {
+    //MARK: - 数组排序
     func  mq_sortJsonString() -> String {
         let array = self 
         var arr: Array<String> = []

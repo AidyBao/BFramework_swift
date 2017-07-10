@@ -109,6 +109,10 @@
 		7A9CE1C31F0F7C2D000E957C /* UIViewController+MQNavControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9CE1C11F0F7C2D000E957C /* UIViewController+MQNavControl.swift */; };
 		7A9CE1C71F0F8015000E957C /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9CE1C51F0F8015000E957C /* MapViewController.swift */; };
 		7A9CE1C81F0F8015000E957C /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A9CE1C61F0F8015000E957C /* MapViewController.xib */; };
+		7AA6EB4B1F131D1F009322DE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA6EB491F131D1F009322DE /* LoginViewController.swift */; };
+		7AA6EB4C1F131D1F009322DE /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AA6EB4A1F131D1F009322DE /* LoginViewController.xib */; };
+		7AA6EB4E1F131D77009322DE /* UserLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA6EB4D1F131D77009322DE /* UserLogin.swift */; };
+		7AA6EB511F131E20009322DE /* UserLoginCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA6EB501F131E20009322DE /* UserLoginCache.swift */; };
 		7AC13B9F1F0634DB0019E340 /* MQSettings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7AC13B9E1F0634DB0019E340 /* MQSettings.bundle */; };
 		7AC13BA11F0635130019E340 /* MQTabbarConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC13BA01F0635130019E340 /* MQTabbarConfig.swift */; };
 		7AC13BA31F06352C0019E340 /* MQFontConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC13BA21F06352C0019E340 /* MQFontConfig.swift */; };
@@ -261,6 +265,10 @@
 		7A9CE1C11F0F7C2D000E957C /* UIViewController+MQNavControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+MQNavControl.swift"; sourceTree = "<group>"; };
 		7A9CE1C51F0F8015000E957C /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		7A9CE1C61F0F8015000E957C /* MapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
+		7AA6EB491F131D1F009322DE /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		7AA6EB4A1F131D1F009322DE /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		7AA6EB4D1F131D77009322DE /* UserLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserLogin.swift; sourceTree = "<group>"; };
+		7AA6EB501F131E20009322DE /* UserLoginCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserLoginCache.swift; sourceTree = "<group>"; };
 		7AC13B9E1F0634DB0019E340 /* MQSettings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MQSettings.bundle; sourceTree = "<group>"; };
 		7AC13BA01F0635130019E340 /* MQTabbarConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MQTabbarConfig.swift; sourceTree = "<group>"; };
 		7AC13BA21F06352C0019E340 /* MQFontConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MQFontConfig.swift; sourceTree = "<group>"; };
@@ -430,6 +438,7 @@
 		7A6D14731F0B78DF00B30FD4 /* MQCommonUI */ = {
 			isa = PBXGroup;
 			children = (
+				7AA6EB4F1F131E00009322DE /* AppManager */,
 				7A6D14771F0B79C700B30FD4 /* MQAddressView */,
 				7A6D148E1F0B8BC900B30FD4 /* MQDateSelect */,
 				7A6D14911F0B8BC900B30FD4 /* MQEmptyView */,
@@ -634,6 +643,7 @@
 		7A7E097A1F0256C20072C968 /* MQMain */ = {
 			isa = PBXGroup;
 			children = (
+				7AA6EB441F131D08009322DE /* Login */,
 				7A6BE7A91F04E7DA00A92196 /* MainRootVC */,
 				7A6BE7A81F04E7D300A92196 /* Common */,
 				7A7E097B1F0256C20072C968 /* VC1 */,
@@ -857,6 +867,56 @@
 			path = BExtension;
 			sourceTree = "<group>";
 		};
+		7AA6EB441F131D08009322DE /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				7AA6EB451F131D08009322DE /* Controller */,
+				7AA6EB461F131D08009322DE /* Model */,
+				7AA6EB471F131D08009322DE /* View */,
+				7AA6EB481F131D08009322DE /* ViewModel */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		7AA6EB451F131D08009322DE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7AA6EB491F131D1F009322DE /* LoginViewController.swift */,
+				7AA6EB4A1F131D1F009322DE /* LoginViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		7AA6EB461F131D08009322DE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7AA6EB4D1F131D77009322DE /* UserLogin.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7AA6EB471F131D08009322DE /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7AA6EB481F131D08009322DE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		7AA6EB4F1F131E00009322DE /* AppManager */ = {
+			isa = PBXGroup;
+			children = (
+				7AA6EB501F131E20009322DE /* UserLoginCache.swift */,
+			);
+			path = AppManager;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -982,6 +1042,7 @@
 				7A6D14CA1F0B8DAE00B30FD4 /* CommonIcon.xcassets in Resources */,
 				7A6D14B91F0B8BC900B30FD4 /* MQCheck@3x.png in Resources */,
 				7A6D14BA1F0B8BC900B30FD4 /* MQFailure@2x.png in Resources */,
+				7AA6EB4C1F131D1F009322DE /* LoginViewController.xib in Resources */,
 				7A7E099A1F0257510072C968 /* VC4.xib in Resources */,
 				7A6D14271F0B36C400B30FD4 /* VC5.xib in Resources */,
 				7A6D14BD1F0B8BC900B30FD4 /* MQLoading@3x.png in Resources */,
@@ -1120,6 +1181,7 @@
 				7A6D14B31F0B8BC900B30FD4 /* MQHUD.swift in Sources */,
 				7A6D143E1F0B5A9F00B30FD4 /* MQAPIDataparse.swift in Sources */,
 				7A9CE1B71F0F5AE6000E957C /* ChildrenController.swift in Sources */,
+				7AA6EB511F131E20009322DE /* UserLoginCache.swift in Sources */,
 				7A6D14C61F0B8BC900B30FD4 /* MQUIImageView.swift in Sources */,
 				7A6D14321F0B416C00B30FD4 /* UIColor+MQ.swift in Sources */,
 				7A6BE7A41F04E36900A92196 /* Base64.m in Sources */,
@@ -1131,12 +1193,14 @@
 				7A6D14671F0B6C0400B30FD4 /* MQAudioUtils.swift in Sources */,
 				7A6A354E1F062F0A000AB9D2 /* UITabBarController+MQ.swift in Sources */,
 				7AC13BA71F06355D0019E340 /* MQTintColorConfig.swift in Sources */,
+				7AA6EB4E1F131D77009322DE /* UserLogin.swift in Sources */,
 				7A6D146A1F0B6C0400B30FD4 /* MQCommonUtils.swift in Sources */,
 				7A7E099D1F0257780072C968 /* VC1.swift in Sources */,
 				7A9CE1BA1F0F5B77000E957C /* MQSegmentView.swift in Sources */,
 				7A6D14841F0B7A9A00B30FD4 /* MQParishModel.swift in Sources */,
 				7A6D142A1F0B388C00B30FD4 /* MQRouter.swift in Sources */,
 				7A6D146E1F0B6C0400B30FD4 /* MQImagePickerUtils.swift in Sources */,
+				7AA6EB4B1F131D1F009322DE /* LoginViewController.swift in Sources */,
 				7A6D14581F0B5F1F00B30FD4 /* UIScrollView+MQRefresh.swift in Sources */,
 				7A6D14381F0B43A800B30FD4 /* NSObject+MQ.swift in Sources */,
 				7A6D14C71F0B8BC900B30FD4 /* MQUILabel.swift in Sources */,

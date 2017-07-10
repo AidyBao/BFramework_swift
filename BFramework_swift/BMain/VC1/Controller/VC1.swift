@@ -31,6 +31,8 @@ class VC1: UIViewController {
         self.mq_clearNavbarBackButtonTitle()
         //
         self.mq_addKeyboardNotification()
+        //
+        self.requestForUserLogin()
     }
     
     @IBAction func testSegmentView(_ sender: UIButton) {
@@ -95,6 +97,12 @@ class VC1: UIViewController {
         self.navigationController?.pushViewController(testVC, animated: true)
     }
     
+    @IBAction func getUserLogin(_ sender: UIButton) {
+        let userLogin = UserLoginCache.mq_UserLogin
+        print(userLogin?.userId ?? "")
+        print(userLogin?.isLoginSataus ?? false)
+    }
+    
     
     //MARK: - Left Bar Button Action
     override func mq_leftBarButtonAction(index: Int) {
@@ -126,9 +134,38 @@ class VC1: UIViewController {
     deinit {
         self.mq_removeKeyboardNotification()
     }
-
 }
 
 extension VC1 {
-    
+    func requestForUserLogin() {
+        
+        var params = Dictionary<String,Any>.init()
+        params["userName"] = "waibu"
+        params["passWord"] = "123456"
+        
+        MQNetwork.asyncRequest(withUrl: MQAPI.address(module: MQAPI_USER_LOGIN), params: params.mq_signDic(), method: .post) { (success, status, content, stringValue, error) in
+            if success {
+                if status == MQAPI_SUCCESS {
+                    if let dict = content["data"] as? Dictionary<String,Any> {
+                        var userLogin = UserLogin.init()
+                        userLogin = UserLogin.mj_object(withKeyValues: dict)
+                        userLogin.isLoginSataus = true
+                        UserLoginCache.mq_UserLogin = userLogin
+                        
+                        MQHUD.showSuccess(in: self.view, text: "登录成功", delay: MQHUD_MBDELAY_TIME)
+                    }
+                }else{
+                    MQHUD.showFailure(in: self.view, text: "登录失败", delay: MQHUD_MBDELAY_TIME)
+                }
+            }else if status != MQAPI_LOGIN_INVALID{
+                //
+                MQHUD.showFailure(in: self.view, text: (error?.description)!, delay: MQHUD_MBDELAY_TIME)
+                //没有网络
+                MQEmptyView.mq_show(in: self.view, type: .networkError, text1: "没有网络", text2: "", topOffset: 10, callBack: {
+                    self.requestForUserLogin()
+                    MQEmptyView.hide(from: self.view)
+                })
+            }
+        }
+    }
 }

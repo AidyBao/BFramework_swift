@@ -49,4 +49,5 @@ let MQAPI_INITIAL_PASSWORD              =  "reson123456"
 //MARK: - 资源地址
 let MQAPI_RESOURCE_URL                  =   "hyk/pages/uploadFileGjApp"         //文件上传接口
 
-
+//MARK: - 登录
+let MQAPI_USER_LOGIN                    =    "user/login"                      //登录

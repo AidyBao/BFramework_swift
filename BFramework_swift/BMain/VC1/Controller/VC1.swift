@@ -28,19 +28,20 @@ class VC1: UIViewController {
         self.view.backgroundColor = UIColor.lightGray
         self.title = "VC1"
         
-        self.mq_clearNavbarBackButtonTitle()
         //
         self.mq_addKeyboardNotification()
         //
-        self.requestForUserLogin()
+//        self.requestForUserLogin()
     }
     
+    //MARK: - 分段控制器视图
     @IBAction func testSegmentView(_ sender: UIButton) {
         let testVC: Test01Controller = Test01Controller.init()
         testVC.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(testVC, animated: true)
     }
     
+    //MARK: - 播放声音
     @IBAction func playSound(_ sender: UIButton) {
         
         let index = type % 3
@@ -154,22 +155,25 @@ class VC1: UIViewController {
     }
 }
 
+//MARK: - HTTP
 extension VC1 {
+    //MARK: - 登录
     func requestForUserLogin() {
-        
         var params = Dictionary<String,Any>.init()
         params["userName"] = "waibu"
         params["passWord"] = "123456"
-        
+        //params.mq_signDic() 签名
         MQNetwork.asyncRequest(withUrl: MQAPI.address(module: MQAPI_USER_LOGIN), params: params.mq_signDic(), method: .post) { (success, status, content, stringValue, error) in
             if success {
                 if status == MQAPI_SUCCESS {
                     if let dict = content["data"] as? Dictionary<String,Any> {
+                        
+                        //缓存登录信息
                         var userLogin = UserLogin.init()
                         userLogin = UserLogin.mj_object(withKeyValues: dict)
                         userLogin.isLoginSataus = true
                         UserLoginCache.mq_UserLogin = userLogin
-                        
+                        //友好提示
                         MQHUD.showSuccess(in: self.view, text: "登录成功", delay: MQHUD_MBDELAY_TIME)
                     }
                 }else{

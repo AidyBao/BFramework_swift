@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		051B1FCA9BBF84AA8E245778 /* Pods_BFramework_swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2774CA59CF5658B49F6EB9E7 /* Pods_BFramework_swift.framework */; };
+		7A654C251F14601900F91309 /* MMSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A654C241F14601900F91309 /* MMSegment.swift */; };
 		7A6A354E1F062F0A000AB9D2 /* UITabBarController+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6A354D1F062F0A000AB9D2 /* UITabBarController+MQ.swift */; };
 		7A6BE7A41F04E36900A92196 /* Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A6BE7A31F04E36900A92196 /* Base64.m */; };
 		7A6BE7A71F04E41A00A92196 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A6BE7A61F04E41A00A92196 /* libz.tbd */; };
@@ -160,6 +161,7 @@
 
 /* Begin PBXFileReference section */
 		2774CA59CF5658B49F6EB9E7 /* Pods_BFramework_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BFramework_swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A654C241F14601900F91309 /* MMSegment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMSegment.swift; sourceTree = "<group>"; };
 		7A6A354D1F062F0A000AB9D2 /* UITabBarController+MQ.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITabBarController+MQ.swift"; sourceTree = "<group>"; };
 		7A6BE7A21F04E36900A92196 /* Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64.h; sourceTree = "<group>"; };
 		7A6BE7A31F04E36900A92196 /* Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Base64.m; sourceTree = "<group>"; };
@@ -334,6 +336,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		7A654C231F14601900F91309 /* MQSegmentControl */ = {
+			isa = PBXGroup;
+			children = (
+				7A654C241F14601900F91309 /* MMSegment.swift */,
+			);
+			path = MQSegmentControl;
+			sourceTree = "<group>";
+		};
 		7A6BE7921F04E0B800A92196 /* MQNetwork */ = {
 			isa = PBXGroup;
 			children = (
@@ -458,6 +468,7 @@
 		7A6D14731F0B78DF00B30FD4 /* MQCommonUI */ = {
 			isa = PBXGroup;
 			children = (
+				7A654C231F14601900F91309 /* MQSegmentControl */,
 				7AA6EB4F1F131E00009322DE /* AppManager */,
 				7A6D14771F0B79C700B30FD4 /* MQAddressView */,
 				7A6D148E1F0B8BC900B30FD4 /* MQDateSelect */,
@@ -1190,6 +1201,7 @@
 				7A6D147D1F0B79C700B30FD4 /* MQAddressView.swift in Sources */,
 				7A6D14301F0B411000B30FD4 /* UIDevice+MQ.swift in Sources */,
 				7A6D143F1F0B5A9F00B30FD4 /* MQAPISign.swift in Sources */,
+				7A654C251F14601900F91309 /* MMSegment.swift in Sources */,
 				7A7E09951F0257420072C968 /* VC3.swift in Sources */,
 				7A6D142E1F0B3F3D00B30FD4 /* MQConfigValueProtocol.swift in Sources */,
 				7A6D146F1F0B6C0400B30FD4 /* MQLocationUtils.swift in Sources */,

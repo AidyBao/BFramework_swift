@@ -15,6 +15,9 @@ class Test01Controller: UIViewController {
         self.hidesBottomBarWhenPushed = true
         self.title = "Test"
         
+        //
+        self.mq_clearNavbarBackButtonTitle()
+        
         let mqSegmentView:MQSegmentView = MQSegmentView.init(frame: CGRect.init(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height - 64))
         mqSegmentView.backgroundColor = UIColor.lightGray
         mqSegmentView.arrTitle = self.titleArr

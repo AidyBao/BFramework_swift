@@ -20,6 +20,8 @@ class VC1: UIViewController {
     @IBOutlet weak var lbTitle: UILabel!
     @IBOutlet weak var lbBody: UILabel!
     @IBOutlet weak var txtF: UITextField!
+    @IBOutlet weak var countDownLB: MQCountDownLabel!
+    
     var type = 0
 
     override func viewDidLoad() {
@@ -122,6 +124,22 @@ class VC1: UIViewController {
             UIApplication.shared.openURL(URL.init(string: nsStringToOpen)!)
         }
     }
+    
+    //MARK: - 倒计时
+    @IBAction func mqCoundown(_ sender: UIButton) {
+        if countDownLB == nil {
+            countDownLB = MQCountDownLabel.init(frame: CGRect.zero)
+            countDownLB.maxSecond = 5
+            countDownLB.prefix = "倒计时"
+        }
+        countDownLB.start()
+        countDownLB.countDownCompleteClosure = { [unowned self] in
+            //
+            if self.countDownLB != nil {
+            }
+        }
+    }
+    
     
     //MARK: - Left Bar Button Action
     override func mq_leftBarButtonAction(index: Int) {

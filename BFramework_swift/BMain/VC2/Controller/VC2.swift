@@ -14,23 +14,35 @@ class VC2: UIViewController {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.orange
         self.title = "VC2"
-        // Do any additional setup after loading the view.
     }
+    
+    @IBAction func filterBtn(_ sender: UIButton) {
+        let filterView: MQSideFilterView = MQSideFilterView.loadNib()
+        filterView.show()
+        filterView.loadData(dataArray: self.dataArray)
+    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    lazy var dataArray: NSMutableArray = {
+        let array: NSMutableArray = NSMutableArray.init(capacity: 10)
+        let superModel: GoodsPropertiesCategory = GoodsPropertiesCategory.init()
+        for i in 0..<10 {
+            superModel.title = "品牌\(i+2)"
+            let subArray =  NSMutableArray.init(capacity: 5)
+            for j in 0..<5 {
+                let subModel: GoodsPropertiesChildrenCategory = GoodsPropertiesChildrenCategory.init()
+                subModel.property = "苹果\(j)"
+                subArray.add(subModel)
+            }
+            superModel.propertesArr = subArray
+            array.add(superModel)
+        }
+        return array
+    }()
+    
 }

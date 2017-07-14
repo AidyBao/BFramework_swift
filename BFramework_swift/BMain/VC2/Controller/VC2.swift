@@ -12,7 +12,7 @@ class VC2: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.orange
+        self.view.backgroundColor = UIColor.clear
         self.title = "VC2"
     }
     

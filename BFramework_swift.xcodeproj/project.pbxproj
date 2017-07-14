@@ -91,6 +91,8 @@
 		7A6D14D11F0B90B800B30FD4 /* UINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A6D14D01F0B90B800B30FD4 /* UINavigationController+FDFullscreenPopGesture.m */; };
 		7A6F812F1F0C8CEC005D9EBC /* MQDimmingPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6F812E1F0C8CEC005D9EBC /* MQDimmingPresentationController.swift */; };
 		7A757FB51F03754A00CD6BC5 /* TabbarIcon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A757FB41F03754A00CD6BC5 /* TabbarIcon.xcassets */; };
+		7A77C2A41F18969A00523000 /* GoodsPropertyRootCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A77C2A21F18969A00523000 /* GoodsPropertyRootCell.swift */; };
+		7A77C2A51F18969A00523000 /* GoodsPropertyRootCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A77C2A31F18969A00523000 /* GoodsPropertyRootCell.xib */; };
 		7A7943B11F1750A300ABE042 /* MQSideFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7943B01F1750A300ABE042 /* MQSideFilterView.swift */; };
 		7A7943B31F1750E300ABE042 /* MQSideFilterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A7943B21F1750E300ABE042 /* MQSideFilterView.xib */; };
 		7A7943B51F17559F00ABE042 /* MQSideFilterView+CLV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7943B41F17559F00ABE042 /* MQSideFilterView+CLV.swift */; };
@@ -255,6 +257,8 @@
 		7A6D14D01F0B90B800B30FD4 /* UINavigationController+FDFullscreenPopGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+FDFullscreenPopGesture.m"; sourceTree = "<group>"; };
 		7A6F812E1F0C8CEC005D9EBC /* MQDimmingPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MQDimmingPresentationController.swift; sourceTree = "<group>"; };
 		7A757FB41F03754A00CD6BC5 /* TabbarIcon.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = TabbarIcon.xcassets; sourceTree = "<group>"; };
+		7A77C2A21F18969A00523000 /* GoodsPropertyRootCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoodsPropertyRootCell.swift; sourceTree = "<group>"; };
+		7A77C2A31F18969A00523000 /* GoodsPropertyRootCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GoodsPropertyRootCell.xib; sourceTree = "<group>"; };
 		7A7943B01F1750A300ABE042 /* MQSideFilterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MQSideFilterView.swift; sourceTree = "<group>"; };
 		7A7943B21F1750E300ABE042 /* MQSideFilterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MQSideFilterView.xib; sourceTree = "<group>"; };
 		7A7943B41F17559F00ABE042 /* MQSideFilterView+CLV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MQSideFilterView+CLV.swift"; sourceTree = "<group>"; };
@@ -799,6 +803,8 @@
 		7A7E09831F0256C20072C968 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				7A77C2A21F18969A00523000 /* GoodsPropertyRootCell.swift */,
+				7A77C2A31F18969A00523000 /* GoodsPropertyRootCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1132,6 +1138,7 @@
 				7A6D14C31F0B8BC900B30FD4 /* MQSuccess@3x.png in Resources */,
 				7A6D14CA1F0B8DAE00B30FD4 /* CommonIcon.xcassets in Resources */,
 				7A6D14B91F0B8BC900B30FD4 /* MQCheck@3x.png in Resources */,
+				7A77C2A51F18969A00523000 /* GoodsPropertyRootCell.xib in Resources */,
 				7A6D14BA1F0B8BC900B30FD4 /* MQFailure@2x.png in Resources */,
 				7AA6EB4C1F131D1F009322DE /* LoginViewController.xib in Resources */,
 				7A7E099A1F0257510072C968 /* VC4.xib in Resources */,
@@ -1246,6 +1253,7 @@
 				7A6D14591F0B5F1F00B30FD4 /* UIView+MQFrame.swift in Sources */,
 				7A6D14681F0B6C0400B30FD4 /* MQButton.swift in Sources */,
 				7A6D14341F0B433000B30FD4 /* String+MQ.swift in Sources */,
+				7A77C2A41F18969A00523000 /* GoodsPropertyRootCell.swift in Sources */,
 				7A6D14C41F0B8BC900B30FD4 /* MQSegment.swift in Sources */,
 				7A6D14541F0B5F1F00B30FD4 /* MQUITextView.swift in Sources */,
 				7A6D146B1F0B6C0400B30FD4 /* MQDateUtils.swift in Sources */,

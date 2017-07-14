@@ -13,11 +13,7 @@ extension MQSideFilterView: UICollectionViewDelegate{
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
     }
-
-    
 }
-
-
 
 
 extension MQSideFilterView: UICollectionViewDataSource{
@@ -31,8 +27,7 @@ extension MQSideFilterView: UICollectionViewDataSource{
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell: UICollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
-        cell.backgroundColor = UIColor.orange
+        let cell: GoodsPropertyRootCell = collectionView.dequeueReusableCell(withReuseIdentifier: GoodsPropertyRootCell.GoodsPropertyRootCellID, for: indexPath) as! GoodsPropertyRootCell
         return cell
     }
     
@@ -47,13 +42,18 @@ extension MQSideFilterView: UICollectionViewDataSource{
 }
 
 extension MQSideFilterView: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets.init(top: 10, left: 14, bottom: 10, right: 14)
+    }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = (MQ_BOUNDS_WIDTH * 0.85 - 14 * 4) / 3.0
         return CGSize(width: width, height: 30)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 15
+        return 10
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {

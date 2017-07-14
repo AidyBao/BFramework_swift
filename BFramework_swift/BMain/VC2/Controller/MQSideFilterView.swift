@@ -31,22 +31,29 @@ class MQSideFilterView: UIView {
         super.awakeFromNib()
         self.backView.backgroundColor = UIColor.black.withAlphaComponent(0.2)
         
-        self.collectionView.delegate = self
-        self.collectionView.dataSource = self
-        self.collectionView.register(UICollectionViewCell.classForCoder(), forCellWithReuseIdentifier: "cell")
-        self.collectionView.register(UICollectionReusableView.classForCoder(), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "headCell")
-        
+        //
+        self.setCollectionViewUI()
+        //
         self.showFilterView(true)
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
         self.frame = UIScreen.main.bounds
+        self.collectionView.width = MQ_BOUNDS_WIDTH*0.85
     }
     
     //MARK: - LoadData
     func loadData(dataArray array: NSMutableArray) {
         
+    }
+    
+    //MARK: - CollectionView
+    func setCollectionViewUI() {
+        self.collectionView.delegate = self
+        self.collectionView.dataSource = self
+        self.collectionView.register(UINib.init(nibName: String.init(describing: GoodsPropertyRootCell.self), bundle: nil), forCellWithReuseIdentifier: GoodsPropertyRootCell.GoodsPropertyRootCellID)
+        self.collectionView.register(UICollectionReusableView.classForCoder(), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "headCell")
     }
     
     //MARK: - 显示/隐藏筛选视图
@@ -106,7 +113,6 @@ class MQSideFilterView: UIView {
             })
         }
     }
-    
     
     //MARK: - 右扫手势
     @IBAction func tapTableViewAction(_ sender: UISwipeGestureRecognizer) {

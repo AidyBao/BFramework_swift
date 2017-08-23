@@ -40,7 +40,7 @@ class MQSideFilterView: UIView {
     override func layoutSubviews() {
         super.layoutSubviews()
         self.frame = UIScreen.main.bounds
-        self.collectionView.width = MQ_BOUNDS_WIDTH*0.85
+        self.collectionView.width = MQ_BOUNDS_WIDTH*0.84
     }
     
     //MARK: - LoadData
@@ -72,7 +72,7 @@ class MQSideFilterView: UIView {
         
         if show {
             self.hideMaskView(false)
-            self.tableViewGap.constant = MQ_BOUNDS_WIDTH * 0.15
+            self.tableViewGap.constant = MQ_BOUNDS_WIDTH * 0.16
             UIView.animate(withDuration: animationDuration, animations: {
                 self.layoutIfNeeded()
             }, completion: { (finished) in

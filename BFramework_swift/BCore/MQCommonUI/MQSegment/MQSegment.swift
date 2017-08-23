@@ -94,7 +94,11 @@ class MQSegment: UIScrollView {
             let buttonSize = self.sizeWithText(text as! NSString, font: UIFont.systemFont(ofSize: titlefondOfSize), maxSize: CGSize(width: CGFloat(MAXFLOAT), height: button_H))
             
             // 计算内容的宽度
-            let button_W = 2 * margin + buttonSize.width
+            let btnWidth = UIScreen.main.bounds.width/CGFloat(titleArr.count)
+            var button_W = 2 * margin + buttonSize.width
+            if button_W < btnWidth {
+                button_W = btnWidth
+            }
             btn.frame = CGRect(x: button_X, y: button_Y, width: button_W, height: button_H)
             
             btn.setTitle(text as? String, for: UIControlState())
@@ -133,7 +137,7 @@ class MQSegment: UIScrollView {
         // 指示器默认在第一个选中位置
         // 计算TitleLabel内容的Size
         let buttonSize : CGSize = self.sizeWithText((firstButton.titleLabel?.text)! as NSString, font: UIFont.systemFont(ofSize: titlefondOfSize), maxSize: CGSize(width: CGFloat(MAXFLOAT), height: SegmentH))
-        self.indicatorView.width = buttonSize.width
+        self.indicatorView.width = buttonSize.width + margin
         self.indicatorView.centerX = firstButton.centerX
     }
     
@@ -166,7 +170,9 @@ class MQSegment: UIScrollView {
         }
             // 改变指示器位置
         UIView.animate(withDuration: 0.20, animations: {
-            self.indicatorView.width = sender.width - margin
+            let buttonSize : CGSize = self.sizeWithText((sender.titleLabel?.text)! as NSString, font: UIFont.systemFont(ofSize: titlefondOfSize), maxSize: CGSize(width: CGFloat(MAXFLOAT), height: SegmentH))
+//            self.indicatorView.width = sender.width - margin
+            self.indicatorView.width = buttonSize.width + margin
             self.indicatorView.centerX = sender.centerX
         })
         

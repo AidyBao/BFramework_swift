@@ -9,5 +9,6 @@
 import UIKit
 
 class GoodsPropertiesChildrenCategory: NSObject {
+    var isSelected: Bool = false
     var property: String = ""
 }

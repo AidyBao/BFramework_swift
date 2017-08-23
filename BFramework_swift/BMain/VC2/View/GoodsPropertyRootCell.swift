@@ -15,7 +15,7 @@ class GoodsPropertyRootCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         self.backgroundColor = UIColor.groupTableViewBackground
-        self.layer.cornerRadius = 3.0
+        self.layer.cornerRadius = self.height/2.0
         self.layer.masksToBounds = true
     }
 }

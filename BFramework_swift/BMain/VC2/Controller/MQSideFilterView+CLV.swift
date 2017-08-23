@@ -48,8 +48,8 @@ extension MQSideFilterView: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = (MQ_BOUNDS_WIDTH * 0.85 - 14 * 4) / 3.0
-        return CGSize(width: width, height: 30)
+        let width = (MQ_BOUNDS_WIDTH * 0.84 - 22.5 * 4) / 3.0
+        return CGSize(width: width, height: 20)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {

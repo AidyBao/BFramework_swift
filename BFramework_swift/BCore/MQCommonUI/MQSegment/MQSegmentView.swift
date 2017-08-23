@@ -19,6 +19,7 @@ protocol MQSegmentViewDelegate: NSObjectProtocol {
 
 
 class MQSegmentView: UIView{
+    var oldSelectedIndex: NSInteger = -1
     weak var delegate: MQSegmentViewDelegate?
     weak var dataSource: MQSegmentViewDataSource? {
         didSet{
@@ -61,8 +62,27 @@ class MQSegmentView: UIView{
         self.mqSegment.titleArr = self.arrTitle
     }
     
+    func selectedItem(_ index: NSInteger) {
+        
+        if self.oldSelectedIndex == index {
+            return
+        }
+        
+        self.oldSelectedIndex = index
+        
+        self.mqSegment.selectedIndex = index
+        
+//        self.scrollView.setContentOffset(CGPoint(x:UIScreen.main.bounds.width * CGFloat(index),y:UIScreen.main.bounds.height - 64 - 44), animated: true)
+        
+        self.reloadData()
+        
+    }
+    
     //MARK: - LoadData 
     func reloadData() {
+        
+        self.childrenViews.removeAllObjects()
+        
         let count: NSInteger = (self.dataSource?.numberOfTab(mqSegmentView: self))!
         for i in 0..<count {
             let childrenVC = self.dataSource?.slideSwitchView(mqSegmentView: self, index: i)
@@ -71,7 +91,7 @@ class MQSegmentView: UIView{
             childrenVC?.view.backgroundColor = UIColor.init(colorLiteralRed: Float(CGFloat(arc4random_uniform(255))/CGFloat(255.0)) , green: Float(CGFloat(arc4random_uniform(255))/CGFloat(255.0)) , blue: Float(CGFloat(arc4random_uniform(255))/CGFloat(255.0)) , alpha: 1.0)
             self.scrollView.addSubview((childrenVC?.view)!)
         }
-        self.scrollView.frame = CGRect.init(x: 0, y: self.mqSegment.frame.maxY, width: UIScreen.main.bounds.width, height: self.height - self.mqSegment.height)
+        self.scrollView.frame = CGRect.init(x: UIScreen.main.bounds.width * CGFloat(self.oldSelectedIndex), y: self.mqSegment.frame.maxY, width: UIScreen.main.bounds.width, height: self.height - self.mqSegment.height)
         self.scrollView.contentSize = CGSize(width: UIScreen.main.bounds.width * CGFloat(self.childrenViews.count), height: UIScreen.main.bounds.height - 64 - 44)
     }
     
@@ -110,8 +130,20 @@ class MQSegmentView: UIView{
 extension MQSegmentView: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let index = NSInteger(scrollView.contentOffset.x / scrollView.bounds.size.width)
+
+        if self.oldSelectedIndex == index {
+            return
+        }
+        
+        self.oldSelectedIndex = index
+        
         self.showCurrentChrildrenController(index)
         self.mqSegment.selectedIndex = index
+        
+        
+        if delegate != nil {
+            delegate?.didselectSegmentView(mqSegmentView: self, index: index)
+        }
     }
 }
 

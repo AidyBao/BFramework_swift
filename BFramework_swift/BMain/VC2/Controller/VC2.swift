@@ -44,5 +44,4 @@ class VC2: UIViewController {
         }
         return array
     }()
-    
 }

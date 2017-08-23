@@ -9,6 +9,10 @@
 import UIKit
 
 class Test01Controller: UIViewController {
+    
+    var selectedIndex: NSInteger = 0
+    var contentViews: [UIViewController] = []
+    var selectIndex: NSInteger = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,12 +22,30 @@ class Test01Controller: UIViewController {
         //
         self.mq_clearNavbarBackButtonTitle()
         
-        let mqSegmentView:MQSegmentView = MQSegmentView.init(frame: CGRect.init(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height - 64))
-        mqSegmentView.backgroundColor = UIColor.lightGray
-        mqSegmentView.arrTitle = self.titleArr
-        mqSegmentView.dataSource = self
-        mqSegmentView.delegate = self
-        self.view.addSubview(mqSegmentView)
+        //分段控制器
+        for _ in 0..<4 {
+            let VC = TestVC02.init()
+            contentViews.append(VC)
+            addChildViewController(VC)
+        }
+        let sliderView = MQSliderView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height), titles: ["全部", "待付款", "待发货", "已发货"], contentViews: contentViews)
+        sliderView.delegate = self
+        sliderView.sliderWidth = 55
+        sliderView.sliderColor = UIColor.mq_tintColor
+        sliderView.btnFontColorNormal = UIColor.mq_textColorBody
+        sliderView.btnFontColorSelected = UIColor.mq_tintColor
+        sliderView.isShowVerticalLine = false
+        sliderView.selectedIndex = 2 // 默认选中第2个
+        self.selectIndex = 2
+        view.addSubview(sliderView)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        
+        //更新默认数据
+        let defaultVC = contentViews[self.selectIndex] as! TestVC02
+        defaultVC.loadDataWithIndex(self.selectIndex)
     }
     
     override func didReceiveMemoryWarning() {
@@ -35,26 +57,16 @@ class Test01Controller: UIViewController {
     //MARK: - Lazy
     lazy var titleArr: NSMutableArray = {
         let arr: NSMutableArray = NSMutableArray.init(capacity: 3)
-        arr.setArray(["精选", "电视剧电视剧电视剧", "电影", "综艺", "段子", "视屏", "养生"])
+        arr.setArray(["精选", "电视剧", "电影", "综艺"])
         return arr
     }()
 }
 
-extension Test01Controller: MQSegmentViewDataSource {
-    func numberOfTab(mqSegmentView: MQSegmentView) -> NSInteger {
-        return self.titleArr.count
-    }
-    
-    func slideSwitchView(mqSegmentView: MQSegmentView, index: NSInteger) -> UIViewController {
-        let testView = ChildrenController.init()
-        self.addChildViewController(testView)
-        testView.title = self.titleArr.object(at: index) as? String
-        return testView
+extension Test01Controller:MQSliderViewDelegate {
+    func didSelectedSliderViewItem(_ index: NSInteger,_ selectedVC: UIViewController) {
+        self.selectIndex = index
+        let orderVC = selectedVC as! TestVC02
+        orderVC.loadDataWithIndex(index)
     }
 }
 
-extension Test01Controller: MQSegmentViewDelegate {
-    func didselectSegmentView(mqSegmentView: MQSegmentView, index: NSInteger) {
-        
-    }
-}

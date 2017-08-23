@@ -137,6 +137,34 @@
 		7AC13BA71F06355D0019E340 /* MQTintColorConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC13BA61F06355D0019E340 /* MQTintColorConfig.swift */; };
 		7AC13BA91F0638550019E340 /* MQRootController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC13BA81F0638550019E340 /* MQRootController.swift */; };
 		7AC13BAB1F063AAC0019E340 /* Bundle+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC13BAA1F063AAC0019E340 /* Bundle+MQ.swift */; };
+		7ACAADF11F4D2D2200C08F6F /* AdaptiveFirstControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACAADDA1F4D2D2200C08F6F /* AdaptiveFirstControl.swift */; };
+		7ACAADF21F4D2D2200C08F6F /* AdaptiveSecondControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACAADDB1F4D2D2200C08F6F /* AdaptiveSecondControl.swift */; };
+		7ACAADF31F4D2D2200C08F6F /* BottomFirstVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACAADDD1F4D2D2200C08F6F /* BottomFirstVC.swift */; };
+		7ACAADF41F4D2D2200C08F6F /* BottomSecondVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACAADDE1F4D2D2200C08F6F /* BottomSecondVC.swift */; };
+		7ACAADF51F4D2D2200C08F6F /* DissolveFirstVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACAADE01F4D2D2200C08F6F /* DissolveFirstVC.swift */; };
+		7ACAADF61F4D2D2200C08F6F /* DissolveSecondVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACAADE11F4D2D2200C08F6F /* DissolveSecondVC.swift */; };
+		7ACAADF71F4D2D2200C08F6F /* PopAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACAADE31F4D2D2200C08F6F /* PopAnimation.swift */; };
+		7ACAADF81F4D2D2200C08F6F /* PopViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7ACAADE41F4D2D2200C08F6F /* PopViewController.storyboard */; };
+		7ACAADF91F4D2D2200C08F6F /* PopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACAADE51F4D2D2200C08F6F /* PopViewController.swift */; };
+		7ACAADFA1F4D2D2200C08F6F /* WjPresentationCoutro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACAADE61F4D2D2200C08F6F /* WjPresentationCoutro.swift */; };
+		7ACAADFB1F4D2D2200C08F6F /* FromRightFirstVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACAADE81F4D2D2200C08F6F /* FromRightFirstVC.swift */; };
+		7ACAADFC1F4D2D2200C08F6F /* FromRightSecondVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACAADE91F4D2D2200C08F6F /* FromRightSecondVC.swift */; };
+		7ACAADFD1F4D2D2200C08F6F /* SwipeFirstVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACAADEB1F4D2D2200C08F6F /* SwipeFirstVC.swift */; };
+		7ACAADFE1F4D2D2200C08F6F /* SwipeSecondVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACAADEC1F4D2D2200C08F6F /* SwipeSecondVC.swift */; };
+		7ACAADFF1F4D2D2200C08F6F /* SwipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACAADED1F4D2D2200C08F6F /* SwipeViewController.swift */; };
+		7ACAAE001F4D2D2200C08F6F /* FromTopFirstVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACAADEF1F4D2D2200C08F6F /* FromTopFirstVC.swift */; };
+		7ACAAE011F4D2D2200C08F6F /* FromTopSecondVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACAADF01F4D2D2200C08F6F /* FromTopSecondVC.swift */; };
+		7ACAAE091F4D2D4F00C08F6F /* AdaptiveAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACAAE041F4D2D4F00C08F6F /* AdaptiveAnimator.swift */; };
+		7ACAAE0A1F4D2D4F00C08F6F /* DissolveAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACAAE051F4D2D4F00C08F6F /* DissolveAnimator.swift */; };
+		7ACAAE0B1F4D2D4F00C08F6F /* FromBottomAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACAAE061F4D2D4F00C08F6F /* FromBottomAnimator.swift */; };
+		7ACAAE0C1F4D2D4F00C08F6F /* FromRightAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACAAE071F4D2D4F00C08F6F /* FromRightAnimator.swift */; };
+		7ACAAE0D1F4D2D4F00C08F6F /* FromTopAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACAAE081F4D2D4F00C08F6F /* FromTopAnimator.swift */; };
+		7ACAAE0F1F4D461200C08F6F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACAAE0E1F4D461200C08F6F /* BaseViewController.swift */; };
+		7ACAAE111F4D471A00C08F6F /* MQSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACAAE101F4D471A00C08F6F /* MQSliderView.swift */; };
+		7ACAAE141F4D47DA00C08F6F /* TestVC02.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACAAE121F4D47DA00C08F6F /* TestVC02.swift */; };
+		7ACAAE151F4D47DA00C08F6F /* TestVC02.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7ACAAE131F4D47DA00C08F6F /* TestVC02.xib */; };
+		7ACAAE181F4D480600C08F6F /* TestVC03.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACAAE161F4D480600C08F6F /* TestVC03.swift */; };
+		7ACAAE191F4D480600C08F6F /* TestVC03.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7ACAAE171F4D480600C08F6F /* TestVC03.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -311,6 +339,34 @@
 		7AC13BA61F06355D0019E340 /* MQTintColorConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MQTintColorConfig.swift; sourceTree = "<group>"; };
 		7AC13BA81F0638550019E340 /* MQRootController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MQRootController.swift; sourceTree = "<group>"; };
 		7AC13BAA1F063AAC0019E340 /* Bundle+MQ.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+MQ.swift"; sourceTree = "<group>"; };
+		7ACAADDA1F4D2D2200C08F6F /* AdaptiveFirstControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdaptiveFirstControl.swift; sourceTree = "<group>"; };
+		7ACAADDB1F4D2D2200C08F6F /* AdaptiveSecondControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdaptiveSecondControl.swift; sourceTree = "<group>"; };
+		7ACAADDD1F4D2D2200C08F6F /* BottomFirstVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomFirstVC.swift; sourceTree = "<group>"; };
+		7ACAADDE1F4D2D2200C08F6F /* BottomSecondVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomSecondVC.swift; sourceTree = "<group>"; };
+		7ACAADE01F4D2D2200C08F6F /* DissolveFirstVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DissolveFirstVC.swift; sourceTree = "<group>"; };
+		7ACAADE11F4D2D2200C08F6F /* DissolveSecondVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DissolveSecondVC.swift; sourceTree = "<group>"; };
+		7ACAADE31F4D2D2200C08F6F /* PopAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopAnimation.swift; sourceTree = "<group>"; };
+		7ACAADE41F4D2D2200C08F6F /* PopViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PopViewController.storyboard; sourceTree = "<group>"; };
+		7ACAADE51F4D2D2200C08F6F /* PopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopViewController.swift; sourceTree = "<group>"; };
+		7ACAADE61F4D2D2200C08F6F /* WjPresentationCoutro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WjPresentationCoutro.swift; sourceTree = "<group>"; };
+		7ACAADE81F4D2D2200C08F6F /* FromRightFirstVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FromRightFirstVC.swift; sourceTree = "<group>"; };
+		7ACAADE91F4D2D2200C08F6F /* FromRightSecondVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FromRightSecondVC.swift; sourceTree = "<group>"; };
+		7ACAADEB1F4D2D2200C08F6F /* SwipeFirstVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeFirstVC.swift; sourceTree = "<group>"; };
+		7ACAADEC1F4D2D2200C08F6F /* SwipeSecondVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeSecondVC.swift; sourceTree = "<group>"; };
+		7ACAADED1F4D2D2200C08F6F /* SwipeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeViewController.swift; sourceTree = "<group>"; };
+		7ACAADEF1F4D2D2200C08F6F /* FromTopFirstVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FromTopFirstVC.swift; sourceTree = "<group>"; };
+		7ACAADF01F4D2D2200C08F6F /* FromTopSecondVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FromTopSecondVC.swift; sourceTree = "<group>"; };
+		7ACAAE041F4D2D4F00C08F6F /* AdaptiveAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdaptiveAnimator.swift; sourceTree = "<group>"; };
+		7ACAAE051F4D2D4F00C08F6F /* DissolveAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DissolveAnimator.swift; sourceTree = "<group>"; };
+		7ACAAE061F4D2D4F00C08F6F /* FromBottomAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FromBottomAnimator.swift; sourceTree = "<group>"; };
+		7ACAAE071F4D2D4F00C08F6F /* FromRightAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FromRightAnimator.swift; sourceTree = "<group>"; };
+		7ACAAE081F4D2D4F00C08F6F /* FromTopAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FromTopAnimator.swift; sourceTree = "<group>"; };
+		7ACAAE0E1F4D461200C08F6F /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		7ACAAE101F4D471A00C08F6F /* MQSliderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MQSliderView.swift; sourceTree = "<group>"; };
+		7ACAAE121F4D47DA00C08F6F /* TestVC02.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestVC02.swift; sourceTree = "<group>"; };
+		7ACAAE131F4D47DA00C08F6F /* TestVC02.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestVC02.xib; sourceTree = "<group>"; };
+		7ACAAE161F4D480600C08F6F /* TestVC03.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestVC03.swift; sourceTree = "<group>"; };
+		7ACAAE171F4D480600C08F6F /* TestVC03.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestVC03.xib; sourceTree = "<group>"; };
 		D570DECA2F92BC656D71C25B /* Pods-BFramework_swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BFramework_swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BFramework_swift/Pods-BFramework_swift.debug.xcconfig"; sourceTree = "<group>"; };
 		EC89DEF8F15B81697509555C /* Pods-BFramework_swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BFramework_swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-BFramework_swift/Pods-BFramework_swift.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -602,6 +658,7 @@
 		7A6D14A81F0B8BC900B30FD4 /* MQSegment */ = {
 			isa = PBXGroup;
 			children = (
+				7ACAAE101F4D471A00C08F6F /* MQSliderView.swift */,
 				7A9CE1B91F0F5B77000E957C /* MQSegmentView.swift */,
 				7A6D14A91F0B8BC900B30FD4 /* MQSegment.swift */,
 			);
@@ -739,6 +796,10 @@
 				7A7E099C1F0257780072C968 /* VC1.xib */,
 				7A9CE1AF1F0F5A0A000E957C /* Test01Controller.swift */,
 				7A9CE1B01F0F5A0A000E957C /* Test01Controller.xib */,
+				7ACAAE121F4D47DA00C08F6F /* TestVC02.swift */,
+				7ACAAE131F4D47DA00C08F6F /* TestVC02.xib */,
+				7ACAAE161F4D480600C08F6F /* TestVC03.swift */,
+				7ACAAE171F4D480600C08F6F /* TestVC03.xib */,
 				7A9CE1B51F0F5AE6000E957C /* ChildrenController.swift */,
 				7A9CE1B61F0F5AE6000E957C /* ChildrenController.xib */,
 				7A9CE1C51F0F8015000E957C /* MapViewController.swift */,
@@ -860,6 +921,7 @@
 		7A7E098A1F0256C20072C968 /* VC4 */ = {
 			isa = PBXGroup;
 			children = (
+				7ACAAE021F4D2D4F00C08F6F /* Tools */,
 				7A7E098B1F0256C20072C968 /* Controller */,
 				7A7E098C1F0256C20072C968 /* Model */,
 				7A7E098D1F0256C20072C968 /* View */,
@@ -871,6 +933,8 @@
 		7A7E098B1F0256C20072C968 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				7ACAAE0E1F4D461200C08F6F /* BaseViewController.swift */,
+				7ACAADD81F4D2D2200C08F6F /* Controllers */,
 				7A7E09971F0257510072C968 /* VC4.swift */,
 				7A7E09981F0257510072C968 /* VC4.xib */,
 			);
@@ -1014,6 +1078,106 @@
 			path = "UMMobClick-NO-IDFA";
 			sourceTree = "<group>";
 		};
+		7ACAADD81F4D2D2200C08F6F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7ACAADD91F4D2D2200C08F6F /* Adaptive */,
+				7ACAADDC1F4D2D2200C08F6F /* Bottom */,
+				7ACAADDF1F4D2D2200C08F6F /* Dissolve */,
+				7ACAADE21F4D2D2200C08F6F /* PopView */,
+				7ACAADE71F4D2D2200C08F6F /* Right */,
+				7ACAADEA1F4D2D2200C08F6F /* Swipe */,
+				7ACAADEE1F4D2D2200C08F6F /* Top */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		7ACAADD91F4D2D2200C08F6F /* Adaptive */ = {
+			isa = PBXGroup;
+			children = (
+				7ACAADDA1F4D2D2200C08F6F /* AdaptiveFirstControl.swift */,
+				7ACAADDB1F4D2D2200C08F6F /* AdaptiveSecondControl.swift */,
+			);
+			path = Adaptive;
+			sourceTree = "<group>";
+		};
+		7ACAADDC1F4D2D2200C08F6F /* Bottom */ = {
+			isa = PBXGroup;
+			children = (
+				7ACAADDD1F4D2D2200C08F6F /* BottomFirstVC.swift */,
+				7ACAADDE1F4D2D2200C08F6F /* BottomSecondVC.swift */,
+			);
+			path = Bottom;
+			sourceTree = "<group>";
+		};
+		7ACAADDF1F4D2D2200C08F6F /* Dissolve */ = {
+			isa = PBXGroup;
+			children = (
+				7ACAADE01F4D2D2200C08F6F /* DissolveFirstVC.swift */,
+				7ACAADE11F4D2D2200C08F6F /* DissolveSecondVC.swift */,
+			);
+			path = Dissolve;
+			sourceTree = "<group>";
+		};
+		7ACAADE21F4D2D2200C08F6F /* PopView */ = {
+			isa = PBXGroup;
+			children = (
+				7ACAADE31F4D2D2200C08F6F /* PopAnimation.swift */,
+				7ACAADE41F4D2D2200C08F6F /* PopViewController.storyboard */,
+				7ACAADE51F4D2D2200C08F6F /* PopViewController.swift */,
+				7ACAADE61F4D2D2200C08F6F /* WjPresentationCoutro.swift */,
+			);
+			path = PopView;
+			sourceTree = "<group>";
+		};
+		7ACAADE71F4D2D2200C08F6F /* Right */ = {
+			isa = PBXGroup;
+			children = (
+				7ACAADE81F4D2D2200C08F6F /* FromRightFirstVC.swift */,
+				7ACAADE91F4D2D2200C08F6F /* FromRightSecondVC.swift */,
+			);
+			path = Right;
+			sourceTree = "<group>";
+		};
+		7ACAADEA1F4D2D2200C08F6F /* Swipe */ = {
+			isa = PBXGroup;
+			children = (
+				7ACAADEB1F4D2D2200C08F6F /* SwipeFirstVC.swift */,
+				7ACAADEC1F4D2D2200C08F6F /* SwipeSecondVC.swift */,
+				7ACAADED1F4D2D2200C08F6F /* SwipeViewController.swift */,
+			);
+			path = Swipe;
+			sourceTree = "<group>";
+		};
+		7ACAADEE1F4D2D2200C08F6F /* Top */ = {
+			isa = PBXGroup;
+			children = (
+				7ACAADEF1F4D2D2200C08F6F /* FromTopFirstVC.swift */,
+				7ACAADF01F4D2D2200C08F6F /* FromTopSecondVC.swift */,
+			);
+			path = Top;
+			sourceTree = "<group>";
+		};
+		7ACAAE021F4D2D4F00C08F6F /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				7ACAAE031F4D2D4F00C08F6F /* Animators */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		7ACAAE031F4D2D4F00C08F6F /* Animators */ = {
+			isa = PBXGroup;
+			children = (
+				7ACAAE041F4D2D4F00C08F6F /* AdaptiveAnimator.swift */,
+				7ACAAE051F4D2D4F00C08F6F /* DissolveAnimator.swift */,
+				7ACAAE061F4D2D4F00C08F6F /* FromBottomAnimator.swift */,
+				7ACAAE071F4D2D4F00C08F6F /* FromRightAnimator.swift */,
+				7ACAAE081F4D2D4F00C08F6F /* FromTopAnimator.swift */,
+			);
+			path = Animators;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1132,6 +1296,7 @@
 				7A9CE1B21F0F5A0A000E957C /* Test01Controller.xib in Resources */,
 				7A9CE1C01F0F7965000E957C /* soundA.caf in Resources */,
 				7AC13B9F1F0634DB0019E340 /* MQSettings.bundle in Resources */,
+				7ACAAE151F4D47DA00C08F6F /* TestVC02.xib in Resources */,
 				7A6D14C11F0B8BC900B30FD4 /* MQNoNetwork@3x.png in Resources */,
 				7A6D14BE1F0B8BC900B30FD4 /* MQNoData@2x.png in Resources */,
 				7A7E09961F0257420072C968 /* VC3.xib in Resources */,
@@ -1158,8 +1323,10 @@
 				7A6D14B71F0B8BC900B30FD4 /* iconfont.ttf in Resources */,
 				7A6D14B11F0B8BC900B30FD4 /* MQDateSelectUtils.xib in Resources */,
 				7A7E09531F0248BD0072C968 /* Assets.xcassets in Resources */,
+				7ACAADF81F4D2D2200C08F6F /* PopViewController.storyboard in Resources */,
 				7A7943B31F1750E300ABE042 /* MQSideFilterView.xib in Resources */,
 				7A6D147B1F0B79C700B30FD4 /* Address.plist in Resources */,
+				7ACAAE191F4D480600C08F6F /* TestVC03.xib in Resources */,
 				7A6D14BF1F0B8BC900B30FD4 /* MQNoData@3x.png in Resources */,
 				7A6D14BC1F0B8BC900B30FD4 /* MQLoading@2x.png in Resources */,
 			);
@@ -1238,21 +1405,27 @@
 				7A6D14261F0B36C400B30FD4 /* VC5.swift in Sources */,
 				7A6D14691F0B6C0400B30FD4 /* MQCache.swift in Sources */,
 				7A654C2B1F1468C600F91309 /* MQCountDownLabelCountDownLabel+CountDown.swift in Sources */,
+				7ACAAE141F4D47DA00C08F6F /* TestVC02.swift in Sources */,
 				7AC13BA31F06352C0019E340 /* MQFontConfig.swift in Sources */,
 				7A7943B11F1750A300ABE042 /* MQSideFilterView.swift in Sources */,
 				7A6D147D1F0B79C700B30FD4 /* MQAddressView.swift in Sources */,
 				7A6D14301F0B411000B30FD4 /* UIDevice+MQ.swift in Sources */,
 				7A7943B91F17659300ABE042 /* GoodsPropertiesChildrenCategory.swift in Sources */,
+				7ACAADF41F4D2D2200C08F6F /* BottomSecondVC.swift in Sources */,
 				7A6D143F1F0B5A9F00B30FD4 /* MQAPISign.swift in Sources */,
+				7ACAADFC1F4D2D2200C08F6F /* FromRightSecondVC.swift in Sources */,
 				7A654C251F14601900F91309 /* MMSegment.swift in Sources */,
 				7A7E09951F0257420072C968 /* VC3.swift in Sources */,
 				7A6D142E1F0B3F3D00B30FD4 /* MQConfigValueProtocol.swift in Sources */,
 				7A6D146F1F0B6C0400B30FD4 /* MQLocationUtils.swift in Sources */,
+				7ACAAE181F4D480600C08F6F /* TestVC03.swift in Sources */,
+				7ACAADF61F4D2D2200C08F6F /* DissolveSecondVC.swift in Sources */,
 				7A6D14701F0B6C0400B30FD4 /* MQTintButton.swift in Sources */,
 				7A6D14421F0B5BBD00B30FD4 /* MQURLConst.swift in Sources */,
 				7A6D14591F0B5F1F00B30FD4 /* UIView+MQFrame.swift in Sources */,
 				7A6D14681F0B6C0400B30FD4 /* MQButton.swift in Sources */,
 				7A6D14341F0B433000B30FD4 /* String+MQ.swift in Sources */,
+				7ACAADF71F4D2D2200C08F6F /* PopAnimation.swift in Sources */,
 				7A77C2A41F18969A00523000 /* GoodsPropertyRootCell.swift in Sources */,
 				7A6D14C41F0B8BC900B30FD4 /* MQSegment.swift in Sources */,
 				7A6D14541F0B5F1F00B30FD4 /* MQUITextView.swift in Sources */,
@@ -1261,11 +1434,17 @@
 				7A7E09991F0257510072C968 /* VC4.swift in Sources */,
 				7A6D14B21F0B8BC900B30FD4 /* MQEmptyView.swift in Sources */,
 				7A6D14B41F0B8BC900B30FD4 /* MQLineChartView.swift in Sources */,
+				7ACAAE001F4D2D2200C08F6F /* FromTopFirstVC.swift in Sources */,
+				7ACAADFA1F4D2D2200C08F6F /* WjPresentationCoutro.swift in Sources */,
 				7A654C2A1F1468C600F91309 /* MQCountDownLabel.swift in Sources */,
+				7ACAADF11F4D2D2200C08F6F /* AdaptiveFirstControl.swift in Sources */,
+				7ACAAE0F1F4D461200C08F6F /* BaseViewController.swift in Sources */,
+				7ACAADF91F4D2D2200C08F6F /* PopViewController.swift in Sources */,
 				7A6D146D1F0B6C0400B30FD4 /* MQDevice.swift in Sources */,
 				7A6D14661F0B6C0400B30FD4 /* MQAlertUtils.swift in Sources */,
 				7A6D14761F0B78DF00B30FD4 /* MQAutoScrollView.swift in Sources */,
 				7A6D14B51F0B8BC900B30FD4 /* MQQRCodeScanViewController.swift in Sources */,
+				7ACAADF51F4D2D2200C08F6F /* DissolveFirstVC.swift in Sources */,
 				7AC13BA91F0638550019E340 /* MQRootController.swift in Sources */,
 				7A9CE1C71F0F8015000E957C /* MapViewController.swift in Sources */,
 				7A6D14441F0B5CAB00B30FD4 /* NotificationCenter+MQ.swift in Sources */,
@@ -1273,39 +1452,50 @@
 				7A6D14CE1F0B905000B30FD4 /* MQUIViewController.swift in Sources */,
 				7A7943B71F17656C00ABE042 /* GoodsPropertiesCategory.swift in Sources */,
 				7A9CE1B11F0F5A0A000E957C /* Test01Controller.swift in Sources */,
+				7ACAAE0D1F4D2D4F00C08F6F /* FromTopAnimator.swift in Sources */,
 				7A6D14531F0B5F1F00B30FD4 /* MQUITextField.swift in Sources */,
 				7A6D14551F0B5F1F00B30FD4 /* UIFont+MQ.swift in Sources */,
 				7A6D14C51F0B8BC900B30FD4 /* MQUIButton.swift in Sources */,
 				7AC13BAB1F063AAC0019E340 /* Bundle+MQ.swift in Sources */,
 				7AA6EB531F1372DD009322DE /* AppDelegate+RemoteNotice.swift in Sources */,
+				7ACAAE091F4D2D4F00C08F6F /* AdaptiveAnimator.swift in Sources */,
 				7A6D14D11F0B90B800B30FD4 /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
 				7AC13BA51F0635440019E340 /* MQNavBarConfig.swift in Sources */,
 				7A6F812F1F0C8CEC005D9EBC /* MQDimmingPresentationController.swift in Sources */,
 				7A6D14821F0B7A9A00B30FD4 /* MQCityModel.swift in Sources */,
 				7A6D14721F0B6C6000B30FD4 /* UIViewController+MQ.swift in Sources */,
+				7ACAAE0C1F4D2D4F00C08F6F /* FromRightAnimator.swift in Sources */,
+				7ACAADFE1F4D2D2200C08F6F /* SwipeSecondVC.swift in Sources */,
 				7A6D144A1F0B5E0B00B30FD4 /* MQBase64Utils.swift in Sources */,
+				7ACAAE011F4D2D2200C08F6F /* FromTopSecondVC.swift in Sources */,
 				7A6D143D1F0B5A9F00B30FD4 /* MQAPI.swift in Sources */,
 				7A7943B51F17559F00ABE042 /* MQSideFilterView+CLV.swift in Sources */,
 				7A6D14B31F0B8BC900B30FD4 /* MQHUD.swift in Sources */,
 				7A6D143E1F0B5A9F00B30FD4 /* MQAPIDataparse.swift in Sources */,
 				7A9CE1B71F0F5AE6000E957C /* ChildrenController.swift in Sources */,
 				7AA6EB511F131E20009322DE /* UserLoginCache.swift in Sources */,
+				7ACAADFF1F4D2D2200C08F6F /* SwipeViewController.swift in Sources */,
 				7A6D14C61F0B8BC900B30FD4 /* MQUIImageView.swift in Sources */,
 				7A6D14321F0B416C00B30FD4 /* UIColor+MQ.swift in Sources */,
 				7A6BE7A41F04E36900A92196 /* Base64.m in Sources */,
 				7A6D14571F0B5F1F00B30FD4 /* UIImage+MQCropping.m in Sources */,
+				7ACAAE111F4D471A00C08F6F /* MQSliderView.swift in Sources */,
 				7A6D14B01F0B8BC900B30FD4 /* MQDateSelectUtils.swift in Sources */,
+				7ACAADF31F4D2D2200C08F6F /* BottomFirstVC.swift in Sources */,
 				7A6D14401F0B5A9F00B30FD4 /* MQNetwork.swift in Sources */,
 				7A6D14371F0B43A800B30FD4 /* NSAttributedString+MQ.swift in Sources */,
 				7A7E09A11F0257840072C968 /* VC2.swift in Sources */,
 				7A6D14671F0B6C0400B30FD4 /* MQAudioUtils.swift in Sources */,
 				7A6A354E1F062F0A000AB9D2 /* UITabBarController+MQ.swift in Sources */,
+				7ACAAE0B1F4D2D4F00C08F6F /* FromBottomAnimator.swift in Sources */,
 				7A654C2C1F1468C600F91309 /* MQCountDownLabelCountDownLabel+Timer.swift in Sources */,
 				7AC13BA71F06355D0019E340 /* MQTintColorConfig.swift in Sources */,
 				7AA6EB4E1F131D77009322DE /* UserLogin.swift in Sources */,
 				7A6D146A1F0B6C0400B30FD4 /* MQCommonUtils.swift in Sources */,
 				7A7E099D1F0257780072C968 /* VC1.swift in Sources */,
 				7A9CE1BA1F0F5B77000E957C /* MQSegmentView.swift in Sources */,
+				7ACAADFB1F4D2D2200C08F6F /* FromRightFirstVC.swift in Sources */,
+				7ACAADFD1F4D2D2200C08F6F /* SwipeFirstVC.swift in Sources */,
 				7A6D14841F0B7A9A00B30FD4 /* MQParishModel.swift in Sources */,
 				7A6D142A1F0B388C00B30FD4 /* MQRouter.swift in Sources */,
 				7A6D146E1F0B6C0400B30FD4 /* MQImagePickerUtils.swift in Sources */,
@@ -1320,6 +1510,8 @@
 				7AC13BA11F0635130019E340 /* MQTabbarConfig.swift in Sources */,
 				7A6D147C1F0B79C700B30FD4 /* MQAddressCache.swift in Sources */,
 				7AA6EB5D1F137485009322DE /* MQRouter+RemoteNotification.swift in Sources */,
+				7ACAADF21F4D2D2200C08F6F /* AdaptiveSecondControl.swift in Sources */,
+				7ACAAE0A1F4D2D4F00C08F6F /* DissolveAnimator.swift in Sources */,
 				7A9CE1C31F0F7C2D000E957C /* UIViewController+MQNavControl.swift in Sources */,
 				7A6D14851F0B7A9A00B30FD4 /* MQProvinceModel.swift in Sources */,
 			);

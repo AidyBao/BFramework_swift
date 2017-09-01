@@ -24,7 +24,7 @@ class VC4: UIViewController {
         super.viewDidLoad()
 
         self.view.backgroundColor = UIColor.brown
-        self.title = "VC4"
+        self.navigationItem.title = "VC4"
         // Do any additional setup after loading the view.
     }
 

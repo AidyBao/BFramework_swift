@@ -11,7 +11,12 @@ import UIKit
 
 extension Bundle {
     static var mqSettingBundle: Bundle {
-        return Bundle.init(path: Bundle.init(for: MQTintColorConfig.self).path(forResource: "MQSettings", ofType: "bundle")!)!
+        
+        let mqCoreStr = Bundle.main.path(forResource: "MQSettings", ofType: "bundle")
+        let mqCoreBundle = Bundle.init(path: mqCoreStr!)
+        return mqCoreBundle!
+        
+//        return Bundle.init(path: Bundle.init(for: MQTintColorConfig.self).path(forResource: "MQSettings", ofType: "bundle")!)!
     }
     
     class func mq_tintColorConfigPath() -> String! {

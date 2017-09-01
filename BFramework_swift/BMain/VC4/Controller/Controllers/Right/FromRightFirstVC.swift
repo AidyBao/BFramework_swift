@@ -12,8 +12,8 @@ class FromRightFirstVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "底部弹出"
-        view.backgroundColor = UIColor.red
+        self.title = "右边弹出"
+        view.backgroundColor = UIColor.lightGray
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "click", style: .plain, target: self, action: #selector(presentVC))
         

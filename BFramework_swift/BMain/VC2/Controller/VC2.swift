@@ -13,7 +13,7 @@ class VC2: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.clear
-        self.title = "VC2"
+        self.navigationItem.title = "VC2"
     }
     
     @IBAction func filterBtn(_ sender: UIButton) {

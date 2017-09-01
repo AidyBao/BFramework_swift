@@ -53,7 +53,7 @@
 		</dict>
 		<dict>
 			<key>showAsPresent</key>
-			<false/>
+			<true/>
 			<key>embedInNavigation</key>
 			<true/>
 			<key>normalImage</key>

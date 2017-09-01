@@ -20,12 +20,12 @@ class MQTabbarItem: NSObject {
         
     }
     
-    init(_ dic:[String:Any]!) {
+    public init(_ dic:[String:Any]!) {
         super.init()
         self.setValuesForKeys(dic)
     }
     
-    override func setValue(_ value: Any?, forUndefinedKey key: String) {
+    override public func setValue(_ value: Any?, forUndefinedKey key: String) {
         
     }
 }

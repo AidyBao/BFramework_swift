@@ -13,7 +13,7 @@ class VC5: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.blue
-        self.title = "VC5"
+        self.navigationItem.title = "VC5"
         // Do any additional setup after loading the view.
     }
 

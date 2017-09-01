@@ -28,7 +28,7 @@ class VC1: UIViewController {
         super.viewDidLoad()
         
         self.view.backgroundColor = UIColor.lightGray
-        self.title = "VC1"
+        self.navigationItem.title = "VC1"
         
         //
         self.mq_addKeyboardNotification()

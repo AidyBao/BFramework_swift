@@ -18,4 +18,9 @@ class GoodsPropertyRootCell: UICollectionViewCell {
         self.layer.cornerRadius = self.height/2.0
         self.layer.masksToBounds = true
     }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        self.layer.cornerRadius = self.height/2.0
+    }
 }

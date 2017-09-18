@@ -2,8 +2,8 @@
 //  MQAddressCache.swift
 //  YDY_GJ_3_5
 //
-//  Created by 120v on 2017/6/9.
-//  Copyright © 2017年 screson. All rights reserved.
+//  Created by AidyBao on 2017/6/9.
+//  Copyright © 2017年 AidyBao. All rights reserved.
 //
 
 import UIKit

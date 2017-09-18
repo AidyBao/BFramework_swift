@@ -2,8 +2,8 @@
 //  UserLoginCache.swift
 //  BFramework_swift
 //
-//  Created by 120v on 2017/7/10.
-//  Copyright © 2017年 120v. All rights reserved.
+//  Created by AidyBao on 2017/7/10.
+//  Copyright © 2017年 AidyBao. All rights reserved.
 //
 
 import UIKit

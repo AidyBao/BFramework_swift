@@ -2,8 +2,8 @@
 //  CountDownLabel+Timer.swift
 //  CountDownLabel
 //
-//  Created by Charlin on 16/5/30.
-//  Copyright © 2016年 Charlin. All rights reserved.
+//  Created by AidyBao on 16/5/30.
+//  Copyright © 2016年 AidyBao. All rights reserved.
 //
 
 import UIKit
@@ -31,7 +31,9 @@ extension MQCountDownLabel {
     }
     
     func timerValidate(){
-        timer.invalidate()
-        timer = nil
+        if let timer = timer {
+            timer.invalidate()
+            self.timer = nil
+        }
     }
 }

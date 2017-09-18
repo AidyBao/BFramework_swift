@@ -165,6 +165,7 @@
 		7ACAAE151F4D47DA00C08F6F /* TestVC02.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7ACAAE131F4D47DA00C08F6F /* TestVC02.xib */; };
 		7ACAAE181F4D480600C08F6F /* TestVC03.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACAAE161F4D480600C08F6F /* TestVC03.swift */; };
 		7ACAAE191F4D480600C08F6F /* TestVC03.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7ACAAE171F4D480600C08F6F /* TestVC03.xib */; };
+		7AE361561F6F7079007BC33B /* MQCountDownButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE361551F6F7079007BC33B /* MQCountDownButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -367,6 +368,7 @@
 		7ACAAE131F4D47DA00C08F6F /* TestVC02.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestVC02.xib; sourceTree = "<group>"; };
 		7ACAAE161F4D480600C08F6F /* TestVC03.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestVC03.swift; sourceTree = "<group>"; };
 		7ACAAE171F4D480600C08F6F /* TestVC03.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestVC03.xib; sourceTree = "<group>"; };
+		7AE361551F6F7079007BC33B /* MQCountDownButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MQCountDownButton.swift; sourceTree = "<group>"; };
 		D570DECA2F92BC656D71C25B /* Pods-BFramework_swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BFramework_swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BFramework_swift/Pods-BFramework_swift.debug.xcconfig"; sourceTree = "<group>"; };
 		EC89DEF8F15B81697509555C /* Pods-BFramework_swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BFramework_swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-BFramework_swift/Pods-BFramework_swift.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -554,6 +556,7 @@
 		7A6D14731F0B78DF00B30FD4 /* MQCommonUI */ = {
 			isa = PBXGroup;
 			children = (
+				7AE361541F6F7060007BC33B /* MQCountDownButton */,
 				7A654C261F1468C600F91309 /* MQCountDownLabel */,
 				7A654C231F14601900F91309 /* MQSegmentControl */,
 				7AA6EB4F1F131E00009322DE /* AppManager */,
@@ -1178,6 +1181,14 @@
 			path = Animators;
 			sourceTree = "<group>";
 		};
+		7AE361541F6F7060007BC33B /* MQCountDownButton */ = {
+			isa = PBXGroup;
+			children = (
+				7AE361551F6F7079007BC33B /* MQCountDownButton.swift */,
+			);
+			path = MQCountDownButton;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1472,6 +1483,7 @@
 				7A7943B51F17559F00ABE042 /* MQSideFilterView+CLV.swift in Sources */,
 				7A6D14B31F0B8BC900B30FD4 /* MQHUD.swift in Sources */,
 				7A6D143E1F0B5A9F00B30FD4 /* MQAPIDataparse.swift in Sources */,
+				7AE361561F6F7079007BC33B /* MQCountDownButton.swift in Sources */,
 				7A9CE1B71F0F5AE6000E957C /* ChildrenController.swift in Sources */,
 				7AA6EB511F131E20009322DE /* UserLoginCache.swift in Sources */,
 				7ACAADFF1F4D2D2200C08F6F /* SwipeViewController.swift in Sources */,

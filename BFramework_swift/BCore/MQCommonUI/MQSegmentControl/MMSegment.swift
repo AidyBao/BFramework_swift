@@ -2,8 +2,8 @@
 //  MMSegment.swift
 //  YDY_GJ_3_5
 //
-//  Created by screson on 2017/5/8.
-//  Copyright © 2017年 screson. All rights reserved.
+//  Created by AidyBao on 2017/5/8.
+//  Copyright © 2017年 AidyBao. All rights reserved.
 //
 
 import UIKit

@@ -13,7 +13,7 @@ extension Bundle {
     static var mqSettingBundle: Bundle {
         
         let mqCoreStr = Bundle.main.path(forResource: "MQSettings", ofType: "bundle")
-        let mqCoreBundle = Bundle.init(path: mqCoreStr!)
+        let mqCoreBundle = Bundle(path: mqCoreStr!)
         return mqCoreBundle!
         
 //        return Bundle.init(path: Bundle.init(for: MQTintColorConfig.self).path(forResource: "MQSettings", ofType: "bundle")!)!
@@ -45,7 +45,7 @@ extension Bundle {
     }
     
     static var mq_projectName: String! {
-        return self.main.infoDictionary!["CFBundleExecutable"] as! String
+        return self.main.infoDictionary!["CFBundleExecutable"] as? String
     }
     
     static var mq_bundleVersion: String {

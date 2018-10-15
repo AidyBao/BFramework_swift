@@ -7,12 +7,10 @@
 //
 
 import UIKit
+import HandyJSON
 
 class GoodsPropertiesCategory: NSObject {
+    required override init() {}
     var title: String = ""
-    var propertesArr: NSMutableArray = []
-    
-    override static func mj_objectClassInArray() -> [AnyHashable : Any]! {
-        return ["propertesArr":GoodsPropertiesChildrenCategory.classForCoder()]
-    }
+    var propertesArr: Array<GoodsPropertiesChildrenCategory> = []
 }

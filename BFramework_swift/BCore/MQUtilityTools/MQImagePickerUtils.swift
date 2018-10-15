@@ -123,9 +123,9 @@ class MQImagePickerUtils: NSObject,UIImagePickerControllerDelegate,UINavigationC
         if mediaType.isEqual(to: kUTTypeImage as String) {
             let theImage : UIImage!
             if picker.allowsEditing{
-                theImage = info[UIImagePickerControllerEditedImage] as! UIImage
+                theImage = info[UIImagePickerControllerEditedImage] as? UIImage
             }else{
-                theImage = info[UIImagePickerControllerOriginalImage] as! UIImage
+                theImage = (info[UIImagePickerControllerOriginalImage] as! UIImage)
             }
             self.pickPhotoEnd?(theImage,HCheckPhotoStatus.success)
         }else{

@@ -8,6 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		051B1FCA9BBF84AA8E245778 /* Pods_BFramework_swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2774CA59CF5658B49F6EB9E7 /* Pods_BFramework_swift.framework */; };
+		7A19DC992174333400095BBC /* ZXUserMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A19DC982174333400095BBC /* ZXUserMode.swift */; };
+		7A19DC9B21743AE500095BBC /* AppDelegate+ZX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A19DC9A21743AE500095BBC /* AppDelegate+ZX.swift */; };
+		7A19DC9D21743B8000095BBC /* ZXNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A19DC9C21743B8000095BBC /* ZXNotification.swift */; };
+		7A19DC9F21743FF900095BBC /* ZXModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A19DC9E21743FF900095BBC /* ZXModel.swift */; };
+		7A19DCA1217441AF00095BBC /* MQGlobalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A19DCA0217441AF00095BBC /* MQGlobalData.swift */; };
+		7A19DCA521745E7E00095BBC /* ZXAddressModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A19DCA221745E7D00095BBC /* ZXAddressModel.swift */; };
+		7A19DCA621745E7E00095BBC /* ZXAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A19DCA321745E7D00095BBC /* ZXAddressViewController.swift */; };
+		7A19DCA721745E7E00095BBC /* ZXAddressViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A19DCA421745E7E00095BBC /* ZXAddressViewController.xib */; };
+		7A19DCA92174601B00095BBC /* ZXLoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A19DCA82174601B00095BBC /* ZXLoginManager.swift */; };
+		7A19DCAB217488E900095BBC /* ZJAutoScrollLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A19DCAA217488E800095BBC /* ZJAutoScrollLabel.swift */; };
+		7A19DCAD2174916000095BBC /* MQUtiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A19DCAC2174916000095BBC /* MQUtiles.swift */; };
+		7A19DCAF217492F000095BBC /* Timer+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A19DCAE217492F000095BBC /* Timer+MQ.swift */; };
 		7A654C251F14601900F91309 /* MMSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A654C241F14601900F91309 /* MMSegment.swift */; };
 		7A654C2A1F1468C600F91309 /* MQCountDownLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A654C271F1468C600F91309 /* MQCountDownLabel.swift */; };
 		7A654C2B1F1468C600F91309 /* MQCountDownLabelCountDownLabel+CountDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A654C281F1468C600F91309 /* MQCountDownLabelCountDownLabel+CountDown.swift */; };
@@ -30,8 +42,6 @@
 		7A6D143F1F0B5A9F00B30FD4 /* MQAPISign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6D143B1F0B5A9F00B30FD4 /* MQAPISign.swift */; };
 		7A6D14401F0B5A9F00B30FD4 /* MQNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6D143C1F0B5A9F00B30FD4 /* MQNetwork.swift */; };
 		7A6D14421F0B5BBD00B30FD4 /* MQURLConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6D14411F0B5BBD00B30FD4 /* MQURLConst.swift */; };
-		7A6D14441F0B5CAB00B30FD4 /* NotificationCenter+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6D14431F0B5CAB00B30FD4 /* NotificationCenter+MQ.swift */; };
-		7A6D14481F0B5DA500B30FD4 /* MQNotificationNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6D14471F0B5DA500B30FD4 /* MQNotificationNames.swift */; };
 		7A6D144A1F0B5E0B00B30FD4 /* MQBase64Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6D14491F0B5E0B00B30FD4 /* MQBase64Utils.swift */; };
 		7A6D14531F0B5F1F00B30FD4 /* MQUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6D144B1F0B5F1F00B30FD4 /* MQUITextField.swift */; };
 		7A6D14541F0B5F1F00B30FD4 /* MQUITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6D144C1F0B5F1F00B30FD4 /* MQUITextView.swift */; };
@@ -53,12 +63,6 @@
 		7A6D14721F0B6C6000B30FD4 /* UIViewController+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6D14711F0B6C6000B30FD4 /* UIViewController+MQ.swift */; };
 		7A6D14761F0B78DF00B30FD4 /* MQAutoScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6D14751F0B78DF00B30FD4 /* MQAutoScrollView.swift */; };
 		7A6D147B1F0B79C700B30FD4 /* Address.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A6D14781F0B79C700B30FD4 /* Address.plist */; };
-		7A6D147C1F0B79C700B30FD4 /* MQAddressCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6D14791F0B79C700B30FD4 /* MQAddressCache.swift */; };
-		7A6D147D1F0B79C700B30FD4 /* MQAddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6D147A1F0B79C700B30FD4 /* MQAddressView.swift */; };
-		7A6D14821F0B7A9A00B30FD4 /* MQCityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6D147E1F0B7A9A00B30FD4 /* MQCityModel.swift */; };
-		7A6D14831F0B7A9A00B30FD4 /* MQCountryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6D147F1F0B7A9A00B30FD4 /* MQCountryModel.swift */; };
-		7A6D14841F0B7A9A00B30FD4 /* MQParishModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6D14801F0B7A9A00B30FD4 /* MQParishModel.swift */; };
-		7A6D14851F0B7A9A00B30FD4 /* MQProvinceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6D14811F0B7A9A00B30FD4 /* MQProvinceModel.swift */; };
 		7A6D148B1F0B7FCC00B30FD4 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A6D148A1F0B7FCC00B30FD4 /* libsqlite3.0.tbd */; };
 		7A6D14B01F0B8BC900B30FD4 /* MQDateSelectUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6D148F1F0B8BC900B30FD4 /* MQDateSelectUtils.swift */; };
 		7A6D14B11F0B8BC900B30FD4 /* MQDateSelectUtils.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A6D14901F0B8BC900B30FD4 /* MQDateSelectUtils.xib */; };
@@ -122,8 +126,6 @@
 		7A9CE1C81F0F8015000E957C /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A9CE1C61F0F8015000E957C /* MapViewController.xib */; };
 		7AA6EB4B1F131D1F009322DE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA6EB491F131D1F009322DE /* LoginViewController.swift */; };
 		7AA6EB4C1F131D1F009322DE /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AA6EB4A1F131D1F009322DE /* LoginViewController.xib */; };
-		7AA6EB4E1F131D77009322DE /* UserLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA6EB4D1F131D77009322DE /* UserLogin.swift */; };
-		7AA6EB511F131E20009322DE /* UserLoginCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA6EB501F131E20009322DE /* UserLoginCache.swift */; };
 		7AA6EB531F1372DD009322DE /* AppDelegate+RemoteNotice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA6EB521F1372DD009322DE /* AppDelegate+RemoteNotice.swift */; };
 		7AA6EB5A1F1373D0009322DE /* libUMessage_Sdk_1.4.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AA6EB561F1373D0009322DE /* libUMessage_Sdk_1.4.0.a */; };
 		7AA6EB5B1F1373D0009322DE /* UMMobClick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AA6EB591F1373D0009322DE /* UMMobClick.framework */; };
@@ -200,6 +202,18 @@
 
 /* Begin PBXFileReference section */
 		2774CA59CF5658B49F6EB9E7 /* Pods_BFramework_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BFramework_swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A19DC982174333400095BBC /* ZXUserMode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXUserMode.swift; sourceTree = "<group>"; };
+		7A19DC9A21743AE500095BBC /* AppDelegate+ZX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppDelegate+ZX.swift"; sourceTree = "<group>"; };
+		7A19DC9C21743B8000095BBC /* ZXNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXNotification.swift; sourceTree = "<group>"; };
+		7A19DC9E21743FF900095BBC /* ZXModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZXModel.swift; sourceTree = "<group>"; };
+		7A19DCA0217441AF00095BBC /* MQGlobalData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MQGlobalData.swift; sourceTree = "<group>"; };
+		7A19DCA221745E7D00095BBC /* ZXAddressModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXAddressModel.swift; sourceTree = "<group>"; };
+		7A19DCA321745E7D00095BBC /* ZXAddressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXAddressViewController.swift; sourceTree = "<group>"; };
+		7A19DCA421745E7E00095BBC /* ZXAddressViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZXAddressViewController.xib; sourceTree = "<group>"; };
+		7A19DCA82174601B00095BBC /* ZXLoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZXLoginManager.swift; sourceTree = "<group>"; };
+		7A19DCAA217488E800095BBC /* ZJAutoScrollLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZJAutoScrollLabel.swift; sourceTree = "<group>"; };
+		7A19DCAC2174916000095BBC /* MQUtiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MQUtiles.swift; sourceTree = "<group>"; };
+		7A19DCAE217492F000095BBC /* Timer+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Timer+MQ.swift"; sourceTree = "<group>"; };
 		7A654C241F14601900F91309 /* MMSegment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMSegment.swift; sourceTree = "<group>"; };
 		7A654C271F1468C600F91309 /* MQCountDownLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MQCountDownLabel.swift; sourceTree = "<group>"; };
 		7A654C281F1468C600F91309 /* MQCountDownLabelCountDownLabel+CountDown.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MQCountDownLabelCountDownLabel+CountDown.swift"; sourceTree = "<group>"; };
@@ -223,8 +237,6 @@
 		7A6D143B1F0B5A9F00B30FD4 /* MQAPISign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MQAPISign.swift; sourceTree = "<group>"; };
 		7A6D143C1F0B5A9F00B30FD4 /* MQNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MQNetwork.swift; sourceTree = "<group>"; };
 		7A6D14411F0B5BBD00B30FD4 /* MQURLConst.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MQURLConst.swift; sourceTree = "<group>"; };
-		7A6D14431F0B5CAB00B30FD4 /* NotificationCenter+MQ.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NotificationCenter+MQ.swift"; sourceTree = "<group>"; };
-		7A6D14471F0B5DA500B30FD4 /* MQNotificationNames.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MQNotificationNames.swift; sourceTree = "<group>"; };
 		7A6D14491F0B5E0B00B30FD4 /* MQBase64Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MQBase64Utils.swift; sourceTree = "<group>"; };
 		7A6D144B1F0B5F1F00B30FD4 /* MQUITextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MQUITextField.swift; sourceTree = "<group>"; };
 		7A6D144C1F0B5F1F00B30FD4 /* MQUITextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MQUITextView.swift; sourceTree = "<group>"; };
@@ -247,12 +259,6 @@
 		7A6D14711F0B6C6000B30FD4 /* UIViewController+MQ.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+MQ.swift"; sourceTree = "<group>"; };
 		7A6D14751F0B78DF00B30FD4 /* MQAutoScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MQAutoScrollView.swift; sourceTree = "<group>"; };
 		7A6D14781F0B79C700B30FD4 /* Address.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Address.plist; sourceTree = "<group>"; };
-		7A6D14791F0B79C700B30FD4 /* MQAddressCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MQAddressCache.swift; sourceTree = "<group>"; };
-		7A6D147A1F0B79C700B30FD4 /* MQAddressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MQAddressView.swift; sourceTree = "<group>"; };
-		7A6D147E1F0B7A9A00B30FD4 /* MQCityModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MQCityModel.swift; sourceTree = "<group>"; };
-		7A6D147F1F0B7A9A00B30FD4 /* MQCountryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MQCountryModel.swift; sourceTree = "<group>"; };
-		7A6D14801F0B7A9A00B30FD4 /* MQParishModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MQParishModel.swift; sourceTree = "<group>"; };
-		7A6D14811F0B7A9A00B30FD4 /* MQProvinceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MQProvinceModel.swift; sourceTree = "<group>"; };
 		7A6D148A1F0B7FCC00B30FD4 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		7A6D148F1F0B8BC900B30FD4 /* MQDateSelectUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MQDateSelectUtils.swift; sourceTree = "<group>"; };
 		7A6D14901F0B8BC900B30FD4 /* MQDateSelectUtils.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MQDateSelectUtils.xib; sourceTree = "<group>"; };
@@ -324,8 +330,6 @@
 		7A9CE1C61F0F8015000E957C /* MapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
 		7AA6EB491F131D1F009322DE /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		7AA6EB4A1F131D1F009322DE /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
-		7AA6EB4D1F131D77009322DE /* UserLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserLogin.swift; sourceTree = "<group>"; };
-		7AA6EB501F131E20009322DE /* UserLoginCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserLoginCache.swift; sourceTree = "<group>"; };
 		7AA6EB521F1372DD009322DE /* AppDelegate+RemoteNotice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppDelegate+RemoteNotice.swift"; sourceTree = "<group>"; };
 		7AA6EB561F1373D0009322DE /* libUMessage_Sdk_1.4.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libUMessage_Sdk_1.4.0.a; sourceTree = "<group>"; };
 		7AA6EB571F1373D0009322DE /* UMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMessage.h; sourceTree = "<group>"; };
@@ -471,7 +475,8 @@
 			isa = PBXGroup;
 			children = (
 				7A6F812E1F0C8CEC005D9EBC /* MQDimmingPresentationController.swift */,
-				7A6D14431F0B5CAB00B30FD4 /* NotificationCenter+MQ.swift */,
+				7A19DC9E21743FF900095BBC /* ZXModel.swift */,
+				7A19DCA0217441AF00095BBC /* MQGlobalData.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -538,6 +543,7 @@
 		7A6D145A1F0B6C0400B30FD4 /* MQUtilityTools */ = {
 			isa = PBXGroup;
 			children = (
+				7A19DCAA217488E800095BBC /* ZJAutoScrollLabel.swift */,
 				7A6D145B1F0B6C0400B30FD4 /* MQAlertUtils.swift */,
 				7A6D145C1F0B6C0400B30FD4 /* MQAudioUtils.swift */,
 				7A6D145D1F0B6C0400B30FD4 /* MQButton.swift */,
@@ -549,6 +555,7 @@
 				7A6D14631F0B6C0400B30FD4 /* MQImagePickerUtils.swift */,
 				7A6D14641F0B6C0400B30FD4 /* MQLocationUtils.swift */,
 				7A6D14651F0B6C0400B30FD4 /* MQTintButton.swift */,
+				7A19DCAC2174916000095BBC /* MQUtiles.swift */,
 			);
 			path = MQUtilityTools;
 			sourceTree = "<group>";
@@ -559,7 +566,6 @@
 				7AE361541F6F7060007BC33B /* MQCountDownButton */,
 				7A654C261F1468C600F91309 /* MQCountDownLabel */,
 				7A654C231F14601900F91309 /* MQSegmentControl */,
-				7AA6EB4F1F131E00009322DE /* AppManager */,
 				7A6D14771F0B79C700B30FD4 /* MQAddressView */,
 				7A6D148E1F0B8BC900B30FD4 /* MQDateSelect */,
 				7A6D14911F0B8BC900B30FD4 /* MQEmptyView */,
@@ -586,12 +592,9 @@
 			isa = PBXGroup;
 			children = (
 				7A6D14781F0B79C700B30FD4 /* Address.plist */,
-				7A6D14791F0B79C700B30FD4 /* MQAddressCache.swift */,
-				7A6D147A1F0B79C700B30FD4 /* MQAddressView.swift */,
-				7A6D147E1F0B7A9A00B30FD4 /* MQCityModel.swift */,
-				7A6D147F1F0B7A9A00B30FD4 /* MQCountryModel.swift */,
-				7A6D14801F0B7A9A00B30FD4 /* MQParishModel.swift */,
-				7A6D14811F0B7A9A00B30FD4 /* MQProvinceModel.swift */,
+				7A19DCA221745E7D00095BBC /* ZXAddressModel.swift */,
+				7A19DCA321745E7D00095BBC /* ZXAddressViewController.swift */,
+				7A19DCA421745E7E00095BBC /* ZXAddressViewController.xib */,
 			);
 			path = MQAddressView;
 			sourceTree = "<group>";
@@ -717,6 +720,7 @@
 			children = (
 				7A7E094B1F0248BD0072C968 /* AppDelegate.swift */,
 				7AA6EB521F1372DD009322DE /* AppDelegate+RemoteNotice.swift */,
+				7A19DC9A21743AE500095BBC /* AppDelegate+ZX.swift */,
 				7A7E097A1F0256C20072C968 /* MQMain */,
 				7A7E09791F0256C20072C968 /* MQCore */,
 				7A7E09521F0248BD0072C968 /* Assets.xcassets */,
@@ -751,7 +755,7 @@
 				7A6D14CB1F0B900000B30FD4 /* MQClosure.swift */,
 				7A6D142B1F0B3E9700B30FD4 /* MQStructs.swift */,
 				7A6D14411F0B5BBD00B30FD4 /* MQURLConst.swift */,
-				7A6D14471F0B5DA500B30FD4 /* MQNotificationNames.swift */,
+				7A19DC9C21743B8000095BBC /* ZXNotification.swift */,
 				7A6D14731F0B78DF00B30FD4 /* MQCommonUI */,
 				7A6D145A1F0B6C0400B30FD4 /* MQUtilityTools */,
 				7A6D14281F0B387B00B30FD4 /* BRouter */,
@@ -1000,6 +1004,7 @@
 				7A6D14331F0B433000B30FD4 /* String+MQ.swift */,
 				7A6D14351F0B43A800B30FD4 /* NSAttributedString+MQ.swift */,
 				7A6D14361F0B43A800B30FD4 /* NSObject+MQ.swift */,
+				7A19DCAE217492F000095BBC /* Timer+MQ.swift */,
 			);
 			name = MQExtension;
 			path = BExtension;
@@ -1028,7 +1033,7 @@
 		7AA6EB461F131D08009322DE /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				7AA6EB4D1F131D77009322DE /* UserLogin.swift */,
+				7A19DC982174333400095BBC /* ZXUserMode.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1043,16 +1048,9 @@
 		7AA6EB481F131D08009322DE /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				7A19DCA82174601B00095BBC /* ZXLoginManager.swift */,
 			);
 			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		7AA6EB4F1F131E00009322DE /* AppManager */ = {
-			isa = PBXGroup;
-			children = (
-				7AA6EB501F131E20009322DE /* UserLoginCache.swift */,
-			);
-			path = AppManager;
 			sourceTree = "<group>";
 		};
 		7AA6EB541F1373D0009322DE /* UMessage */ = {
@@ -1322,6 +1320,7 @@
 				7A6D14BD1F0B8BC900B30FD4 /* MQLoading@3x.png in Resources */,
 				7A9CE1C81F0F8015000E957C /* MapViewController.xib in Resources */,
 				7A6D14BB1F0B8BC900B30FD4 /* MQFailure@3x.png in Resources */,
+				7A19DCA721745E7E00095BBC /* ZXAddressViewController.xib in Resources */,
 				7A7E099E1F0257780072C968 /* VC1.xib in Resources */,
 				7A6D14B81F0B8BC900B30FD4 /* MQCheck@2x.png in Resources */,
 				7A6D14C21F0B8BC900B30FD4 /* MQSuccess@2x.png in Resources */,
@@ -1381,13 +1380,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BFramework_swift-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		63C1BFA0EE5148BF1ED636B5 /* [CP] Embed Pods Frameworks */ = {
@@ -1396,9 +1398,28 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-BFramework_swift/Pods-BFramework_swift-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/HandyJSON/HandyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/JXPhotoBrowser/JXPhotoBrowser.framework",
+				"${BUILT_PRODUCTS_DIR}/KeychainSwift/KeychainSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/MJExtension/MJExtension.framework",
+				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HandyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JXPhotoBrowser.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJExtension.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1419,16 +1440,19 @@
 				7ACAAE141F4D47DA00C08F6F /* TestVC02.swift in Sources */,
 				7AC13BA31F06352C0019E340 /* MQFontConfig.swift in Sources */,
 				7A7943B11F1750A300ABE042 /* MQSideFilterView.swift in Sources */,
-				7A6D147D1F0B79C700B30FD4 /* MQAddressView.swift in Sources */,
 				7A6D14301F0B411000B30FD4 /* UIDevice+MQ.swift in Sources */,
 				7A7943B91F17659300ABE042 /* GoodsPropertiesChildrenCategory.swift in Sources */,
 				7ACAADF41F4D2D2200C08F6F /* BottomSecondVC.swift in Sources */,
+				7A19DC992174333400095BBC /* ZXUserMode.swift in Sources */,
 				7A6D143F1F0B5A9F00B30FD4 /* MQAPISign.swift in Sources */,
 				7ACAADFC1F4D2D2200C08F6F /* FromRightSecondVC.swift in Sources */,
 				7A654C251F14601900F91309 /* MMSegment.swift in Sources */,
+				7A19DCAB217488E900095BBC /* ZJAutoScrollLabel.swift in Sources */,
 				7A7E09951F0257420072C968 /* VC3.swift in Sources */,
+				7A19DCA1217441AF00095BBC /* MQGlobalData.swift in Sources */,
 				7A6D142E1F0B3F3D00B30FD4 /* MQConfigValueProtocol.swift in Sources */,
 				7A6D146F1F0B6C0400B30FD4 /* MQLocationUtils.swift in Sources */,
+				7A19DCAF217492F000095BBC /* Timer+MQ.swift in Sources */,
 				7ACAAE181F4D480600C08F6F /* TestVC03.swift in Sources */,
 				7ACAADF61F4D2D2200C08F6F /* DissolveSecondVC.swift in Sources */,
 				7A6D14701F0B6C0400B30FD4 /* MQTintButton.swift in Sources */,
@@ -1458,7 +1482,6 @@
 				7ACAADF51F4D2D2200C08F6F /* DissolveFirstVC.swift in Sources */,
 				7AC13BA91F0638550019E340 /* MQRootController.swift in Sources */,
 				7A9CE1C71F0F8015000E957C /* MapViewController.swift in Sources */,
-				7A6D14441F0B5CAB00B30FD4 /* NotificationCenter+MQ.swift in Sources */,
 				7A6D146C1F0B6C0400B30FD4 /* MQDeletedView.swift in Sources */,
 				7A6D14CE1F0B905000B30FD4 /* MQUIViewController.swift in Sources */,
 				7A7943B71F17656C00ABE042 /* GoodsPropertiesCategory.swift in Sources */,
@@ -1473,7 +1496,6 @@
 				7A6D14D11F0B90B800B30FD4 /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
 				7AC13BA51F0635440019E340 /* MQNavBarConfig.swift in Sources */,
 				7A6F812F1F0C8CEC005D9EBC /* MQDimmingPresentationController.swift in Sources */,
-				7A6D14821F0B7A9A00B30FD4 /* MQCityModel.swift in Sources */,
 				7A6D14721F0B6C6000B30FD4 /* UIViewController+MQ.swift in Sources */,
 				7ACAAE0C1F4D2D4F00C08F6F /* FromRightAnimator.swift in Sources */,
 				7ACAADFE1F4D2D2200C08F6F /* SwipeSecondVC.swift in Sources */,
@@ -1485,7 +1507,6 @@
 				7A6D143E1F0B5A9F00B30FD4 /* MQAPIDataparse.swift in Sources */,
 				7AE361561F6F7079007BC33B /* MQCountDownButton.swift in Sources */,
 				7A9CE1B71F0F5AE6000E957C /* ChildrenController.swift in Sources */,
-				7AA6EB511F131E20009322DE /* UserLoginCache.swift in Sources */,
 				7ACAADFF1F4D2D2200C08F6F /* SwipeViewController.swift in Sources */,
 				7A6D14C61F0B8BC900B30FD4 /* MQUIImageView.swift in Sources */,
 				7A6D14321F0B416C00B30FD4 /* UIColor+MQ.swift in Sources */,
@@ -1495,37 +1516,38 @@
 				7A6D14B01F0B8BC900B30FD4 /* MQDateSelectUtils.swift in Sources */,
 				7ACAADF31F4D2D2200C08F6F /* BottomFirstVC.swift in Sources */,
 				7A6D14401F0B5A9F00B30FD4 /* MQNetwork.swift in Sources */,
+				7A19DC9B21743AE500095BBC /* AppDelegate+ZX.swift in Sources */,
 				7A6D14371F0B43A800B30FD4 /* NSAttributedString+MQ.swift in Sources */,
 				7A7E09A11F0257840072C968 /* VC2.swift in Sources */,
+				7A19DCA92174601B00095BBC /* ZXLoginManager.swift in Sources */,
 				7A6D14671F0B6C0400B30FD4 /* MQAudioUtils.swift in Sources */,
 				7A6A354E1F062F0A000AB9D2 /* UITabBarController+MQ.swift in Sources */,
+				7A19DCA521745E7E00095BBC /* ZXAddressModel.swift in Sources */,
 				7ACAAE0B1F4D2D4F00C08F6F /* FromBottomAnimator.swift in Sources */,
 				7A654C2C1F1468C600F91309 /* MQCountDownLabelCountDownLabel+Timer.swift in Sources */,
+				7A19DCAD2174916000095BBC /* MQUtiles.swift in Sources */,
 				7AC13BA71F06355D0019E340 /* MQTintColorConfig.swift in Sources */,
-				7AA6EB4E1F131D77009322DE /* UserLogin.swift in Sources */,
 				7A6D146A1F0B6C0400B30FD4 /* MQCommonUtils.swift in Sources */,
 				7A7E099D1F0257780072C968 /* VC1.swift in Sources */,
 				7A9CE1BA1F0F5B77000E957C /* MQSegmentView.swift in Sources */,
 				7ACAADFB1F4D2D2200C08F6F /* FromRightFirstVC.swift in Sources */,
 				7ACAADFD1F4D2D2200C08F6F /* SwipeFirstVC.swift in Sources */,
-				7A6D14841F0B7A9A00B30FD4 /* MQParishModel.swift in Sources */,
+				7A19DC9D21743B8000095BBC /* ZXNotification.swift in Sources */,
+				7A19DC9F21743FF900095BBC /* ZXModel.swift in Sources */,
 				7A6D142A1F0B388C00B30FD4 /* MQRouter.swift in Sources */,
 				7A6D146E1F0B6C0400B30FD4 /* MQImagePickerUtils.swift in Sources */,
 				7AA6EB4B1F131D1F009322DE /* LoginViewController.swift in Sources */,
 				7A6D14581F0B5F1F00B30FD4 /* UIScrollView+MQRefresh.swift in Sources */,
 				7A6D14381F0B43A800B30FD4 /* NSObject+MQ.swift in Sources */,
+				7A19DCA621745E7E00095BBC /* ZXAddressViewController.swift in Sources */,
 				7A6D14C71F0B8BC900B30FD4 /* MQUILabel.swift in Sources */,
-				7A6D14831F0B7A9A00B30FD4 /* MQCountryModel.swift in Sources */,
 				7A7E094C1F0248BD0072C968 /* AppDelegate.swift in Sources */,
 				7A6D14CC1F0B900000B30FD4 /* MQClosure.swift in Sources */,
-				7A6D14481F0B5DA500B30FD4 /* MQNotificationNames.swift in Sources */,
 				7AC13BA11F0635130019E340 /* MQTabbarConfig.swift in Sources */,
-				7A6D147C1F0B79C700B30FD4 /* MQAddressCache.swift in Sources */,
 				7AA6EB5D1F137485009322DE /* MQRouter+RemoteNotification.swift in Sources */,
 				7ACAADF21F4D2D2200C08F6F /* AdaptiveSecondControl.swift in Sources */,
 				7ACAAE0A1F4D2D4F00C08F6F /* DissolveAnimator.swift in Sources */,
 				7A9CE1C31F0F7C2D000E957C /* UIViewController+MQNavControl.swift in Sources */,
-				7A6D14851F0B7A9A00B30FD4 /* MQProvinceModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -33,11 +33,11 @@ class VC2: UIViewController {
         let superModel: GoodsPropertiesCategory = GoodsPropertiesCategory.init()
         for i in 0..<10 {
             superModel.title = "品牌\(i+2)"
-            let subArray =  NSMutableArray.init(capacity: 5)
+            var subArray = Array<GoodsPropertiesChildrenCategory>()
             for j in 0..<5 {
-                let subModel: GoodsPropertiesChildrenCategory = GoodsPropertiesChildrenCategory.init()
+                let subModel = GoodsPropertiesChildrenCategory()
                 subModel.property = "苹果\(j)"
-                subArray.add(subModel)
+                subArray.append(subModel)
             }
             superModel.propertesArr = subArray
             array.add(superModel)

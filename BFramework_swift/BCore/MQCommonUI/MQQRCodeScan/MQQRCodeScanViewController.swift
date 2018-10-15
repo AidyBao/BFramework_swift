@@ -257,7 +257,7 @@ extension MQQRCodeScanViewController: AVCaptureMetadataOutputObjectsDelegate{
                     }else{
                         self.dismiss(animated: false, completion: nil)
                     }
-                    delegate.mqScanCode(resultString: result, jsonValue: result.mj_JSONObject(), control: nil)
+                    delegate.mqScanCode(resultString: result, jsonValue: result, control: nil)
                 }
             }else {
                 self.restartScan()

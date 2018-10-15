@@ -72,19 +72,19 @@ class MQLocationUtils: NSObject,CLLocationManagerDelegate {
                 locating = true
             }else{
                 switch status {
-                    case .restricted:
-                        completion?(.restricted,nil)
-                    case .denied:
-                        completion?(.denied,nil)
-                    default:
-                        break
+                case .restricted:
+                    completion?(.restricted,nil)
+                case .denied:
+                    completion?(.denied,nil)
+                default:
+                    break
                 }
             }
         }else{
             completion?(.disable,nil)
         }
-        let mqLocation = MQLocationUtils()
-        mqLocation.checkEnd = completion
+        let zxLocation = MQLocationUtils()
+        zxLocation.checkEnd = completion
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {

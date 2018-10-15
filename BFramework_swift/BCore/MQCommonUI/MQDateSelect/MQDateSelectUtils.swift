@@ -47,7 +47,7 @@ class MQDateSelectUtils: MQUIViewController {
         if let minDate = minDate {
             self.datePicker.minimumDate = minDate
         } else {
-            self.datePicker.minimumDate = MQDateUtils.mq_zeroDate()
+            self.datePicker.minimumDate = MQDateUtils.beijingDate()
         }
         
         if let maxDate = maxDate {

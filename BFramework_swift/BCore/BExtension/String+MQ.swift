@@ -14,6 +14,14 @@ let MOBILE_REG      = "[1]\\d{10}$"
 let EMAIL_REG       = "\\b([a-zA-Z0-9%_.+\\-]+)@([a-zA-Z0-9.\\-]+?\\.[a-zA-Z]{2,6})\\b"
 let CHINESE_REG     = "(^[\\u4e00-\\u9fa5]+$)"
 
+
+//邀请码规则(8位字母或数字组成，规则：*A***G**、*G***A**、*G***G**)
+let ZXIsInviteCode_REG = "^[A-Z0-9][AG][A-Z0-9]{3}[AG][A-Z0-9]{2}$"
+//包含邀请码规则(8位字母或数字组成，规则：*A***G**、*G***A**、*G***G**)
+let ZXContainInviteCode_REG = "^.*[A-Z0-9][AG][A-Z0-9]{3}[AG][A-Z0-9]{2}$"
+//包含添加好友口令规则（已确认，#爱口令#长按复制此消息，打卡爱广告即可添加我为好友*A***G**J*、*A***G**H*、*A***G**Y*、*G***A**J*、*G***A**H*、*G***A**Y*、*G***G**J*、*G***G**H*、*G***G**Y*）
+let ZXContainAddFriend_REG = "^.*[A-Z0-9][AG][A-Z0-9]{3}[AG][A-Z0-9]{2}[JHY][A-Z0-9]$"
+
 extension String {
     func index(at: Int) -> Index {
         return self.index(startIndex, offsetBy: at)
@@ -58,6 +66,21 @@ extension String {
         return mq_matchs(regularString: CHINESE_REG)
     }
     
+    //是否是邀请码规则
+    public func zx_isInviteCode() -> Bool {
+        return mq_matchs(regularString: ZXIsInviteCode_REG)
+    }
+    
+    //是否包含邀请码规则
+    public func zx_isContainInviteCode() -> Bool {
+        return mq_matchs(regularString: ZXContainInviteCode_REG)
+    }
+    
+    //包含添加好友规则
+    public func zx_isContainAddFriendCode() -> Bool {
+        return mq_matchs(regularString: ZXContainAddFriend_REG)
+    }
+    
     func mq_textRectSize(toFont font:UIFont,limiteSize:CGSize) -> CGSize {
         let size = (self as NSString).boundingRect(with: limiteSize, options: NSStringDrawingOptions(rawValue: NSStringDrawingOptions.usesLineFragmentOrigin.rawValue|NSStringDrawingOptions.truncatesLastVisibleLine.rawValue), attributes: [NSFontAttributeName:font], context: nil).size
         return size
@@ -97,29 +120,29 @@ extension String {
     }
     
     func mq_imageFullPath() -> String {
-        return MQAPI.address(image: self)
+        return  MQAPI.file(address: self)
     }
     
     func mq_priceFormat(_ fontName:String,size:CGFloat,bigSize:CGFloat,color:UIColor) -> NSMutableAttributedString {
         var price = self
-        if price.characters.count <= 0 {
+        if price.count <= 0 {
             price = "0"
         }
         if price.hasPrefix("¥") {
             price = price.substring(from: 1)
         }
-        var aRange = NSMakeRange(0, price.characters.count + 1)
-        var pRange = NSMakeRange(1, price.characters.count)
+        var aRange = NSMakeRange(0, price.count + 1)
+        var pRange = NSMakeRange(1, price.count)
         let location = (price as NSString).range(of: ".")
         if  location.length > 0 {
             if (price.characters.count - 1 - location.location) < 2 {
                 price += "0"
-                aRange = NSMakeRange(0, price.characters.count + 1)
+                aRange = NSMakeRange(0, price.count + 1)
             }
             pRange = NSMakeRange(1, location.location)
         } else {
             price += ".00"
-            aRange = NSMakeRange(0, price.characters.count + 1)
+            aRange = NSMakeRange(0, price.count + 1)
         }
         
         let formatPrice = NSAttributedString.mq_colorFormat("¥\(price)", color: color, at: aRange)

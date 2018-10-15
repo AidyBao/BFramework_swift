@@ -7,19 +7,41 @@
 //
 
 import UIKit
-let MQNOTICE_LOGIN_OFFLINE  =   "MQNOTICE_LOGIN_OFFLINE"    //登录失效通知
-let MQNOTICE_LOGIN_SUCCESS  =   "MQNOTICE_LOGIN_SUCCESS"    //登录成功
-let MQNOTICE_AUTHO_INVALID  =   "MQNOTICE_AUTHO_INVALID"    //用户权限失效
+let ZXAPI_TIMEOUT_INTREVAL      =   10.0    //接口超时时间
+let ZXAPI_SUCCESS:Int           =   0       //接口调用成功
+let ZXAPI_UNREGIST:Int          =   100004  //用户不存在
+let ZXAPI_STOCK_NOTENOUGH:Int   =   202005  //库存不足
+let ZXAPI_LOGIN_INVALID:Int     =   100001  //登录失效
+let ZXAPI_FORMAT_ERROR:Int      =   900900  //无数据或格式错误
+let ZXAPI_SERVCE_ERROR:Int      =   -1009   //网络错误
+let ZXAPI_SERVCE_STOP:Int       =   -1004   //网络错误
+let ZXAPI_COUPON_ERROR:Int      =   200006  //保存订单现金券异常
+let ZXAPI_UNMATCHED_ERROR:Int   =   200010  //未匹配到任务
+let ZXAPI_OTHER_MATCHED:Int     =   200018  //已被其他人领取
+let ZXAPI_TASK_INVALID:Int      =   200020  //任务已失效
+let ZXAPI_SHAKE_COUNT_ZERO:Int  =   200201  //次数用完
 
-let MQAPI_TIMEOUT_INTREVAL      =   10.0 //接口超时时间
-let MQAPI_SUCCESS:Int           =   0 //接口调用成功
-let MQAPI_LOGIN_INVALID:Int     =   100001 //登录失效
-let MQAPI_AUTHO_INVALID:Int     =   204003 //用户权限失效
-let MQAPI_FORMAT_ERROR:Int      =   900900 //无数据或格式错误
-let MQAPI_SERVCE_ERROR:Int      =   -1009  //网络错误
-let MQAPI_SERVCE_STOP:Int       =   -1004  //网络错误
+let ZXAPI_HTTP_TIME_OUT         =   -1001   //请求超时
+let ZXAPI_HTTP_ERROR            =   900901  //HTTP请求失败
 
-class MQError: NSObject {
+
+
+extension Int {
+    func zx_errorCodeParse(loginInvalid:(() -> Void)?,
+                           serverError:(() -> Void)?,
+                           networkError:(() -> Void)?) {
+        if self == ZXAPI_LOGIN_INVALID {
+            loginInvalid?()
+        } else if self >= 100000 {
+            serverError?()
+        } else {
+            networkError?()
+        }
+    }
+}
+
+
+class ZXError: NSObject {
     var errorMessage:String = ""
     init(_ msg:String!) {
         super.init()
@@ -34,13 +56,18 @@ class MQError: NSObject {
 }
 
 
-typealias MQAPISuccessAction        = (Int,Dictionary<String,Any>) -> Void          //Code,Response Object
-typealias MQAPIPOfflineAction       = (Int,MQError,Dictionary<String,Any>) -> Void                         //OfflineMessage
-typealias MQAPIServerErrorAction    = (Int,MQError,Dictionary<String,Any>) -> Void  //Status,ErrorMsg,Object
-typealias MQAPICompletionAction     = (Bool,Int,Dictionary<String,Any>,String,MQError?) -> Void       //success 服务器正取返回，code = 0，Object,ObjectString,ErrorInfo
+typealias ZXAPISuccessAction        = (Int,Dictionary<String,Any>) -> Void          //Code,Response Object
+typealias ZXAPIPOfflineAction       = (Int,ZXError,Dictionary<String,Any>) -> Void                         //OfflineMessage
+typealias ZXAPIServerErrorAction    = (Int,ZXError,Dictionary<String,Any>) -> Void  //Status,ErrorMsg,Object
+typealias ZXAPICompletionAction     = (Bool,Int,Dictionary<String,Any>,String,ZXError?) -> Void       //success 服务器正取返回，code = 0，Object,ObjectString,ErrorInfo
 
-class MQAPIDataparse: NSObject {
-    class func parseJsonObject(_ objA:Any?,success:MQAPISuccessAction?,offline:MQAPIPOfflineAction?,serverError:MQAPIServerErrorAction?) {
+class ZXAPIDataparse: NSObject {
+    
+    class func parseJsonObject(_ objA:Any?,
+                               url:String? = nil,
+                               success:ZXAPISuccessAction?,
+                               offline:ZXAPIPOfflineAction?,
+                               serverError:ZXAPIServerErrorAction?) {
         if let objB = objA as? Dictionary<String,Any> {
             var status = 0
             if let s = objB["status"] as? NSNumber {
@@ -49,35 +76,106 @@ class MQAPIDataparse: NSObject {
                 status = Int(s)!
             }
             switch status {
-                case MQAPI_AUTHO_INVALID:
-                    NotificationCenter.mqpost.authorInvalid()
-                    offline?(MQAPI_LOGIN_INVALID,MQError.init((objB["msg"] as? String) ?? "用户门店权限失效"),objB)
-                case MQAPI_LOGIN_INVALID:
-                    NotificationCenter.mqpost.loginInvalid()
-                    offline?(status,MQError.init((objB["msg"] as? String) ?? "用户登录失效"),objB)
-                case MQAPI_SUCCESS:
-                    success?(status,objB)
-                default:
-                    serverError?(status,MQError.init((objB["msg"] as? String) ?? "未知错误"),objB)
-                    break
+            case ZXAPI_LOGIN_INVALID:
+                if let url = url, !MQNetwork.notPostLoginInvalid(url: url) {
+//                    NotificationCenter.zxpost.loginInvalid()
+                }
+                offline?(status,ZXError.init((objB["msg"] as? String) ?? "用户登录失效"),objB)
+            case ZXAPI_SUCCESS:
+                success?(status,objB)
+            default:
+                serverError?(status,ZXError.init((objB["msg"] as? String) ?? "未知错误"),objB)
+                break
             }
         }else{
-            serverError?(MQAPI_FORMAT_ERROR,MQError.init("无数据或格式错误"),[:])
+            serverError?(ZXAPI_FORMAT_ERROR,ZXError.init("无数据或格式错误"),[:])
         }
     }
 }
 
 extension MQNetwork {
-    @discardableResult class func asyncRequest(withUrl url:String,
-                                               params:Dictionary<String, Any>?,
-                                               method:MQHTTPMethod,
-                                               completion:@escaping MQAPICompletionAction) -> URLSessionTask? {
-        var tempP = params
-        if let dic = tempP,dic["sign"] == nil {
-            tempP = tempP?.mq_signDic()
+    //不校验用户信息
+    fileprivate static func notCheckLogin(url:String) -> Bool {
+        if url == MQAPI.api(address: ZXAPIConst.Personal.getAreaList) ||
+            url == MQAPI.api(address: ZXAPIConst.User.getSMSCode) ||
+            url == MQAPI.api(address: ZXAPIConst.User.getDictList) ||
+            url == MQAPI.api(address: ZXAPIConst.User.verCode) ||
+            url == MQAPI.api(address: ZXAPIConst.User.telLogin) ||
+            url == MQAPI.api(address: ZXAPIConst.User.WXLogin) ||
+            url == MQAPI.api(address: ZXAPIConst.User.register) ||
+            url == MQAPI.api(address: ZXAPIConst.User.verInviteCode) ||
+            url == MQAPI.api(address: ZXAPIConst.System.time) {
+            return true
         }
-        let task = MQNetwork.xxxasyncRequest(withUrl: url, params: tempP, method: method, completion: { (objA, stringValue) in
-            MQAPIDataparse.parseJsonObject(objA, success: { (code, dic) in
+        return false
+    }
+    
+    //是否发送登录失效通知
+    fileprivate static func notPostLoginInvalid(url: String) -> Bool {
+        if url == MQAPI.api(address: ZXAPIConst.Home.behavior) ||
+            url == MQAPI.api(address: ZXAPIConst.User.updateEqInfo) ||
+            url == MQAPI.api(address: ZXAPIConst.Personal.messageNoRead){
+            return true
+        } else {
+            return notCheckLogin(url:url)
+        }
+    }
+    
+    class func errorCodeParse(_ code:Int,
+                              httpError:(() -> Void)?,
+                              serverError:(() -> Void)?,
+                              loginInvalid:(() -> Void)? = nil) {
+        if code != ZXAPI_SUCCESS {
+            if code == ZXAPI_LOGIN_INVALID {
+                loginInvalid?()
+            } else if code == NSURLErrorUnknown ||
+                code == NSURLErrorCancelled ||
+                code == NSURLErrorBadURL ||
+                code == NSURLErrorUnsupportedURL ||
+                code == NSURLErrorCannotFindHost ||
+                code == NSURLErrorCannotConnectToHost ||
+                code == NSURLErrorNetworkConnectionLost ||
+                code == NSURLErrorDNSLookupFailed ||
+                code == NSURLErrorHTTPTooManyRedirects ||
+                code == NSURLErrorResourceUnavailable ||
+                code == NSURLErrorNotConnectedToInternet ||
+                code == NSURLErrorRedirectToNonExistentLocation ||
+                code == NSURLErrorBadServerResponse ||
+                code == NSURLErrorUserCancelledAuthentication ||
+                code == NSURLErrorUserAuthenticationRequired ||
+                code == NSURLErrorZeroByteResource ||
+                code == NSURLErrorCannotDecodeRawData ||
+                code == NSURLErrorCannotDecodeContentData ||
+                code == NSURLErrorCannotParseResponse{
+                httpError?()
+            } else {
+                serverError?()
+            }
+        }
+        
+    }
+    
+    @discardableResult class func asyncRequest(withUrl url:String,
+                                               params: Dictionary<String, Any>?,
+                                               sign: Bool = true,
+                                               method:ZXHTTPMethod,
+                                               completion:@escaping ZXAPICompletionAction) -> URLSessionTask? {
+        var tempP = [String:Any]()
+        if let p = params {
+            tempP = p
+        }
+        if showRequestLog {
+            print("\n------------Request(未编码)------------\n请求地址:\n\(url)\n请求参数:\n\(String(describing: params))\n---------------------------\n")
+        }
+        if sign,tempP["sign"] == nil {
+            if self.notCheckLogin(url: url) {
+                tempP = tempP.zx_signDicWithEncode(false)
+            } else {
+                tempP = tempP.zx_signDicWithEncode()
+            }
+        }
+        let task = MQNetwork.zx_asyncRequest(withUrl: url, params: tempP, method: method, completion: { (objA, stringValue) in
+            ZXAPIDataparse.parseJsonObject(objA,url: url, success: { (code, dic) in
                 completion(true, code, dic, stringValue!, nil)
             }, offline: { (code, error, dic) in
                 completion(false, code, dic, stringValue!, error)
@@ -85,34 +183,53 @@ extension MQNetwork {
                 completion(false, code, dic, stringValue!, error)
             })
         }, timeOut: { (errorMsg) in
-            completion(false,NSURLErrorTimedOut,[:],"",MQError.init(errorMsg))
+            completion(false,NSURLErrorTimedOut,[:],"",ZXError.init(errorMsg))
         }) { (code, errorMsg) in
-            completion(false,code,[:],"",MQError.init(errorMsg))
+            completion(false,code,[:],"",ZXError.init(errorMsg))
         }
         return task
     }
     
+    
+    /// 图片文件上传
+    ///
+    /// - Parameters:
+    ///   - url:
+    ///   - images:
+    ///   - params:
+    ///   - sign:
+    ///   - completion:
+    /// - Returns:
     @discardableResult class func uploadImage(to url:String!,
-                                              images:Array<UIImage>!,
+                                              images:Array<Data>!,
                                               params:Dictionary<String,Any>?,
-                                              compressRatio:CGFloat,
-                                              completion:@escaping MQAPICompletionAction) -> URLSessionTask? {
-        var tempP = params
-        if let dic = tempP,dic["sign"] == nil {
-            tempP = tempP?.mq_signDicNotEncode()
+                                              sign: Bool = true,
+                                              completion:@escaping ZXAPICompletionAction) -> URLSessionTask? {
+        var tempP = [String:Any]()
+        if let p = params {
+            tempP = p
         }
-        let task = MQNetwork.xxxuploadImage(to: url, images: images, params: tempP, compressRatio: compressRatio, completion: { (objA, stringValue) in
-            MQAPIDataparse.parseJsonObject(objA, success: { (code, dic) in
+        if sign,tempP["sign"] == nil {
+            if self.notCheckLogin(url: url) {
+                tempP = tempP.zx_signDicWithEncode(false)
+            } else {
+                tempP = tempP.zx_signDicWithEncode()
+            }
+            
+        }
+        
+        let task = MQNetwork.zx_uploadImage(to: url, images: images, params: tempP, completion: { (objA, stringValue) in
+            ZXAPIDataparse.parseJsonObject(objA, success: { (code, dic) in
                 completion(true, code, dic, stringValue!, nil)
             }, offline: { (code, error, dic) in
-                completion(false, code, dic, stringValue!, nil)
+                completion(false, code, dic, stringValue!, error)
             }, serverError: { (code, error, dic) in
-                completion(false, code, dic, stringValue!, nil)
+                completion(false, code, dic, stringValue!, error)
             })
         }, timeOut: { (errorMsg) in
-            completion(false,NSURLErrorTimedOut,[:],"",MQError.init(errorMsg))
+            completion(false,NSURLErrorTimedOut,[:],"",ZXError.init(errorMsg))
         }) { (code, errorMsg) in
-            completion(false,code,[:],"",MQError.init(errorMsg))
+            completion(false,code,[:],"",ZXError.init(errorMsg))
         }
         return task
     }
@@ -123,23 +240,31 @@ extension MQNetwork {
                                              mimeType: String,
                                              fileData: Data,
                                              params:Dictionary<String,Any>?,
-                                             completion:@escaping MQAPICompletionAction) -> URLSessionTask? {
-        var tempP = params
-        if let dic = tempP,dic["sign"] == nil {
-            tempP = tempP?.mq_signDicNotEncode()
+                                             sign: Bool = true,
+                                             completion:@escaping ZXAPICompletionAction) -> URLSessionTask? {
+        var tempP = [String:Any]()
+        if let p = params {
+            tempP = p
         }
-        let task = MQNetwork.xxxfileupload(to: url, name: name, fileName: fileName, mimeType: mimeType, fileData: fileData, params: tempP, completion: { (objA, stringValue) in
-            MQAPIDataparse.parseJsonObject(objA, success: { (code, dic) in
+        if sign,tempP["sign"] == nil {
+            if self.notCheckLogin(url: url) {
+                tempP = tempP.zx_signDicWithEncode(false)
+            } else {
+                tempP = tempP.zx_signDicWithEncode()
+            }
+        }
+        let task = MQNetwork.zx_fileupload(to: url, name: name, fileName: fileName, mimeType: mimeType, fileData: fileData, params: tempP, completion: { (objA, stringValue) in
+            ZXAPIDataparse.parseJsonObject(objA, success: { (code, dic) in
                 completion(true, code, dic, stringValue!, nil)
             }, offline: { (code, error, dic) in
-                completion(false, code, dic, stringValue!, nil)
+                completion(false, code, dic, stringValue!, error)
             }, serverError: { (code, error, dic) in
-                completion(false, code, dic, stringValue!, nil)
+                completion(false, code, dic, stringValue!, error)
             })
         }, timeOut: { (errorMsg) in
-            completion(false,NSURLErrorTimedOut,[:],"",MQError.init(errorMsg))
+            completion(false,NSURLErrorTimedOut,[:],"",ZXError.init(errorMsg))
         }) { (code, errorMsg) in
-            completion(false,code,[:],"",MQError.init(errorMsg))
+            completion(false,code,[:],"",ZXError.init(errorMsg))
         }
         return task
     }

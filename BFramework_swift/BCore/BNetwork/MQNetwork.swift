@@ -8,19 +8,21 @@
 
 import UIKit
 
-let MQAPI_URL_ERROR:Int                 =   911911 //接口返回数据非json字典
-typealias MQHTTPCompletionAction        = (Any?,String?) -> Void    //JsonObject,StringValue
-typealias MQHTTPTimeOutAction           = (String) -> Void          //TimeOutMessage
-typealias MQHTTPErrorAction             = (Int,String) -> Void      //Status,ErrorMsg
+let ZXAPI_URL_ERROR:Int                 =   911911 //接口返回数据非json字典
+typealias ZXHTTPCompletionAction        = (Any?,String?) -> Void    //JsonObject,StringValue
+typealias ZXHTTPTimeOutAction           = (String) -> Void          //TimeOutMessage
+typealias ZXHTTPErrorAction             = (Int,String) -> Void      //Status,ErrorMsg
+typealias ZXEmptyCallBack               = () -> Void
+typealias ZXHStatusCallBack             = (_ success: Bool, _ value: String) -> Void
 
-enum MQHTTPMethod {
+enum ZXHTTPMethod {
     case get,post
     func description() -> String{
         switch self {
-            case .get:
-                return "GET"
-            case .post:
-                return "POST"
+        case .get:
+            return "GET"
+        case .post:
+            return "POST"
             
         }
     }
@@ -32,7 +34,7 @@ class MQNetwork: NSObject {
     //{status:0,data:{},msg:"success"}
     private final class func commonProcess(data:Data?,
                                            url:String,
-                                           completion:MQHTTPCompletionAction?) {
+                                           completion:ZXHTTPCompletionAction?) {
         var contentString:String? = nil
         if let data = data {
             do{
@@ -48,14 +50,17 @@ class MQNetwork: NSObject {
             completion?(nil,nil)
         }
         if showRequestLog {
-            print("\n------------Response------------\n请求地址:\n\(url)\n接口返回数据:\n\(contentString ?? "")\n---------------------------\n")
+            let zxPrintQueue = DispatchQueue.init(label: "ZX_PRINT", qos: .background)
+            zxPrintQueue.async {
+                print("\n------------Response------------\n请求地址:\n\(url)\n接口返回数据:\n\(contentString ?? "")\n---------------------------\n")
+            }
         }
     }
     
     private final class func httpError(error:Error,
                                        url:String,
-                                       timeout:MQHTTPTimeOutAction?,
-                                       httpError:MQHTTPErrorAction?) {
+                                       timeout:ZXHTTPTimeOutAction?,
+                                       httpError:ZXHTTPErrorAction?) {
         if showRequestLog {
             print("\n------------Response------------\n请求地址:\n\(url)\n错误:\n\(error)\n描述:\(error.localizedDescription)\n---------------------------\n")
         }
@@ -78,10 +83,13 @@ class MQNetwork: NSObject {
     ///   - timeOut: request timeout
     ///   - httpError: http request error
     /// - Returns: return value description
-    @discardableResult final class func xxxasyncRequest(withUrl url:String,
+    @discardableResult final class func zx_asyncRequest(withUrl url:String,
                                                         params:Dictionary<String, Any>?,
-                                                        method:MQHTTPMethod,
-                                                        completion:MQHTTPCompletionAction?,timeOut:MQHTTPTimeOutAction?,httpError:MQHTTPErrorAction?) -> URLSessionTask? {
+                                                        method:ZXHTTPMethod,
+                                                        detectHeader: Bool = false,
+                                                        completion:ZXHTTPCompletionAction?,
+                                                        timeOut:ZXHTTPTimeOutAction?,
+                                                        httpError:ZXHTTPErrorAction?) -> URLSessionTask? {
         if showRequestLog {
             print("\n------------Request------------\n请求地址:\n\(url)\n请求参数:\n\(String(describing: params))\n---------------------------\n")
         }
@@ -93,12 +101,14 @@ class MQNetwork: NSObject {
                 if let str = value as? String {
                     let tempS = str.replacingOccurrences(of: "\\", with: "")
                     arrParams?.append("\(key)=\(tempS)")
-                }else{
+                } else {
                     arrParams?.append("\(key)=\(value)")
                 }
             }
             paramsString = arrParams?.joined(separator: "&")
-            paramsString = paramsString?.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+            if !detectHeader {
+                paramsString = paramsString?.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+            }
         }
         var urlString = url
         if let paramsStr = paramsString,method == .get{
@@ -113,6 +123,9 @@ class MQNetwork: NSObject {
             if let pStr = paramsString,method == .post {
                 request.httpBody = pStr.data(using: .utf8)
             }
+            if detectHeader {
+                request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
+            }
             let task = session.dataTask(with: request, completionHandler: { (data, response, error) in
                 if error == nil {
                     if let response = response as? HTTPURLResponse,response.statusCode == 200 {
@@ -126,8 +139,7 @@ class MQNetwork: NSObject {
                             self.httpError(error: error, url: url, timeout: timeOut, httpError: httpError)
                         }
                     }
-                    
-                }else{
+                } else {
                     DispatchQueue.main.async {
                         self.httpError(error: error!, url: url, timeout: timeOut, httpError: httpError)
                     }
@@ -137,7 +149,7 @@ class MQNetwork: NSObject {
             return task
         }else{
             DispatchQueue.main.async {
-                httpError?(MQAPI_URL_ERROR,"URL地址错误")
+                httpError?(ZXAPI_URL_ERROR,"URL地址错误")
             }
             if showRequestLog {
                 print("\n------------Response------------\n请求地址:\n\(url)\n错误:URL地址错误\n---------------------------\n")
@@ -150,18 +162,18 @@ class MQNetwork: NSObject {
     ///
     /// - Parameters:
     ///   - url: url
-    ///   - images: image array
+    ///   - images: image data array
     ///   - params: post params
-    ///   - compressRatio: 0 - max compress, 1 - min compress
     ///   - completion: server responsed
     ///   - timeOut: request timeout
     ///   - httpError: http request error
     /// - Returns: return value description
-    @discardableResult class func xxxuploadImage(to url:String!,
-                                                 images:Array<UIImage>!,
+    @discardableResult class func zx_uploadImage(to url:String!,
+                                                 images:Array<Data>!,
                                                  params:Dictionary<String,Any>?,
-                                                 compressRatio:CGFloat,
-                                                 completion:MQHTTPCompletionAction?,timeOut:MQHTTPTimeOutAction?,httpError:MQHTTPErrorAction?) -> URLSessionTask? {
+                                                 completion:ZXHTTPCompletionAction?,
+                                                 timeOut:ZXHTTPTimeOutAction?,
+                                                 httpError:ZXHTTPErrorAction?) -> URLSessionTask? {
         if showRequestLog {
             print("\n------------Request------------\n请求地址:\n\(url)\n请求参数:\n\(String(describing: params))\n---------------------------\n")
         }
@@ -196,11 +208,14 @@ class MQNetwork: NSObject {
                 formatter.dateFormat = "yyyyMMddHHmmss";
                 let fileName     = formatter.string(from: Date())// [formatter stringFromDate:[NSDate date]];
                 body.append(("--\(boundary)\r\n" as String).data(using: String.Encoding.utf8, allowLossyConversion: true)!)
-                body.append("Content-Disposition: form-data; name=\"\(imageKey)\"; filename=\"\(fileName).jpg\"\r\n" .data(using: String.Encoding.utf8, allowLossyConversion: true)!)
+                body.append("Content-Disposition: form-data; name=\"\(imageKey)\"; filename=\"\(fileName).jpeg\"\r\n" .data(using: String.Encoding.utf8, allowLossyConversion: true)!)
                 body.append("Content-Type: image/jpeg\r\n\r\n".data(using: String.Encoding.utf8, allowLossyConversion: true)!)
                 
                 // change quality of image here
-                body.append(UIImageJPEGRepresentation(images[i], compressRatio)!)
+                //Data -> Image -> Data 内容变大
+                //body.append(UIImageJPEGRepresentation(images[i], compressRatio)!)
+                //UIImagePNGRepresentation(images[i])
+                body.append(images[i])
                 body.append("\r\n".data(using: String.Encoding.utf8, allowLossyConversion: true)!)
             }
             
@@ -237,7 +252,7 @@ class MQNetwork: NSObject {
             return task
         }else{
             DispatchQueue.main.async {
-                httpError?(MQAPI_URL_ERROR,"URL地址错误")
+                httpError?(ZXAPI_URL_ERROR,"URL地址错误")
             }
             if showRequestLog {
                 print("\n------------Response------------\n请求地址:\n\(url)\n错误:URL地址错误\n---------------------------\n")
@@ -246,13 +261,15 @@ class MQNetwork: NSObject {
         return nil
     }
     
-    @discardableResult class func xxxfileupload(to url:String!,
+    @discardableResult class func zx_fileupload(to url:String!,
                                                 name:String,
                                                 fileName:String,
                                                 mimeType:String,
                                                 fileData:Data,
                                                 params:Dictionary<String,Any>?,
-                                                completion:MQHTTPCompletionAction?,timeOut:MQHTTPTimeOutAction?,httpError:MQHTTPErrorAction?) -> URLSessionTask? {
+                                                completion:ZXHTTPCompletionAction?,
+                                                timeOut:ZXHTTPTimeOutAction?,
+                                                httpError:ZXHTTPErrorAction?) -> URLSessionTask? {
         if showRequestLog {
             print("\n------------Request------------\n请求地址:\n\(url)\n请求参数:\n\(String(describing: params))\n---------------------------\n")
         }
@@ -323,7 +340,7 @@ class MQNetwork: NSObject {
             return task
         }else{
             DispatchQueue.main.async {
-                httpError?(MQAPI_URL_ERROR,"URL地址错误")
+                httpError?(ZXAPI_URL_ERROR,"URL地址错误")
             }
             if showRequestLog {
                 print("\n------------Response------------\n请求地址:\n\(url)\n错误:URL地址错误\n---------------------------\n")

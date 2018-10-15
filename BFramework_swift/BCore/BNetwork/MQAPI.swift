@@ -9,8 +9,8 @@
 import UIKit
 
 class MQAPI: NSObject {
-    final class func address(module path:String!) -> String {
-        var strAPIURL = MQROOT_URL + ":" + MQPORT
+    final class func api(address path:String!) -> String {
+        var strAPIURL = ZXURLConst.Api.url + ":" + ZXURLConst.Api.port
         if path.hasPrefix("/") {
             strAPIURL += path
         }else {
@@ -19,8 +19,8 @@ class MQAPI: NSObject {
         return strAPIURL
     }
     
-    final class func address(image path:String!) -> String {
-        var strAPIURL = MQIMAGE_URL + ":" + MQIMAGE_PORT
+    final class func file(address path:String!) -> String {
+        var strAPIURL = ZXURLConst.Resource.url + ":" + ZXURLConst.Resource.port
         if path.hasPrefix("/") {
             strAPIURL += path
         }else {

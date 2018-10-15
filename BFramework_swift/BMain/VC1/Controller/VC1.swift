@@ -101,9 +101,8 @@ class VC1: UIViewController {
     }
     
     @IBAction func getUserLogin(_ sender: UIButton) {
-        let userLogin = UserLoginCache.mq_UserLogin
-        print(userLogin?.userId ?? "")
-        print(userLogin?.isLoginSataus ?? false)
+        let user = ZXUser.user
+        print(user.userSex ?? "")
     }
     
     //MARK: - 获取并清除缓存
@@ -117,6 +116,7 @@ class VC1: UIViewController {
     
     //MARK: - AppStore评分
     @IBAction func storeReview(_ sender: Any) {
+        let Appstore_ID = "" //替换为对应的APPID
         if #available(iOS 10.3, *) {
             SKStoreReviewController.requestReview()
         } else {
@@ -128,7 +128,7 @@ class VC1: UIViewController {
     //MARK: - 倒计时
     @IBAction func mqCoundown(_ sender: UIButton) {
         if countDownLB == nil {
-            countDownLB = MQCountDownLabel.init(frame: CGRect.zero)
+            countDownLB = MQCountDownLabel(frame: CGRect.zero)
             countDownLB.maxSecond = 5
             countDownLB.prefix = "倒计时"
         }
@@ -181,25 +181,24 @@ extension VC1 {
         params["userName"] = "waibu"
         params["passWord"] = "123456"
         //params.mq_signDic() 签名
-        MQNetwork.asyncRequest(withUrl: MQAPI.address(module: MQAPI_USER_LOGIN), params: params.mq_signDic(), method: .post) { (success, status, content, stringValue, error) in
+        MQNetwork.asyncRequest(withUrl: MQAPI.api(address: ZXAPIConst.User.telLogin), params: params, method: .post) { (success, status, content, stringValue, error) in
             if success {
-                if status == MQAPI_SUCCESS {
-                    if let dict = content["data"] as? Dictionary<String,Any> {
+                if status == ZXAPI_SUCCESS {
+                    if let data = content["data"] as? Dictionary<String,Any> {
                         
-                        //缓存登录信息
-                        var userLogin = UserLogin.init()
-                        userLogin = UserLogin.mj_object(withKeyValues: dict)
-                        userLogin.isLoginSataus = true
-                        UserLoginCache.mq_UserLogin = userLogin
+                        
+                        let model = ZXUserModel.deserialize(from: data)
+                        //保存用户登录信息
+                        ZXUser.user.save(data)
                         //友好提示
-                        MQHUD.showSuccess(in: self.view, text: "登录成功", delay: MQHUD_MBDELAY_TIME)
+                        MQHUD.showSuccess(in: self.view, text: "登录成功", delay: ZX.HUDDelay)
                     }
                 }else{
-                    MQHUD.showFailure(in: self.view, text: "登录失败", delay: MQHUD_MBDELAY_TIME)
+                    MQHUD.showFailure(in: self.view, text: "登录失败", delay: ZX.HUDDelay)
                 }
-            }else if status != MQAPI_LOGIN_INVALID{
+            }else if status != ZXAPI_LOGIN_INVALID {
                 //
-                MQHUD.showFailure(in: self.view, text: (error?.description)!, delay: MQHUD_MBDELAY_TIME)
+                MQHUD.showFailure(in: self.view, text: (error?.description)!, delay: ZX.HUDDelay)
                 //没有网络
                 MQEmptyView.mq_show(in: self.view, type: .networkError, text1: "没有网络", text2: "", topOffset: 10, callBack: {
                     self.requestForUserLogin()

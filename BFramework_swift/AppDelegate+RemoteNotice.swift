@@ -8,13 +8,15 @@
 
 import UIKit
 
+let ZXNOTICE_DEVICETOKEN    =   "ZXNOTICE_DEVICETOKEN"
+
 let UM_KEY_APPSTORE     =   "58a00f348f4a9d365c0006f3"
 let UM_KEY_ENTERPRISE   =   "589fff99f29d982b83001617"
 
 extension AppDelegate {
     func zx_application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) {
         var um_key = UM_KEY_APPSTORE //AppStore
-        if Bundle.mq_bundleId == ENTERPRISE_BUNDLE_ID {
+        if Bundle.mq_bundleId == UM_KEY_ENTERPRISE {
             um_key = UM_KEY_ENTERPRISE//Enterprise
         }
         
@@ -24,7 +26,7 @@ extension AppDelegate {
         //统计
         let config = UMAnalyticsConfig.sharedInstance()
         config?.appKey = um_key
-        if Bundle.mq_bundleId == ENTERPRISE_BUNDLE_ID {
+        if Bundle.mq_bundleId == UM_KEY_ENTERPRISE {
             config?.channelId = "Enterprise"
         }else{
             config?.channelId = "App Store"
@@ -118,7 +120,7 @@ extension AppDelegate {
         UserDefaults.standard.set(token, forKey: "deviceToken")
         UserDefaults.standard.synchronize()
         
-        NotificationCenter.default.post(name: MQNOTICE_NOTIFICATION_GETDEVICETOKEN.mq_noticeName(), object: token)
+        NotificationCenter.default.post(name: ZXNOTICE_DEVICETOKEN.mq_noticeName(), object: token)
     }
 
     //<=10

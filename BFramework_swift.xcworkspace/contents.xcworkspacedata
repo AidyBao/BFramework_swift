@@ -1,29 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workspace
    version = "1.0">
-   <Group
-      location = "group:BFramework_swift/BMain/VC4/Tools"
-      name = "Tools">
-      <Group
-         location = "group:Animators"
-         name = "Animators">
-         <FileRef
-            location = "group:AdaptiveAnimator.swift">
-         </FileRef>
-         <FileRef
-            location = "group:DissolveAnimator.swift">
-         </FileRef>
-         <FileRef
-            location = "group:FromBottomAnimator.swift">
-         </FileRef>
-         <FileRef
-            location = "group:FromRightAnimator.swift">
-         </FileRef>
-         <FileRef
-            location = "group:FromTopAnimator.swift">
-         </FileRef>
-      </Group>
-   </Group>
    <FileRef
       location = "group:BFramework_swift.xcodeproj">
    </FileRef>

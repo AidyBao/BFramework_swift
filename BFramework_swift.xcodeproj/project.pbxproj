@@ -20,6 +20,16 @@
 		7A19DCAB217488E900095BBC /* ZJAutoScrollLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A19DCAA217488E800095BBC /* ZJAutoScrollLabel.swift */; };
 		7A19DCAD2174916000095BBC /* MQUtiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A19DCAC2174916000095BBC /* MQUtiles.swift */; };
 		7A19DCAF217492F000095BBC /* Timer+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A19DCAE217492F000095BBC /* Timer+MQ.swift */; };
+		7A34C63E2175B5B800632D20 /* ZXSegmentMenuPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A34C63B2175B5B800632D20 /* ZXSegmentMenuPage.swift */; };
+		7A34C63F2175B5B800632D20 /* ZXSegmentMenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A34C63C2175B5B800632D20 /* ZXSegmentMenuCell.xib */; };
+		7A34C6402175B5B800632D20 /* ZXSegmentMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A34C63D2175B5B800632D20 /* ZXSegmentMenuCell.swift */; };
+		7A34C6442175B6A400632D20 /* ZXPageControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A34C6422175B6A400632D20 /* ZXPageControlView.swift */; };
+		7A34C6452175B6A400632D20 /* ZXUIPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A34C6432175B6A400632D20 /* ZXUIPageControl.swift */; };
+		7A34C64B2175B6C600632D20 /* ZXWXCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A34C6472175B6C600632D20 /* ZXWXCenter.swift */; };
+		7A34C64C2175B6C600632D20 /* ZXShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A34C6482175B6C600632D20 /* ZXShareViewController.swift */; };
+		7A34C64D2175B6C600632D20 /* ZXURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A34C6492175B6C600632D20 /* ZXURLSession.swift */; };
+		7A34C64E2175B6C600632D20 /* ZXShareViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A34C64A2175B6C600632D20 /* ZXShareViewController.xib */; };
+		7A34C6502175CD7400632D20 /* AppDelegate+WX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A34C64F2175CD7400632D20 /* AppDelegate+WX.swift */; };
 		7A654C251F14601900F91309 /* MMSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A654C241F14601900F91309 /* MMSegment.swift */; };
 		7A654C2A1F1468C600F91309 /* MQCountDownLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A654C271F1468C600F91309 /* MQCountDownLabel.swift */; };
 		7A654C2B1F1468C600F91309 /* MQCountDownLabelCountDownLabel+CountDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A654C281F1468C600F91309 /* MQCountDownLabelCountDownLabel+CountDown.swift */; };
@@ -214,6 +224,16 @@
 		7A19DCAA217488E800095BBC /* ZJAutoScrollLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZJAutoScrollLabel.swift; sourceTree = "<group>"; };
 		7A19DCAC2174916000095BBC /* MQUtiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MQUtiles.swift; sourceTree = "<group>"; };
 		7A19DCAE217492F000095BBC /* Timer+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Timer+MQ.swift"; sourceTree = "<group>"; };
+		7A34C63B2175B5B800632D20 /* ZXSegmentMenuPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXSegmentMenuPage.swift; sourceTree = "<group>"; };
+		7A34C63C2175B5B800632D20 /* ZXSegmentMenuCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZXSegmentMenuCell.xib; sourceTree = "<group>"; };
+		7A34C63D2175B5B800632D20 /* ZXSegmentMenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXSegmentMenuCell.swift; sourceTree = "<group>"; };
+		7A34C6422175B6A400632D20 /* ZXPageControlView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXPageControlView.swift; sourceTree = "<group>"; };
+		7A34C6432175B6A400632D20 /* ZXUIPageControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXUIPageControl.swift; sourceTree = "<group>"; };
+		7A34C6472175B6C600632D20 /* ZXWXCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXWXCenter.swift; sourceTree = "<group>"; };
+		7A34C6482175B6C600632D20 /* ZXShareViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXShareViewController.swift; sourceTree = "<group>"; };
+		7A34C6492175B6C600632D20 /* ZXURLSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXURLSession.swift; sourceTree = "<group>"; };
+		7A34C64A2175B6C600632D20 /* ZXShareViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZXShareViewController.xib; sourceTree = "<group>"; };
+		7A34C64F2175CD7400632D20 /* AppDelegate+WX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+WX.swift"; sourceTree = "<group>"; };
 		7A654C241F14601900F91309 /* MMSegment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMSegment.swift; sourceTree = "<group>"; };
 		7A654C271F1468C600F91309 /* MQCountDownLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MQCountDownLabel.swift; sourceTree = "<group>"; };
 		7A654C281F1468C600F91309 /* MQCountDownLabelCountDownLabel+CountDown.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MQCountDownLabelCountDownLabel+CountDown.swift"; sourceTree = "<group>"; };
@@ -418,6 +438,36 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		7A34C63A2175B5B800632D20 /* ZXSegmentMenuPage */ = {
+			isa = PBXGroup;
+			children = (
+				7A34C63B2175B5B800632D20 /* ZXSegmentMenuPage.swift */,
+				7A34C63C2175B5B800632D20 /* ZXSegmentMenuCell.xib */,
+				7A34C63D2175B5B800632D20 /* ZXSegmentMenuCell.swift */,
+			);
+			path = ZXSegmentMenuPage;
+			sourceTree = "<group>";
+		};
+		7A34C6412175B6A400632D20 /* ZXPageContolView */ = {
+			isa = PBXGroup;
+			children = (
+				7A34C6422175B6A400632D20 /* ZXPageControlView.swift */,
+				7A34C6432175B6A400632D20 /* ZXUIPageControl.swift */,
+			);
+			path = ZXPageContolView;
+			sourceTree = "<group>";
+		};
+		7A34C6462175B6C600632D20 /* ZXWXCenter */ = {
+			isa = PBXGroup;
+			children = (
+				7A34C6472175B6C600632D20 /* ZXWXCenter.swift */,
+				7A34C6482175B6C600632D20 /* ZXShareViewController.swift */,
+				7A34C6492175B6C600632D20 /* ZXURLSession.swift */,
+				7A34C64A2175B6C600632D20 /* ZXShareViewController.xib */,
+			);
+			path = ZXWXCenter;
+			sourceTree = "<group>";
+		};
 		7A654C231F14601900F91309 /* MQSegmentControl */ = {
 			isa = PBXGroup;
 			children = (
@@ -563,6 +613,9 @@
 		7A6D14731F0B78DF00B30FD4 /* MQCommonUI */ = {
 			isa = PBXGroup;
 			children = (
+				7A34C6462175B6C600632D20 /* ZXWXCenter */,
+				7A34C6412175B6A400632D20 /* ZXPageContolView */,
+				7A34C63A2175B5B800632D20 /* ZXSegmentMenuPage */,
 				7AE361541F6F7060007BC33B /* MQCountDownButton */,
 				7A654C261F1468C600F91309 /* MQCountDownLabel */,
 				7A654C231F14601900F91309 /* MQSegmentControl */,
@@ -721,6 +774,7 @@
 				7A7E094B1F0248BD0072C968 /* AppDelegate.swift */,
 				7AA6EB521F1372DD009322DE /* AppDelegate+RemoteNotice.swift */,
 				7A19DC9A21743AE500095BBC /* AppDelegate+ZX.swift */,
+				7A34C64F2175CD7400632D20 /* AppDelegate+WX.swift */,
 				7A7E097A1F0256C20072C968 /* MQMain */,
 				7A7E09791F0256C20072C968 /* MQCore */,
 				7A7E09521F0248BD0072C968 /* Assets.xcassets */,
@@ -1305,11 +1359,13 @@
 				7A9CE1B21F0F5A0A000E957C /* Test01Controller.xib in Resources */,
 				7A9CE1C01F0F7965000E957C /* soundA.caf in Resources */,
 				7AC13B9F1F0634DB0019E340 /* MQSettings.bundle in Resources */,
+				7A34C64E2175B6C600632D20 /* ZXShareViewController.xib in Resources */,
 				7ACAAE151F4D47DA00C08F6F /* TestVC02.xib in Resources */,
 				7A6D14C11F0B8BC900B30FD4 /* MQNoNetwork@3x.png in Resources */,
 				7A6D14BE1F0B8BC900B30FD4 /* MQNoData@2x.png in Resources */,
 				7A7E09961F0257420072C968 /* VC3.xib in Resources */,
 				7A6D14C31F0B8BC900B30FD4 /* MQSuccess@3x.png in Resources */,
+				7A34C63F2175B5B800632D20 /* ZXSegmentMenuCell.xib in Resources */,
 				7A6D14CA1F0B8DAE00B30FD4 /* CommonIcon.xcassets in Resources */,
 				7A6D14B91F0B8BC900B30FD4 /* MQCheck@3x.png in Resources */,
 				7A77C2A51F18969A00523000 /* GoodsPropertyRootCell.xib in Resources */,
@@ -1442,6 +1498,7 @@
 				7A7943B11F1750A300ABE042 /* MQSideFilterView.swift in Sources */,
 				7A6D14301F0B411000B30FD4 /* UIDevice+MQ.swift in Sources */,
 				7A7943B91F17659300ABE042 /* GoodsPropertiesChildrenCategory.swift in Sources */,
+				7A34C63E2175B5B800632D20 /* ZXSegmentMenuPage.swift in Sources */,
 				7ACAADF41F4D2D2200C08F6F /* BottomSecondVC.swift in Sources */,
 				7A19DC992174333400095BBC /* ZXUserMode.swift in Sources */,
 				7A6D143F1F0B5A9F00B30FD4 /* MQAPISign.swift in Sources */,
@@ -1492,6 +1549,7 @@
 				7A6D14C51F0B8BC900B30FD4 /* MQUIButton.swift in Sources */,
 				7AC13BAB1F063AAC0019E340 /* Bundle+MQ.swift in Sources */,
 				7AA6EB531F1372DD009322DE /* AppDelegate+RemoteNotice.swift in Sources */,
+				7A34C6502175CD7400632D20 /* AppDelegate+WX.swift in Sources */,
 				7ACAAE091F4D2D4F00C08F6F /* AdaptiveAnimator.swift in Sources */,
 				7A6D14D11F0B90B800B30FD4 /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
 				7AC13BA51F0635440019E340 /* MQNavBarConfig.swift in Sources */,
@@ -1502,7 +1560,10 @@
 				7A6D144A1F0B5E0B00B30FD4 /* MQBase64Utils.swift in Sources */,
 				7ACAAE011F4D2D2200C08F6F /* FromTopSecondVC.swift in Sources */,
 				7A6D143D1F0B5A9F00B30FD4 /* MQAPI.swift in Sources */,
+				7A34C64D2175B6C600632D20 /* ZXURLSession.swift in Sources */,
 				7A7943B51F17559F00ABE042 /* MQSideFilterView+CLV.swift in Sources */,
+				7A34C6442175B6A400632D20 /* ZXPageControlView.swift in Sources */,
+				7A34C6402175B5B800632D20 /* ZXSegmentMenuCell.swift in Sources */,
 				7A6D14B31F0B8BC900B30FD4 /* MQHUD.swift in Sources */,
 				7A6D143E1F0B5A9F00B30FD4 /* MQAPIDataparse.swift in Sources */,
 				7AE361561F6F7079007BC33B /* MQCountDownButton.swift in Sources */,
@@ -1532,6 +1593,7 @@
 				7A9CE1BA1F0F5B77000E957C /* MQSegmentView.swift in Sources */,
 				7ACAADFB1F4D2D2200C08F6F /* FromRightFirstVC.swift in Sources */,
 				7ACAADFD1F4D2D2200C08F6F /* SwipeFirstVC.swift in Sources */,
+				7A34C6452175B6A400632D20 /* ZXUIPageControl.swift in Sources */,
 				7A19DC9D21743B8000095BBC /* ZXNotification.swift in Sources */,
 				7A19DC9F21743FF900095BBC /* ZXModel.swift in Sources */,
 				7A6D142A1F0B388C00B30FD4 /* MQRouter.swift in Sources */,
@@ -1546,6 +1608,8 @@
 				7AC13BA11F0635130019E340 /* MQTabbarConfig.swift in Sources */,
 				7AA6EB5D1F137485009322DE /* MQRouter+RemoteNotification.swift in Sources */,
 				7ACAADF21F4D2D2200C08F6F /* AdaptiveSecondControl.swift in Sources */,
+				7A34C64C2175B6C600632D20 /* ZXShareViewController.swift in Sources */,
+				7A34C64B2175B6C600632D20 /* ZXWXCenter.swift in Sources */,
 				7ACAAE0A1F4D2D4F00C08F6F /* DissolveAnimator.swift in Sources */,
 				7A9CE1C31F0F7C2D000E957C /* UIViewController+MQNavControl.swift in Sources */,
 			);
@@ -1700,7 +1764,7 @@
 					"$(PROJECT_DIR)/BFramework_swift/BMain/Resources/UMessage/UMMobClick-NO-IDFA",
 				);
 				INFOPLIST_FILE = BFramework_swift/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1727,7 +1791,7 @@
 					"$(PROJECT_DIR)/BFramework_swift/BMain/Resources/UMessage/UMMobClick-NO-IDFA",
 				);
 				INFOPLIST_FILE = BFramework_swift/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",

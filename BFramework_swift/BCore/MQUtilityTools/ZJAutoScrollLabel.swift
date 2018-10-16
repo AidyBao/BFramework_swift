@@ -126,7 +126,7 @@ class ZJAutoScrollLabel: UIView
     }
     
     //MARK: - Action
-    public func setTexts(_ texts:[String])
+    public func setText(_ texts:[String])
     {
         self.texts = texts
         calculateTextSize()
@@ -138,7 +138,7 @@ class ZJAutoScrollLabel: UIView
         self.textAndWidths.removeAll()
         let usedFont = scrollAttribute.textFont ?? UILabel().font!
         for text in self.texts {
-            let width = text.boundingRect(with: CGSize.init(width: CGFloat.greatestFiniteMagnitude, height: 50), options:.usesFontLeading, attributes:[.font:usedFont], context: nil).size.width
+            let width = text.boundingRect(with: CGSize.init(width: CGFloat.greatestFiniteMagnitude, height: 50), options:.usesFontLeading, attributes:[NSFontAttributeName:usedFont], context: nil).size.width
             self.textAndWidths[text] = checkLabelWidth(with: width)
         }
     }

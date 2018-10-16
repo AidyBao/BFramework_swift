@@ -13,17 +13,23 @@ class MQCache: NSObject {
      * 读取缓存大小
      */
     static func returnCacheSize() -> String {
-        return String(format: "%.2f",MQCache.forderSizeAtPath(folderPath: NSHomeDirectory()))
+        //return String(format: "%.2f",ZXCache.forderSizeAtPath(folderPath: NSHomeDirectory()))
+        return String(format: "%.2f",MQCache.forderSizeAtPath(folderPath: NSHomeDirectory() + "/Library/Caches"))
     }
     
     /**
      * 清除缓存 自己决定清除缓存的位置
      */
-    static func cleanCache(competion:()->Void) {
-        MQCache.deleteFolder(path: NSHomeDirectory() + "/Documents")
-        MQCache.deleteFolder(path: NSHomeDirectory() + "/Library")
-        MQCache.deleteFolder(path: NSHomeDirectory() + "/tmp")
-        competion()
+    static func cleanCache(competion:@escaping ()->Void) {
+        //        ZXCache.deleteFolder(path: NSHomeDirectory() + "/Documents")
+        //        ZXCache.deleteFolder(path: NSHomeDirectory() + "/Library")
+        //        ZXCache.deleteFolder(path: NSHomeDirectory() + "/tmp")
+        DispatchQueue.global(qos: .background).async {
+            MQCache.deleteFolder(path: NSHomeDirectory() + "/Library/Caches")
+            DispatchQueue.main.async {
+                competion()
+            }
+        }
     }
     /**
      * 删除单个文件
@@ -81,5 +87,6 @@ class MQCache: NSObject {
         }
         return fileSize
     }
-
+    
 }
+

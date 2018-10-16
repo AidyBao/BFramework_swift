@@ -9,3 +9,4 @@
 #import "UMessage.h"
 #import "UMMobClick/MobClick.h"
 #import <StoreKit/StoreKit.h>
+#import <WechatOpenSDK/WXApi.h>

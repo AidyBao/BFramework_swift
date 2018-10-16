@@ -200,7 +200,7 @@ extension VC1 {
                 //
                 MQHUD.showFailure(in: self.view, text: (error?.description)!, delay: ZX.HUDDelay)
                 //没有网络
-                MQEmptyView.mq_show(in: self.view, type: .networkError, text1: "没有网络", text2: "", topOffset: 10, callBack: {
+                MQEmptyView.show(in: self.view, below: nil, type: .networkError, text: "没有网络", subText:  "", topOffset: 10, retry: {
                     self.requestForUserLogin()
                     MQEmptyView.hide(from: self.view)
                 })

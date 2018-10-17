@@ -32,7 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //MARK: - Notification
         self.zx_addNotice()
         
-        //MARK: -
+        //MARK: -友盟推送
         self.zx_application(application, didFinishLaunchingWithOptions: launchOptions)
         
         IQKeyboardManager.shared.enableAutoToolbar = false

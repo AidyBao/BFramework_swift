@@ -20,6 +20,10 @@
 		7A19DCAB217488E900095BBC /* ZJAutoScrollLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A19DCAA217488E800095BBC /* ZJAutoScrollLabel.swift */; };
 		7A19DCAD2174916000095BBC /* MQUtiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A19DCAC2174916000095BBC /* MQUtiles.swift */; };
 		7A19DCAF217492F000095BBC /* Timer+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A19DCAE217492F000095BBC /* Timer+MQ.swift */; };
+		7A1CBBCC2176D63A00ABFEC9 /* ZXCountDownManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1CBBCB2176D63A00ABFEC9 /* ZXCountDownManager.swift */; };
+		7A1CBBCF2176DC7900ABFEC9 /* MQTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1CBBCD2176DC7800ABFEC9 /* MQTableViewCell.swift */; };
+		7A1CBBD02176DC7900ABFEC9 /* MQTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A1CBBCE2176DC7900ABFEC9 /* MQTableViewCell.xib */; };
+		7A1CBBD22176DC8B00ABFEC9 /* MQTimeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1CBBD12176DC8B00ABFEC9 /* MQTimeModel.swift */; };
 		7A34C63E2175B5B800632D20 /* ZXSegmentMenuPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A34C63B2175B5B800632D20 /* ZXSegmentMenuPage.swift */; };
 		7A34C63F2175B5B800632D20 /* ZXSegmentMenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A34C63C2175B5B800632D20 /* ZXSegmentMenuCell.xib */; };
 		7A34C6402175B5B800632D20 /* ZXSegmentMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A34C63D2175B5B800632D20 /* ZXSegmentMenuCell.swift */; };
@@ -224,6 +228,10 @@
 		7A19DCAA217488E800095BBC /* ZJAutoScrollLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZJAutoScrollLabel.swift; sourceTree = "<group>"; };
 		7A19DCAC2174916000095BBC /* MQUtiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MQUtiles.swift; sourceTree = "<group>"; };
 		7A19DCAE217492F000095BBC /* Timer+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Timer+MQ.swift"; sourceTree = "<group>"; };
+		7A1CBBCB2176D63A00ABFEC9 /* ZXCountDownManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXCountDownManager.swift; sourceTree = "<group>"; };
+		7A1CBBCD2176DC7800ABFEC9 /* MQTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MQTableViewCell.swift; sourceTree = "<group>"; };
+		7A1CBBCE2176DC7900ABFEC9 /* MQTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MQTableViewCell.xib; sourceTree = "<group>"; };
+		7A1CBBD12176DC8B00ABFEC9 /* MQTimeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MQTimeModel.swift; sourceTree = "<group>"; };
 		7A34C63B2175B5B800632D20 /* ZXSegmentMenuPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXSegmentMenuPage.swift; sourceTree = "<group>"; };
 		7A34C63C2175B5B800632D20 /* ZXSegmentMenuCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZXSegmentMenuCell.xib; sourceTree = "<group>"; };
 		7A34C63D2175B5B800632D20 /* ZXSegmentMenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXSegmentMenuCell.swift; sourceTree = "<group>"; };
@@ -438,6 +446,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		7A1CBBCA2176D63A00ABFEC9 /* ZXCountDownManager */ = {
+			isa = PBXGroup;
+			children = (
+				7A1CBBCB2176D63A00ABFEC9 /* ZXCountDownManager.swift */,
+			);
+			path = ZXCountDownManager;
+			sourceTree = "<group>";
+		};
 		7A34C63A2175B5B800632D20 /* ZXSegmentMenuPage */ = {
 			isa = PBXGroup;
 			children = (
@@ -563,6 +579,7 @@
 		7A6D14231F0B36C400B30FD4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				7A1CBBD12176DC8B00ABFEC9 /* MQTimeModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -570,6 +587,8 @@
 		7A6D14241F0B36C400B30FD4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				7A1CBBCD2176DC7800ABFEC9 /* MQTableViewCell.swift */,
+				7A1CBBCE2176DC7900ABFEC9 /* MQTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -613,6 +632,7 @@
 		7A6D14731F0B78DF00B30FD4 /* MQCommonUI */ = {
 			isa = PBXGroup;
 			children = (
+				7A1CBBCA2176D63A00ABFEC9 /* ZXCountDownManager */,
 				7A34C6462175B6C600632D20 /* ZXWXCenter */,
 				7A34C6412175B6A400632D20 /* ZXPageContolView */,
 				7A34C63A2175B5B800632D20 /* ZXSegmentMenuPage */,
@@ -1361,6 +1381,7 @@
 				7AC13B9F1F0634DB0019E340 /* MQSettings.bundle in Resources */,
 				7A34C64E2175B6C600632D20 /* ZXShareViewController.xib in Resources */,
 				7ACAAE151F4D47DA00C08F6F /* TestVC02.xib in Resources */,
+				7A1CBBD02176DC7900ABFEC9 /* MQTableViewCell.xib in Resources */,
 				7A6D14C11F0B8BC900B30FD4 /* MQNoNetwork@3x.png in Resources */,
 				7A6D14BE1F0B8BC900B30FD4 /* MQNoData@2x.png in Resources */,
 				7A7E09961F0257420072C968 /* VC3.xib in Resources */,
@@ -1518,6 +1539,7 @@
 				7A6D14681F0B6C0400B30FD4 /* MQButton.swift in Sources */,
 				7A6D14341F0B433000B30FD4 /* String+MQ.swift in Sources */,
 				7ACAADF71F4D2D2200C08F6F /* PopAnimation.swift in Sources */,
+				7A1CBBCF2176DC7900ABFEC9 /* MQTableViewCell.swift in Sources */,
 				7A77C2A41F18969A00523000 /* GoodsPropertyRootCell.swift in Sources */,
 				7A6D14C41F0B8BC900B30FD4 /* MQSegment.swift in Sources */,
 				7A6D14541F0B5F1F00B30FD4 /* MQUITextView.swift in Sources */,
@@ -1530,6 +1552,7 @@
 				7ACAADFA1F4D2D2200C08F6F /* WjPresentationCoutro.swift in Sources */,
 				7A654C2A1F1468C600F91309 /* MQCountDownLabel.swift in Sources */,
 				7ACAADF11F4D2D2200C08F6F /* AdaptiveFirstControl.swift in Sources */,
+				7A1CBBCC2176D63A00ABFEC9 /* ZXCountDownManager.swift in Sources */,
 				7ACAAE0F1F4D461200C08F6F /* BaseViewController.swift in Sources */,
 				7ACAADF91F4D2D2200C08F6F /* PopViewController.swift in Sources */,
 				7A6D146D1F0B6C0400B30FD4 /* MQDevice.swift in Sources */,
@@ -1577,6 +1600,7 @@
 				7A6D14B01F0B8BC900B30FD4 /* MQDateSelectUtils.swift in Sources */,
 				7ACAADF31F4D2D2200C08F6F /* BottomFirstVC.swift in Sources */,
 				7A6D14401F0B5A9F00B30FD4 /* MQNetwork.swift in Sources */,
+				7A1CBBD22176DC8B00ABFEC9 /* MQTimeModel.swift in Sources */,
 				7A19DC9B21743AE500095BBC /* AppDelegate+ZX.swift in Sources */,
 				7A6D14371F0B43A800B30FD4 /* NSAttributedString+MQ.swift in Sources */,
 				7A7E09A11F0257840072C968 /* VC2.swift in Sources */,
@@ -1764,7 +1788,7 @@
 					"$(PROJECT_DIR)/BFramework_swift/BMain/Resources/UMessage/UMMobClick-NO-IDFA",
 				);
 				INFOPLIST_FILE = BFramework_swift/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1791,7 +1815,7 @@
 					"$(PROJECT_DIR)/BFramework_swift/BMain/Resources/UMessage/UMMobClick-NO-IDFA",
 				);
 				INFOPLIST_FILE = BFramework_swift/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",

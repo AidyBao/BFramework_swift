@@ -9,13 +9,16 @@
 import UIKit
 import MBProgressHUD
 
-let MQ_LOADING_TEXT     =   "加载中..."
-let MQ_IMAGE_LOADING    =   "MQLoading"
-let MQ_IMAGE_SUCCESS    =   "MQSuccess"
-let MQ_IMAGE_FAILURE    =   "MQFailure"
-let MQ_DELAY_INTERVAL   =   1.2
+let ZX_LOADING_TEXT     =   "加载中..."
+let ZX_NETWORK_ERROR    =   "网络连接失败"
+let ZX_IMAGE_LOADING    =   "ZXLoading"
+let ZX_IMAGE_SUCCESS    =   "ZXSuccess"
+let ZX_IMAGE_FAILURE    =   "ZXFailure"
 
 class MQHUD: NSObject {
+    
+    static let DelayTime = 2.0
+    static let DelayOne  = 1.0
     
     /// MBShowSuccess
     ///
@@ -26,9 +29,11 @@ class MQHUD: NSObject {
     class func showSuccess(in view:UIView,text:String,delay:TimeInterval?) {
         let mbp = MBProgressHUD.showAdded(to: view, animated: true)
         mbp.mode = .customView
-        mbp.customView = UIImageView.init(image: UIImage(named: MQ_IMAGE_SUCCESS))
+        mbp.customView = UIImageView.init(image: UIImage(named: ZX_IMAGE_SUCCESS))
         mbp.label.text = text
         mbp.label.font = UIFont.mq_titleFont(15)
+        mbp.label.numberOfLines = 0
+        mbp.label.lineBreakMode = .byWordWrapping
         mbp.minSize = CGSize(width: 100, height: 100)
         mbp.label.textColor = UIColor.white
         mbp.bezelView.layer.cornerRadius = 10.0
@@ -38,7 +43,7 @@ class MQHUD: NSObject {
             mbp.hide(animated: true, afterDelay: delay)
         }
         mbp.removeFromSuperViewOnHide = true
-
+        
     }
     
     /// MBShowFailure
@@ -50,9 +55,11 @@ class MQHUD: NSObject {
     class func showFailure(in view:UIView,text:String,delay:TimeInterval?) {
         let mbp = MBProgressHUD.showAdded(to: view, animated: true)
         mbp.mode = .customView
-        mbp.customView = UIImageView.init(image: UIImage(named: MQ_IMAGE_FAILURE))
+        mbp.customView = UIImageView.init(image: UIImage(named: ZX_IMAGE_FAILURE))
         mbp.label.text = text
         mbp.label.font = UIFont.mq_titleFont(15)
+        mbp.label.numberOfLines = 0
+        mbp.label.lineBreakMode = .byWordWrapping
         mbp.minSize = CGSize(width: 100, height: 100)
         mbp.label.textColor = UIColor.white
         mbp.bezelView.layer.cornerRadius = 10.0
@@ -74,7 +81,7 @@ class MQHUD: NSObject {
     class func showLoading(in view:UIView,text:String,delay:TimeInterval?) {
         let mbp = MBProgressHUD.showAdded(to: view, animated: true)
         mbp.mode = .customView
-        let customView = UIImageView.init(image: UIImage(named: MQ_IMAGE_LOADING))
+        let customView = UIImageView.init(image: UIImage(named: ZX_IMAGE_LOADING))
         let anima = CABasicAnimation(keyPath: "transform.rotation")
         anima.toValue = Double.pi * 2
         anima.duration = 1.0
@@ -84,6 +91,8 @@ class MQHUD: NSObject {
         mbp.customView = customView
         mbp.label.text = text
         mbp.label.font = UIFont.mq_titleFont(15)
+        mbp.label.numberOfLines = 0
+        mbp.label.lineBreakMode = .byWordWrapping
         mbp.minSize = CGSize(width: 100, height: 100)
         mbp.label.textColor = UIColor.white
         mbp.bezelView.layer.cornerRadius = 10.0
@@ -95,7 +104,27 @@ class MQHUD: NSObject {
         mbp.removeFromSuperViewOnHide = true
     }
     
-    class func hide(for view:UIView,animated:Bool) {
-        MBProgressHUD.hide(for: view, animated: animated)
+    class func showText(in view:UIView,text:String,delay:TimeInterval?,minSize:CGSize = CGSize.zero) {
+        let mbp = MBProgressHUD.showAdded(to: view, animated: true)
+        mbp.mode = .customView
+        mbp.label.text = text
+        mbp.label.font = UIFont.mq_titleFont(15)
+        mbp.label.numberOfLines = 0
+        mbp.label.lineBreakMode = .byWordWrapping
+        mbp.minSize = minSize
+        mbp.label.textColor = UIColor.white
+        mbp.bezelView.layer.cornerRadius = 10.0
+        mbp.bezelView.style = .solidColor
+        mbp.bezelView.color = UIColor(red: 0, green: 0, blue: 0, alpha: 0.7)
+        if let delay = delay,delay > 0 {
+            mbp.hide(animated: true, afterDelay: delay)
+        }
+        mbp.removeFromSuperViewOnHide = true
+    }
+    
+    class func hide(for view:UIView?,animated:Bool) {
+        if let view = view, view != nil {
+            MBProgressHUD.hide(for: view, animated: animated)
+        }
     }
 }

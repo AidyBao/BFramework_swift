@@ -60,7 +60,7 @@ class MQQRCodeScanViewController: MQUIViewController {
             if status == .authorized || status == .notDetermined {
                 self.beginScanning()
             }else{
-                MQHUD.showFailure(in: self.view, text: "未授权,无法使用相机", delay: MQ_DELAY_INTERVAL)
+                MQHUD.showFailure(in: self.view, text: "未授权,无法使用相机", delay: ZX.HUDDelay)
             }
         }
     }
@@ -230,12 +230,12 @@ extension MQQRCodeScanViewController {
                             }
                         })
                     }else{
-                        MQHUD.showFailure(in: vc.view, text: "相机功能被禁用", delay: MQ_DELAY_INTERVAL)
+                        MQHUD.showFailure(in: vc.view, text: "相机功能被禁用", delay: ZX.HUDDelay)
                     }
                 }
             }
         }else{
-            MQHUD.showFailure(in: vc.view, text: "相机功能不可用", delay: MQ_DELAY_INTERVAL)
+            MQHUD.showFailure(in: vc.view, text: "相机功能不可用", delay: ZX.HUDDelay)
         }
     }
 }

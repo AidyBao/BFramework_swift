@@ -24,6 +24,8 @@
 		7A1CBBCF2176DC7900ABFEC9 /* MQTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1CBBCD2176DC7800ABFEC9 /* MQTableViewCell.swift */; };
 		7A1CBBD02176DC7900ABFEC9 /* MQTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A1CBBCE2176DC7900ABFEC9 /* MQTableViewCell.xib */; };
 		7A1CBBD22176DC8B00ABFEC9 /* MQTimeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1CBBD12176DC8B00ABFEC9 /* MQTimeModel.swift */; };
+		7A34477F2191928C00175FD8 /* MQPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A34477D2191928C00175FD8 /* MQPhotoViewController.swift */; };
+		7A3447802191928C00175FD8 /* MQPhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A34477E2191928C00175FD8 /* MQPhotoViewController.xib */; };
 		7A34C63E2175B5B800632D20 /* ZXSegmentMenuPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A34C63B2175B5B800632D20 /* ZXSegmentMenuPage.swift */; };
 		7A34C63F2175B5B800632D20 /* ZXSegmentMenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A34C63C2175B5B800632D20 /* ZXSegmentMenuCell.xib */; };
 		7A34C6402175B5B800632D20 /* ZXSegmentMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A34C63D2175B5B800632D20 /* ZXSegmentMenuCell.swift */; };
@@ -232,6 +234,8 @@
 		7A1CBBCD2176DC7800ABFEC9 /* MQTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MQTableViewCell.swift; sourceTree = "<group>"; };
 		7A1CBBCE2176DC7900ABFEC9 /* MQTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MQTableViewCell.xib; sourceTree = "<group>"; };
 		7A1CBBD12176DC8B00ABFEC9 /* MQTimeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MQTimeModel.swift; sourceTree = "<group>"; };
+		7A34477D2191928C00175FD8 /* MQPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MQPhotoViewController.swift; sourceTree = "<group>"; };
+		7A34477E2191928C00175FD8 /* MQPhotoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MQPhotoViewController.xib; sourceTree = "<group>"; };
 		7A34C63B2175B5B800632D20 /* ZXSegmentMenuPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXSegmentMenuPage.swift; sourceTree = "<group>"; };
 		7A34C63C2175B5B800632D20 /* ZXSegmentMenuCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZXSegmentMenuCell.xib; sourceTree = "<group>"; };
 		7A34C63D2175B5B800632D20 /* ZXSegmentMenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXSegmentMenuCell.swift; sourceTree = "<group>"; };
@@ -454,6 +458,15 @@
 			path = ZXCountDownManager;
 			sourceTree = "<group>";
 		};
+		7A344781219192A600175FD8 /* MQPhoto */ = {
+			isa = PBXGroup;
+			children = (
+				7A34477D2191928C00175FD8 /* MQPhotoViewController.swift */,
+				7A34477E2191928C00175FD8 /* MQPhotoViewController.xib */,
+			);
+			path = MQPhoto;
+			sourceTree = "<group>";
+		};
 		7A34C63A2175B5B800632D20 /* ZXSegmentMenuPage */ = {
 			isa = PBXGroup;
 			children = (
@@ -632,6 +645,7 @@
 		7A6D14731F0B78DF00B30FD4 /* MQCommonUI */ = {
 			isa = PBXGroup;
 			children = (
+				7A344781219192A600175FD8 /* MQPhoto */,
 				7A1CBBCA2176D63A00ABFEC9 /* ZXCountDownManager */,
 				7A34C6462175B6C600632D20 /* ZXWXCenter */,
 				7A34C6412175B6A400632D20 /* ZXPageContolView */,
@@ -1416,6 +1430,7 @@
 				7ACAAE191F4D480600C08F6F /* TestVC03.xib in Resources */,
 				7A6D14BF1F0B8BC900B30FD4 /* MQNoData@3x.png in Resources */,
 				7A6D14BC1F0B8BC900B30FD4 /* MQLoading@2x.png in Resources */,
+				7A3447802191928C00175FD8 /* MQPhotoViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1565,6 +1580,7 @@
 				7A6D146C1F0B6C0400B30FD4 /* MQDeletedView.swift in Sources */,
 				7A6D14CE1F0B905000B30FD4 /* MQUIViewController.swift in Sources */,
 				7A7943B71F17656C00ABE042 /* GoodsPropertiesCategory.swift in Sources */,
+				7A34477F2191928C00175FD8 /* MQPhotoViewController.swift in Sources */,
 				7A9CE1B11F0F5A0A000E957C /* Test01Controller.swift in Sources */,
 				7ACAAE0D1F4D2D4F00C08F6F /* FromTopAnimator.swift in Sources */,
 				7A6D14531F0B5F1F00B30FD4 /* MQUITextField.swift in Sources */,

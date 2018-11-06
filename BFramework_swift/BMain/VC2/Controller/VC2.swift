@@ -22,6 +22,11 @@ class VC2: UIViewController {
         filterView.loadData(dataArray: self.dataArray)
     }
     
+    
+    @IBAction func cameraAction(_ sender: Any) {
+        MQPhotoViewController.popshow(upon: self, showIntro: false)
+    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

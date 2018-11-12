@@ -76,4 +76,44 @@ class ZXLoginManager: NSObject {
             }
         }
     }
+    
+    
+    /// 用户和微信进行绑定
+    ///
+    /// - Parameters:
+    ///   - userId: -
+    ///   - token: -
+    ///   - model: ZXHWXAuthorizeUserModel
+    ///   - completion: -
+    static func bindWX(userId: String,
+                       token: String,
+                       model: ZXHWXAuthorizeUserModel,
+                       completion:((_ c: Int, _ s: Bool, _ model: ZXUserModel?, _ msg: String) -> Void)?) {
+        var params = [String: Any]()
+        params["openid"] = model.openid
+        params["unionid"] = model.unionid
+        params["nickname"] = model.nickname
+        params["country"] = model.country
+        params["province"] = model.province
+        params["city"] = model.city
+        params["sex"] = model.sex
+        
+        params["userId"] = userId
+        params["token"] = token
+        
+        MQNetwork.asyncRequest(withUrl: "ZXAPI.address(module: ZXURLConst.bind.wechat)", params: params.zx_signDic(), method: .post) { (s, c, obj, str, error) in
+            if c == ZXAPI_SUCCESS {
+                if let dict = obj["data"] as? Dictionary<String, Any> {
+                    let model = ZXUserModel.deserialize(from: dict)
+                    ZXUser.user.save(dict)
+                    NotificationCenter.zxpost.loginSuccess()
+                    completion?(c, true, model, "")
+                } else {
+                    completion?(c, false, nil, error?.errorMessage ?? "绑定数据失败")
+                }
+            } else {
+                completion?(c, false, nil, error?.errorMessage ?? "绑定数据失败")
+            }
+        }
+    }
 }

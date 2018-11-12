@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		051B1FCA9BBF84AA8E245778 /* Pods_BFramework_swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2774CA59CF5658B49F6EB9E7 /* Pods_BFramework_swift.framework */; };
+		7A139D912193DDDA00E363FF /* ZXHWXAuthorizeUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A139D902193DDDA00E363FF /* ZXHWXAuthorizeUtils.swift */; };
+		7A139D952194037E00E363FF /* ZXHIDRecognizeUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A139D942194037E00E363FF /* ZXHIDRecognizeUtils.swift */; };
+		7A139D972194038700E363FF /* ZXHAlipayAuthorizeUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A139D962194038700E363FF /* ZXHAlipayAuthorizeUtils.swift */; };
 		7A19DC992174333400095BBC /* ZXUserMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A19DC982174333400095BBC /* ZXUserMode.swift */; };
 		7A19DC9B21743AE500095BBC /* AppDelegate+ZX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A19DC9A21743AE500095BBC /* AppDelegate+ZX.swift */; };
 		7A19DC9D21743B8000095BBC /* ZXNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A19DC9C21743B8000095BBC /* ZXNotification.swift */; };
@@ -218,6 +221,9 @@
 
 /* Begin PBXFileReference section */
 		2774CA59CF5658B49F6EB9E7 /* Pods_BFramework_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BFramework_swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A139D902193DDDA00E363FF /* ZXHWXAuthorizeUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXHWXAuthorizeUtils.swift; sourceTree = "<group>"; };
+		7A139D942194037E00E363FF /* ZXHIDRecognizeUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXHIDRecognizeUtils.swift; sourceTree = "<group>"; };
+		7A139D962194038700E363FF /* ZXHAlipayAuthorizeUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXHAlipayAuthorizeUtils.swift; sourceTree = "<group>"; };
 		7A19DC982174333400095BBC /* ZXUserMode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXUserMode.swift; sourceTree = "<group>"; };
 		7A19DC9A21743AE500095BBC /* AppDelegate+ZX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppDelegate+ZX.swift"; sourceTree = "<group>"; };
 		7A19DC9C21743B8000095BBC /* ZXNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXNotification.swift; sourceTree = "<group>"; };
@@ -450,6 +456,22 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		7A139D922193E55200E363FF /* MQAlipay */ = {
+			isa = PBXGroup;
+			children = (
+				7A139D962194038700E363FF /* ZXHAlipayAuthorizeUtils.swift */,
+			);
+			path = MQAlipay;
+			sourceTree = "<group>";
+		};
+		7A139D932193E55C00E363FF /* MQBaiduAuthorize */ = {
+			isa = PBXGroup;
+			children = (
+				7A139D942194037E00E363FF /* ZXHIDRecognizeUtils.swift */,
+			);
+			path = MQBaiduAuthorize;
+			sourceTree = "<group>";
+		};
 		7A1CBBCA2176D63A00ABFEC9 /* ZXCountDownManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -490,6 +512,7 @@
 			isa = PBXGroup;
 			children = (
 				7A34C6472175B6C600632D20 /* ZXWXCenter.swift */,
+				7A139D902193DDDA00E363FF /* ZXHWXAuthorizeUtils.swift */,
 				7A34C6482175B6C600632D20 /* ZXShareViewController.swift */,
 				7A34C6492175B6C600632D20 /* ZXURLSession.swift */,
 				7A34C64A2175B6C600632D20 /* ZXShareViewController.xib */,
@@ -645,6 +668,8 @@
 		7A6D14731F0B78DF00B30FD4 /* MQCommonUI */ = {
 			isa = PBXGroup;
 			children = (
+				7A139D932193E55C00E363FF /* MQBaiduAuthorize */,
+				7A139D922193E55200E363FF /* MQAlipay */,
 				7A344781219192A600175FD8 /* MQPhoto */,
 				7A1CBBCA2176D63A00ABFEC9 /* ZXCountDownManager */,
 				7A34C6462175B6C600632D20 /* ZXWXCenter */,
@@ -1562,6 +1587,7 @@
 				7A6D14C81F0B8BC900B30FD4 /* MQUIView.swift in Sources */,
 				7A7E09991F0257510072C968 /* VC4.swift in Sources */,
 				7A6D14B21F0B8BC900B30FD4 /* MQEmptyView.swift in Sources */,
+				7A139D952194037E00E363FF /* ZXHIDRecognizeUtils.swift in Sources */,
 				7A6D14B41F0B8BC900B30FD4 /* MQLineChartView.swift in Sources */,
 				7ACAAE001F4D2D2200C08F6F /* FromTopFirstVC.swift in Sources */,
 				7ACAADFA1F4D2D2200C08F6F /* WjPresentationCoutro.swift in Sources */,
@@ -1582,6 +1608,7 @@
 				7A7943B71F17656C00ABE042 /* GoodsPropertiesCategory.swift in Sources */,
 				7A34477F2191928C00175FD8 /* MQPhotoViewController.swift in Sources */,
 				7A9CE1B11F0F5A0A000E957C /* Test01Controller.swift in Sources */,
+				7A139D972194038700E363FF /* ZXHAlipayAuthorizeUtils.swift in Sources */,
 				7ACAAE0D1F4D2D4F00C08F6F /* FromTopAnimator.swift in Sources */,
 				7A6D14531F0B5F1F00B30FD4 /* MQUITextField.swift in Sources */,
 				7A6D14551F0B5F1F00B30FD4 /* UIFont+MQ.swift in Sources */,
@@ -1630,6 +1657,7 @@
 				7AC13BA71F06355D0019E340 /* MQTintColorConfig.swift in Sources */,
 				7A6D146A1F0B6C0400B30FD4 /* MQCommonUtils.swift in Sources */,
 				7A7E099D1F0257780072C968 /* VC1.swift in Sources */,
+				7A139D912193DDDA00E363FF /* ZXHWXAuthorizeUtils.swift in Sources */,
 				7A9CE1BA1F0F5B77000E957C /* MQSegmentView.swift in Sources */,
 				7ACAADFB1F4D2D2200C08F6F /* FromRightFirstVC.swift in Sources */,
 				7ACAADFD1F4D2D2200C08F6F /* SwipeFirstVC.swift in Sources */,

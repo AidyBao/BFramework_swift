@@ -12,6 +12,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MQPhotoViewController" customModule="BFramework_swift" customModuleProvider="target">
             <connections>
+                <outlet property="previewView" destination="roZ-QO-bDO" id="nKU-9f-7D4"/>
+                <outlet property="scanFrame" destination="uu1-CL-vop" id="kB2-wK-Yds"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

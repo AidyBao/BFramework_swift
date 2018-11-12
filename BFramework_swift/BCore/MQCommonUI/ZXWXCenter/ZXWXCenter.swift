@@ -4,7 +4,7 @@
 //
 //  Created by 120v on 2018/1/15.
 //  Copyright © 2018年 screson. All rights reserved.
-//
+//  绑定微信、微信分享方法
 
 //关于：http://115.182.15.118:8111/pages/about.html
 //趣味分享：http://115.182.15.118:8111/pages/ad.html?briefing_page=/upload/xxxxx.png
